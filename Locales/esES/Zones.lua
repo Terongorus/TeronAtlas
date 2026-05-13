@@ -6,12 +6,12 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Zones", "esES", {
+AtlasCFM.Localization:RegisterNamespace("Zones", "esES", {
     ["Frostmane Hollow"] = "Hondonada Peloescarcha", --1.18.1
-    ["Moonwhisper Coast"] = "Costa Susurrolunar", --1.18.1
-    ["Thorn Gorge"] = "Garganta Espinosa", --1.18.1
+    ["Moonwhisper Coast"] = "Costa Susurrolunar",    --1.18.1
+    ["Thorn Gorge"] = "Garganta Espinosa",           --1.18.1
     ["Timbermaw Hold"] = "Bastión de los Timbermaw", --1.18.1
-    ["Windhorn Canyon"] = "Cañón Cornaviento", --1.18.1
+    ["Windhorn Canyon"] = "Cañón Cornaviento",       --1.18.1
     ["Blackstone Island"] = "Isla Piedra Negra",
     ["Farraki Arena"] = "Arena Farraki",
     ["Grim Reaches"] = "Territorios Sombríos",

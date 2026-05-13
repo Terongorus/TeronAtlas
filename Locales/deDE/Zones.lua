@@ -6,12 +6,12 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Zones", "deDE", {
-    ["Frostmane Hollow"] = "Frostmähnenhollow", --1.18.1 TODO
+AtlasCFM.Localization:RegisterNamespace("Zones", "deDE", {
+    ["Frostmane Hollow"] = "Frostmähnenhollow",   --1.18.1 TODO
     ["Moonwhisper Coast"] = "Mondgeflüsterküste", --1.18.1 TODO
-    ["Thorn Gorge"] = "Dornenschlucht", --1.18.1 TODO
-    ["Timbermaw Hold"] = "Holzschlundfeste", --1.18.1
-    ["Windhorn Canyon"] = "Windhornschlucht", --1.18.1 TODO
+    ["Thorn Gorge"] = "Dornenschlucht",           --1.18.1 TODO
+    ["Timbermaw Hold"] = "Holzschlundfeste",      --1.18.1
+    ["Windhorn Canyon"] = "Windhornschlucht",     --1.18.1 TODO
     ["Blackstone Island"] = "Schwarzstein Insel",
     ["Farraki Arena"] = "Farraki Arena",
     ["Grim Reaches"] = "Düsterweiten",

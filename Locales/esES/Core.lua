@@ -9,37 +9,37 @@
 if GetLocale() ~= "esES" then return end
 
 -- Zone name substitutions (for display purposes)
-AtlasTWSortIgnore = { "the (.+)", "el (.+)", "la (.+)", "los (.+)", "las (.+)" }
+AtlasCFMSortIgnore = { "the (.+)", "el (.+)", "la (.+)", "los (.+)", "las (.+)" }
 
-AtlasTWZoneSubstitutions = {
+AtlasCFMZoneSubstitutions = {
     ["El Templo de Atal'Hakkar"] = "Templo Sumergido"
 }
 
 ---
---- Key binding definitions for Atlas-TW addon
+--- Key binding definitions for Atlas-CFM addon
 ---
-BINDING_HEADER_ATLASTW_TITLE = "Atajos de Atlas-TW"
-BINDING_NAME_ATLASTW_TOGGLE = "Alternar Atlas-TW"
-BINDING_NAME_ATLASTW_OPTIONS = "Alternar Opciones"
-BINDING_HEADER_ATLASTWLOOT_TITLE = "Atajos de AtlasTW Botín"
-BINDING_NAME_ATLASTWLOOT_QL1 = "Vista Rápida 1"
-BINDING_NAME_ATLASTWLOOT_QL2 = "Vista Rápida 2"
-BINDING_NAME_ATLASTWLOOT_QL3 = "Vista Rápida 3"
-BINDING_NAME_ATLASTWLOOT_QL4 = "Vista Rápida 4"
-BINDING_NAME_ATLASTWLOOT_QL5 = "Vista Rápida 5"
-BINDING_NAME_ATLASTWLOOT_QL6 = "Vista Rápida 6"
-BINDING_NAME_ATLASTWLOOT_WISHLIST = "Lista de Deseos"
+BINDING_HEADER_AtlasCFM_TITLE = "Atajos de Atlas-CFM"
+BINDING_NAME_AtlasCFM_TOGGLE = "Alternar Atlas-CFM"
+BINDING_NAME_AtlasCFM_OPTIONS = "Alternar Opciones"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Atajos de AtlasCFM Botín"
+BINDING_NAME_AtlasCFMLOOT_QL1 = "Vista Rápida 1"
+BINDING_NAME_AtlasCFMLOOT_QL2 = "Vista Rápida 2"
+BINDING_NAME_AtlasCFMLOOT_QL3 = "Vista Rápida 3"
+BINDING_NAME_AtlasCFMLOOT_QL4 = "Vista Rápida 4"
+BINDING_NAME_AtlasCFMLOOT_QL5 = "Vista Rápida 5"
+BINDING_NAME_AtlasCFMLOOT_QL6 = "Vista Rápida 6"
+BINDING_NAME_AtlasCFMLOOT_WISHLIST = "Lista de Deseos"
 
-AtlasTW = AtlasTW or {}
+AtlasCFM = AtlasCFM or {}
 
 --Default map to auto-select to when no SubZone data is available
-AtlasTW.AssocDefaults = {
+AtlasCFM.AssocDefaults = {
     ["La Masacre"] = "DireMaulNorth",
     ["Cumbre de Roca Negra"] = "BlackrockSpireLower",
     ["Monasterio Escarlata"] = "ScarletMonasteryEnt"
 }
 --Links maps together that are part of the same instance
-AtlasTW.SubZoneAssoc = {
+AtlasCFM.SubZoneAssoc = {
     ["DireMaulNorth"] = "La Masacre",
     ["DireMaulEast"] = "La Masacre",
     ["DireMaulWest"] = "La Masacre",
@@ -54,7 +54,7 @@ AtlasTW.SubZoneAssoc = {
     ["ScarletMonasteryEnt"] = "Monasterio Escarlata"
 }
 --Links SubZone values with specific instance maps
-AtlasTW.SubZoneData = {
+AtlasCFM.SubZoneData = {
     ["Salones de la Destrucción"] = "DireMaulNorth",
     ["Asiento de Gordok"] = "DireMaulNorth",
     ["Barrio de la Madera Corrupta"] = "DireMaulEast",
@@ -93,7 +93,7 @@ AtlasTW.SubZoneData = {
     ["El Gran Vestibulo"] = "ScarletMonasteryEnt"
 }
 --Maps to auto-select to from outdoor zones.
-AtlasTW.OutdoorZoneToAtlas = {
+AtlasCFM.OutdoorZoneToAtlas = {
     ["Vallefresno"] = "BlackfathomDeepsEnt",
     ["Tierras Inhóspitas"] = "UldamanEnt",
     ["Montaña Roca Negra"] = "BlackrockMountainEnt",
@@ -124,7 +124,7 @@ AtlasTW.OutdoorZoneToAtlas = {
 ---
 --- Register Core UI translations
 ---
-AtlasTW.Localization:RegisterNamespace("UI", "esES", {
+AtlasCFM.Localization:RegisterNamespace("UI", "esES", {
     --************************************************
     -- Common UI Strings
     --************************************************
@@ -248,14 +248,15 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     ["Select Category"] = "Seleccionar categoría",
     ["Select Map"] = "Seleccionar mapa",
     ["Select Loot Table"] = "Tabla de botín",
-    ["Show the Quest Panel with AtlasTW"] = "Mostrar el panel de misiones con AtlasTW",
+    ["Show the Quest Panel with AtlasCFM"] = "Mostrar el panel de misiones con AtlasCFM",
     ["Show Quest Panel on the Left"] = "Mostrar el panel de misiones a la izquierda",
     ["Show Quest Panel on the Right"] = "Mostrar el panel de misiones a la derecha",
     ["Color Quests by Level"] = "Colorear las misiones por nivel",
     ["Color Quests from the Questlog"] = "Colorear las misiones del registro de misiones",
     ["Auto-Query Unknown Items"] = "Consultar automáticamente objetos desconocidos",
-    ["Show Loot Panel with AtlasTW"] = "Mostrar panel de botín con AtlasTW",
+    ["Show Loot Panel with AtlasCFM"] = "Mostrar panel de botín con AtlasCFM",
     ["Sort Instance by:"] = "Ordenar instancia por:",
+    ["Server:"] = "Servidor:",
     ["Show Button on Minimap"] = "Mostrar botón en el minimapa",
     ["Auto-Select Instance Map"] = "Mapa de instancia automático",
     ["Transparency"] = "Transparencia",
@@ -303,11 +304,11 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     ["Last Result"] = "Último resul.",
     ["Search options"] = "Opciones de búsqueda",
     ["Partial matching"] = "Coincidencia parcial",
-    ["If checked, AtlasTWLoot searches item names for a partial match."] =
-    "Si está marcado, AtlasTWLoot busca nombres de objetos con coincidencia parcial.",
+    ["If checked, AtlasCFMLoot searches item names for a partial match."] =
+    "Si está marcado, AtlasCFMLoot busca nombres de objetos con coincidencia parcial.",
     ["Predict search"] = "Búsqueda predictiva",
-    ["If checked, AtlasTWLoot predicts search results."] =
-    "Si está marcado, AtlasTWLoot muestra sugerencias mientras escribes.",
+    ["If checked, AtlasCFMLoot predicts search results."] =
+    "Si está marcado, AtlasCFMLoot muestra sugerencias mientras escribes.",
     ["No match found for"] = "No se encontraron coincidencias para",
 
     --************************************************
@@ -328,7 +329,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     ["Charges"] = "Cargas",
 
     --************************************************
-    -- AtlasTW Loot
+    -- AtlasCFM Loot
     --************************************************
     ["Loot Panel"] = "Panel de botín",
     ["Filter: No Filter"] = "Filtro: Sin filtro",
@@ -360,8 +361,8 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     ["Show IDs in Tooltips"] = "Mostrar IDs en descripciones emergentes",
     ["Show Icon in Tooltips"] = "Mostrar icono en descripciones emergentes",
     ["Show Source on Tooltips"] = "Mostrar origen en descripciones",
-    ["Welcome to Atlas-TW Edition. Please take a moment to set your preferences."] =
-    "Bienvenido a Atlas-TW Edition. Por favor, tome un momento para configurar sus preferencias.",
+    ["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."] =
+    "Bienvenido a Atlas-CFM Edition. Por favor, tome un momento para configurar sus preferencias.",
 
     --************************************************
     -- Version & Updates
@@ -389,8 +390,8 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     --************************************************
     -- Minimap Tooltip
     --************************************************
-    ["Left-click to open Atlas-TW.\nMiddle-click for Atlas-TW options.\nRight-click and drag to move this button."] =
-    "Clic izquierdo para abrir Atlas-TW.\nClic medio para opciones de Atlas-TW.\nClic derecho y arrastrar para mover este botón.",
+    ["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."] =
+    "Clic izquierdo para abrir Atlas-CFM.\nClic medio para opciones de Atlas-CFM.\nClic derecho y arrastrar para mover este botón.",
 
     --************************************************
     -- Instance Locations
@@ -514,7 +515,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "esES", {
     ["World Blues"] = "Azules del mundo",
     ["Keys"] = "Llaves",
     ["Level One Lunatic Challenge"] = "Desafío del lunático de nivel uno",
-    ["Honor: "] = "Honor: ", --1.18.1
+    ["Honor: "] = "Honor: ",                         --1.18.1
     ["Conquest Points: "] = "Puntos de Conquista: ", --1.18.1
 
     --************************************************

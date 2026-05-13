@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Bosses", "ptBR", {
+AtlasCFM.Localization:RegisterNamespace("Bosses", "ptBR", {
     ["Broodcommander Axelus"] = "Comandante da Ninhada Axelus",
     ["Ezzel Darkbrewer"] = "Ezzel, o Cervejeiro Sombrio",
     ["High Speaker Jam'wahli"] = "Alto Orador Jam'wahli", -- TODO
@@ -154,6 +154,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "ptBR", {
     ["Sapphiron"] = "Sapphiron",
     ["Kel'Thuzad"] = "Kel'Thuzad",
     ["Nefarian"] = "Nefarian",
+    ["Elementium Decapitator MK III"] = "Decapitador de Elementium MK III", -- VP
     ["Vaelastrasz the Corrupt"] = "Vaelastrasz, o Corrupto",
     ["Razorgore the Untamed"] = "Violâminus, o Indomado",
     ["Broodlord Lashlayer"] = "Prolemestre Flagelador",
@@ -183,6 +184,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "ptBR", {
     ["Ostarius"] = "Ostarius",
     ["Cla'ckora"] = "Cla'ckora",
     ["Lord Kazzak"] = "Lorde Kazzak",
+    ["King Mosh"] = "Rei Mosh",                        --VP
+    ["Teremus the Devourer"] = "Teremus, o Devorador", --VP
     ["Ysondre"] = "Ysondra",
     ["Emeriss"] = "Emeriss",
     ["Taerar"] = "Taerar",
@@ -200,6 +203,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "ptBR", {
     ["Renataki"] = "Renataki",
     ["Wushoolay"] = "Vuxulai",
     ["Hakkar"] = "Hakkar",
+    ["Azus the Bloodseeker"] = "Azus o Buscador de Sangue", --VP
+    ["Nameless Hermit"] = "Ermitaño sin nombre",            --VP
     ["Ayamiss the Hunter"] = "Ayamiss, o Caçador",
     ["Buru the Gorger"] = "Buru, o Banqueteador",
     ["General Rajaxx"] = "General Rajaxx",
@@ -328,6 +333,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "ptBR", {
     ["Razorclaw the Butcher"] = "Garraguda, o Açougueiro",
     ["Wolf Master Nandos"] = "Nandos, o Mestre de Lobos",
     ["Kurinnaxx"] = "Korinnaxx",
+    ["Lady Hederine"] = "Senhora Hederine",
     ["Oggleflint"] = "Pederneiro",
     ["Taragaman the Hungerer"] = "Taragaman, o Famélico",
     ["Jergosh the Invoker"] = "Jergosh, o Invocador",

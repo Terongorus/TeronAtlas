@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("MapData", "enUS", {
+AtlasCFM.Localization:RegisterNamespace("MapData", "enUS", {
     --************************************************
     -- Instance Specific Data
     --************************************************
@@ -64,11 +64,11 @@ AtlasTW.Localization:RegisterNamespace("MapData", "enUS", {
     ["Barkskin Fisher"] = true,
     ["Crusader Larsarius"] = true,
     ["Shadeflayer Goliath"] = true,
-    ["Warbark"] = true, -- 1.18.1 TODO
-    ["Krybee"] = true, -- 1.18.1 TODO
-    ["Larnaea"] = true, -- 1.18.1 TODO
-    ["Glurgill"] = true, -- 1.18.1 TODO
-    ["Thundertusk"] = true, -- 1.18.1 TODO
+    ["Warbark"] = true,           -- 1.18.1 TODO
+    ["Krybee"] = true,            -- 1.18.1 TODO
+    ["Larnaea"] = true,           -- 1.18.1 TODO
+    ["Glurgill"] = true,          -- 1.18.1 TODO
+    ["Thundertusk"] = true,       -- 1.18.1 TODO
     ["Larexxa Foulheart"] = true, -- 1.18.1 TODO
     ["Tablet of Kaz'gan"] = true, -- 1.18.1 TODO
     --Blackfathom Deeps
@@ -328,6 +328,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "enUS", {
     ["Nalpak"] = true,
     ["Kalldan Felmoon"] = true,
     ["Waldor"] = true,
+    ["Mysterious Wailing Cavern Chest"] = true,
     --Dire Maul (Entrance)
     ["Dire Pool"] = true,
     ["Dire Maul Arena"] = true,
@@ -588,7 +589,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "enUS", {
     ["Chest of Dathronag"] = true,
     ["Lower Reserve Key"] = true,
     ["Moonhoof Village"] = true, --1.18.1 TODO
-    ["Narvalis Point"] = true, --1.18.1 TODO
+    ["Narvalis Point"] = true,   --1.18.1 TODO
     ["Shimmerstar Lake"] = true, --1.18.1 TODO
     --Timbermaw Hold
     ["Rune of Illumination"] = true,

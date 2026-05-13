@@ -7,37 +7,37 @@
 ---
 
 -- Zone name substitutions (for display purposes)
-AtlasTWSortIgnore = { "the (.+)" }
+AtlasCFMSortIgnore = { "the (.+)" }
 
-AtlasTWZoneSubstitutions = {
+AtlasCFMZoneSubstitutions = {
     ["The Temple of Atal'Hakkar"] = "Sunken Temple"
 }
 
 ---
---- Key binding definitions for Atlas-TW addon
+--- Key binding definitions for Atlas-CFM addon
 ---
-BINDING_HEADER_ATLASTW_TITLE = "Atlas-TW Bindings"
-BINDING_NAME_ATLASTW_TOGGLE = "Toggle Atlas-TW"
-BINDING_NAME_ATLASTW_OPTIONS = "Toggle Options"
-BINDING_HEADER_ATLASTWLOOT_TITLE = "AtlasTW Loot Bindings"
-BINDING_NAME_ATLASTWLOOT_QL1 = "QuickLook 1"
-BINDING_NAME_ATLASTWLOOT_QL2 = "QuickLook 2"
-BINDING_NAME_ATLASTWLOOT_QL3 = "QuickLook 3"
-BINDING_NAME_ATLASTWLOOT_QL4 = "QuickLook 4"
-BINDING_NAME_ATLASTWLOOT_QL5 = "QuickLook 5"
-BINDING_NAME_ATLASTWLOOT_QL6 = "QuickLook 6"
-BINDING_NAME_ATLASTWLOOT_WISHLIST = "WishList"
+BINDING_HEADER_AtlasCFM_TITLE = "Atlas-CFM Bindings"
+BINDING_NAME_AtlasCFM_TOGGLE = "Toggle Atlas-CFM"
+BINDING_NAME_AtlasCFM_OPTIONS = "Toggle Options"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Atlas-CFM Loot Bindings"
+BINDING_NAME_AtlasCFMLOOT_QL1 = "QuickLook 1"
+BINDING_NAME_AtlasCFMLOOT_QL2 = "QuickLook 2"
+BINDING_NAME_AtlasCFMLOOT_QL3 = "QuickLook 3"
+BINDING_NAME_AtlasCFMLOOT_QL4 = "QuickLook 4"
+BINDING_NAME_AtlasCFMLOOT_QL5 = "QuickLook 5"
+BINDING_NAME_AtlasCFMLOOT_QL6 = "QuickLook 6"
+BINDING_NAME_AtlasCFMLOOT_WISHLIST = "WishList"
 
-AtlasTW = AtlasTW or {}
+AtlasCFM = AtlasCFM or {}
 
 --Default map to auto-select to when no SubZone data is available
-AtlasTW.AssocDefaults = {
+AtlasCFM.AssocDefaults = {
     ["Dire Maul"] = "DireMaulNorth",
     ["Blackrock Spire"] = "BlackrockSpireLower",
     ["Scarlet Monastery"] = "ScarletMonasteryEnt"
 }
 --Links maps together that are part of the same instance
-AtlasTW.SubZoneAssoc = {
+AtlasCFM.SubZoneAssoc = {
     ["DireMaulNorth"] = "Dire Maul",
     ["DireMaulEast"] = "Dire Maul",
     ["DireMaulWest"] = "Dire Maul",
@@ -52,7 +52,7 @@ AtlasTW.SubZoneAssoc = {
     ["ScarletMonasteryEnt"] = "Scarlet Monastery"
 }
 --Links SubZone values with specific instance maps
-AtlasTW.SubZoneData = {
+AtlasCFM.SubZoneData = {
     ["Halls of Destruction"] = "DireMaulNorth",
     ["Gordok's Seat"] = "DireMaulNorth",
     ["Warpwood Quarter"] = "DireMaulEast",
@@ -91,7 +91,7 @@ AtlasTW.SubZoneData = {
     ["The Grand Vestibule"] = "ScarletMonasteryEnt"
 }
 --Maps to auto-select to from outdoor zones.
-AtlasTW.OutdoorZoneToAtlas = {
+AtlasCFM.OutdoorZoneToAtlas = {
     ["Ashenvale"] = "BlackfathomDeepsEnt",
     ["Badlands"] = "UldamanEnt",
     ["Blackrock Mountain"] = "BlackrockMountainEnt",
@@ -122,7 +122,7 @@ AtlasTW.OutdoorZoneToAtlas = {
 ---
 --- Register Core UI translations
 ---
-AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
+AtlasCFM.Localization:RegisterNamespace("UI", "enUS", {
     --************************************************
     -- Common UI Strings
     --************************************************
@@ -246,14 +246,15 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["Select Category"] = true,
     ["Select Map"] = true,
     ["Select Loot Table"] = true,
-    ["Show the Quest Panel with AtlasTW"] = true,
+    ["Show the Quest Panel with AtlasCFM"] = true,
     ["Show Quest Panel on the Left"] = true,
     ["Show Quest Panel on the Right"] = true,
     ["Color Quests by Level"] = true,
     ["Color Quests from the Questlog"] = true,
     ["Auto-Query Unknown Items"] = true,
-    ["Show Loot Panel with AtlasTW"] = true,
+    ["Show Loot Panel with AtlasCFM"] = true,
     ["Sort Instance by:"] = true,
+    ["Server:"] = true,
     ["Show Button on Minimap"] = true,
     ["Auto-Select Instance Map"] = true,
     ["Transparency"] = true,
@@ -266,7 +267,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["pfUI styling enabled. Type /reload to apply changes."] = true,
     ["pfUI styling disabled. Type /reload to apply changes."] = true,
     ["Scale"] = true,
-    ["Welcome to Atlas-TW Edition. Please take a moment to set your preferences."] = true,
+    ["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."] = true,
 
     --************************************************
     -- Quest Related
@@ -300,9 +301,9 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["Last Result"] = true,
     ["Search options"] = true,
     ["Partial matching"] = true,
-    ["If checked, AtlasTWLoot searches item names for a partial match."] = true,
+    ["If checked, AtlasCFMLoot searches item names for a partial match."] = true,
     ["Predict search"] = true,
-    ["If checked, AtlasTWLoot predicts search results."] = true,
+    ["If checked, AtlasCFMLoot predicts search results."] = true,
     ["No match found for"] = true,
 
     --************************************************
@@ -323,7 +324,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["Charges"] = true,
 
     --************************************************
-    -- AtlasTW Loot
+    -- AtlasCFM Loot
     --************************************************
     ["Loot Panel"] = true,
     ["Filter: No Filter"] = "Filter: No Filter",
@@ -364,8 +365,8 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["NewVersionAvailableFmt"] = "|cffff0000New version available!|r |cff00ff00Download here:|r %s",
     [" |cffA52A2Aloaded."] = true,
     ["NoticeText"] = "If you find anything missing, please report it at:|r",
-    ["NoticeLink"] = "https://github.com/byCFM2/Atlas-TW/issues/|r",
-    ["Link"] = "https://github.com/byCFM2/Atlas-TW/|r",
+    ["NoticeLink"] = "https://github.com/byCFM2/Atlas-CFM/issues/|r",
+    ["Link"] = "https://github.com/byCFM2/Atlas-CFM/|r",
 
     --************************************************
     -- Categories & Menus
@@ -383,7 +384,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     --************************************************
     -- Minimap Tooltip
     --************************************************
-    ["Left-click to open Atlas-TW.\nMiddle-click for Atlas-TW options.\nRight-click and drag to move this button."] = true,
+    ["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."] = true,
 
     --************************************************
     -- Instance Locations
@@ -506,7 +507,7 @@ AtlasTW.Localization:RegisterNamespace("UI", "enUS", {
     ["World Blues"] = true,
     ["Keys"] = true,
     ["Level One Lunatic Challenge"] = true,
-    ["Honor: "] = true, --1.18.1
+    ["Honor: "] = true,           --1.18.1
     ["Conquest Points: "] = true, --1.18.1
     --************************************************
     -- Events & Holidays

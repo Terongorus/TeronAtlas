@@ -6,10 +6,12 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Factions", "enUS", {
+AtlasCFM.Localization:RegisterNamespace("Factions", "enUS", {
     -- Player Factions
     ["Alliance"] = true,
     ["Horde"] = true,
+    ["Firebird Corps"] = true,
+    ["Operation Rattlesnake"] = true,
 
     -- Classic Factions
     ["Argent Dawn"] = true,
@@ -40,7 +42,7 @@ AtlasTW.Localization:RegisterNamespace("Factions", "enUS", {
     ["Durotar Labor Union"] = true,
     ["Wardens of Time"] = true,
     ["Shen'dralar"] = true,
-    ["Earthen Ring"] = true, --1.18.1
+    ["Earthen Ring"] = true,   --1.18.1
     ["Draenei Exiles"] = true, --1.18.1
 
     -- Rep Levels

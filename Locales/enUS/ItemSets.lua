@@ -6,10 +6,9 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("ItemSets", "enUS", {
+AtlasCFM.Localization:RegisterNamespace("ItemSets", "enUS", {
     --1.18.1
     ["Sacred Windhorn Attire"] = true,
-    ["Surrender to Madness"] = true,
     -- 1.18
     ["Stormreaver Attire"] = true,
     ["Dragonmaw Battlegarb"] = true,

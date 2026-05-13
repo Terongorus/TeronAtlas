@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("MapData", "ptBR", {
+AtlasCFM.Localization:RegisterNamespace("MapData", "ptBR", {
     -- Instance Specific Data - Razorfen Kraul
     ["Razorfen Spearhide"] = "Couriço do Urzal",
     ["Willix the Importer"] = "Importador Willix",
@@ -62,11 +62,11 @@ AtlasTW.Localization:RegisterNamespace("MapData", "ptBR", {
     ["Barkskin Fisher"] = "Pescador Cascadárvore",
     ["Crusader Larsarius"] = "Cruzado Larsário",
     ["Shadeflayer Goliath"] = "Golias Esfolassombra",
-    ["Warbark"] = "Casca de Guerra", -- 1.18.1 TODO
-    ["Krybee"] = "Krybee", -- 1.18.1 TODO
-    ["Larnaea"] = "Larnaea", -- 1.18.1 TODO
-    ["Glurgill"] = "Glurgill", -- 1.18.1 TODO
-    ["Thundertusk"] = "Presa Trovão", -- 1.18.1 TODO
+    ["Warbark"] = "Casca de Guerra",                 -- 1.18.1 TODO
+    ["Krybee"] = "Krybee",                           -- 1.18.1 TODO
+    ["Larnaea"] = "Larnaea",                         -- 1.18.1 TODO
+    ["Glurgill"] = "Glurgill",                       -- 1.18.1 TODO
+    ["Thundertusk"] = "Presa Trovão",                -- 1.18.1 TODO
     ["Larexxa Foulheart"] = "Larexxa Coração Podre", -- 1.18.1 TODO
     -- Blackfathom Deeps
     ["Lorgalis Manuscript"] = "Manuscrito de Lorgalis",
@@ -351,6 +351,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "ptBR", {
     ["Nalpak"] = "Nalpak",
     ["Kalldan Felmoon"] = "Kalldan Luavil",
     ["Waldor"] = "Waldor",
+    ["Mysterious Wailing Cavern Chest"] = "Caverna Lamentosa Caixa Misteriosa",
 
     -- Dire Maul (Entrance)
     ["Dire Pool"] = "Piscina Terrível",
@@ -610,10 +611,10 @@ AtlasTW.Localization:RegisterNamespace("MapData", "ptBR", {
     ["Kalanar's Strongbox"] = "Caixa Forte de Kalanar",
     ["Chest of Dathronag"] = "Truhe von Dathronag",
     ["Lower Reserve Key"] = "Chave Inferior de Reserva",
-    ["Moonhoof Village"] = "Aldeia Pezuñalunar", --1.18.1 TODO
-    ["Narvalis Point"] = "Ponto Narvalis", --1.18.1 TODO
-    ["Shimmerstar Lake"] = "Lago Resplandestelar", --1.18.1 TODO
-    ["Tablet of Kaz'gan"] = "Tablete de Kaz'gan", -- 1.18.1 TODO
+    ["Moonhoof Village"] = "Aldeia Pezuñalunar",      --1.18.1 TODO
+    ["Narvalis Point"] = "Ponto Narvalis",            --1.18.1 TODO
+    ["Shimmerstar Lake"] = "Lago Resplandestelar",    --1.18.1 TODO
+    ["Tablet of Kaz'gan"] = "Tablete de Kaz'gan",     -- 1.18.1 TODO
     --Timbermaw Hold
     ["Rune of Illumination"] = "Runas de Iluminação", -- 1.18.1 TODO
 })

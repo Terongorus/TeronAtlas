@@ -1,12 +1,1 @@
-*DONT_USE*
-DONT_USE*
-
-.mailmap
-.agent/
-.qoder/
-nampower/
-pfQuest/
-pfQuest-turtle/
-pfUI/
-ShaguTweaks/
-ShaguTweaks-extras/
+*.py

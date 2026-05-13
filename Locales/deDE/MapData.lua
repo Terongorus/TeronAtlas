@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("MapData", "deDE", {
+AtlasCFM.Localization:RegisterNamespace("MapData", "deDE", {
     --************************************************
     -- Instance Specific Data
     --************************************************
@@ -64,12 +64,12 @@ AtlasTW.Localization:RegisterNamespace("MapData", "deDE", {
     ["Barkskin Fisher"] = "Borkenhautfischer",
     ["Crusader Larsarius"] = "Kreuzfahrer Larsarius",
     ["Shadeflayer Goliath"] = "Schattenschlitzer Goliath",
-    ["Warbark"] = "Kriegsrinde", -- 1.18.1 TODO
-    ["Krybee"] = "Krybee", -- 1.18.1 TODO
-    ["Larnaea"] = "Larnaea", -- 1.18.1 TODO
-    ["Glurgill"] = "Glurgill", -- 1.18.1 TODO
-    ["Thundertusk"] = "Donnerzahn", -- 1.18.1 TODO
-    ["Larexxa Foulheart"] = "Larexxa Faulherz", -- 1.18.1 TODO
+    ["Warbark"] = "Kriegsrinde",                 -- 1.18.1 TODO
+    ["Krybee"] = "Krybee",                       -- 1.18.1 TODO
+    ["Larnaea"] = "Larnaea",                     -- 1.18.1 TODO
+    ["Glurgill"] = "Glurgill",                   -- 1.18.1 TODO
+    ["Thundertusk"] = "Donnerzahn",              -- 1.18.1 TODO
+    ["Larexxa Foulheart"] = "Larexxa Faulherz",  -- 1.18.1 TODO
     ["Tablet of Kaz'gan"] = "Tafel von Kaz'gan", -- 1.18.1 TODO
     --Blackfathom Deeps
     ["Lorgalis Manuscript"] = "Manuskript von Lorgalis",
@@ -326,6 +326,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "deDE", {
     ["Nalpak"] = "Nalpak",
     ["Kalldan Felmoon"] = "Kalldan Teufelsmond",
     ["Waldor"] = "Waldor",
+    ["Mysterious Wailing Cavern Chest"] = "Mysteriöse Höhlenkiste der Heulende Höhlen",
     --Dire Maul (Entrance)
     ["Dire Pool"] = "Düsterteich",
     ["Dire Maul Arena"] = "Düsterbrucharena",
@@ -586,9 +587,9 @@ AtlasTW.Localization:RegisterNamespace("MapData", "deDE", {
     ["Kalanar's Strongbox"] = "Kalanar'ser Feste",
     ["Chest of Dathronag"] = "Truhe von Dathronag",
     ["Lower Reserve Key"] = "Unterer Reserveschlüssel",
-    ["Moonhoof Village"] = "Mondhufdorf", --1.18.1 TODO
-    ["Narvalis Point"] = "Narvalis-Außenposten", --1.18.1 TODO
-    ["Shimmerstar Lake"] = "Schimmersternsee", --1.18.1 TODO
+    ["Moonhoof Village"] = "Mondhufdorf",               --1.18.1 TODO
+    ["Narvalis Point"] = "Narvalis-Außenposten",        --1.18.1 TODO
+    ["Shimmerstar Lake"] = "Schimmersternsee",          --1.18.1 TODO
     --Timbermaw Hold
     ["Rune of Illumination"] = "Runen der Erleuchtung", --1.18.1 TODO
 })

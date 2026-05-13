@@ -5,7 +5,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("MapData", "esES", {
+AtlasCFM.Localization:RegisterNamespace("MapData", "esES", {
     ["Back"] = "Atrás",
     ["Blacksmithing Plans"] = "Planos de Herrería",
     ["Brazier of Invocation"] = "Brasero de Invocación",
@@ -327,6 +327,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "esES", {
     ["Nalpak"] = "Nalpak",
     ["Kalldan Felmoon"] = "Kalldan Lunavil",
     ["Waldor"] = "Waldor",
+    ["Mysterious Wailing Cavern Chest"] = "Cofre misterioso de la Caverna Lamentosa",
     ["Dire Pool"] = "Estanque Siniestro",
     ["Dire Maul Arena"] = "Arena de La Masacre",
     ["Mushgog"] = "Mushgog",
@@ -515,16 +516,16 @@ AtlasTW.Localization:RegisterNamespace("MapData", "esES", {
     ["South of the path along Lake Elune'ara"] = "Al sur del sendero junto al Lago Elune'ara",
     [" Arena"] = " Arena",
     [" (Chess fight)"] = " (Batalla de ajedrez)",
-    ["Warbark"] = "Corteza de Guerra", -- 1.18.1 TODO
-    ["Krybee"] = "Krybee", -- 1.18.1 TODO
-    ["Larnaea"] = "Larnaea", -- 1.18.1 TODO
-    ["Glurgill"] = "Glurgill", -- 1.18.1 TODO
-    ["Thundertusk"] = "Colmillo de Trueno", -- 1.18.1 TODO
+    ["Warbark"] = "Corteza de Guerra",                 -- 1.18.1 TODO
+    ["Krybee"] = "Krybee",                             -- 1.18.1 TODO
+    ["Larnaea"] = "Larnaea",                           -- 1.18.1 TODO
+    ["Glurgill"] = "Glurgill",                         -- 1.18.1 TODO
+    ["Thundertusk"] = "Colmillo de Trueno",            -- 1.18.1 TODO
     ["Larexxa Foulheart"] = "Larexxa Corazón Podrido", -- 1.18.1 TODO
-    ["Moonhoof Village"] = "Aldea Pezuñalunar", --1.18.1
-    ["Narvalis Point"] = "Punto Narvalis", --1.18.1
-    ["Shimmerstar Lake"] = "Lago Resplandestelar", --1.18.1
-    ["Tablet of Kaz'gan"] = "Tableta de Kaz'gan", -- 1.18.1 TODO
+    ["Moonhoof Village"] = "Aldea Pezuñalunar",        --1.18.1
+    ["Narvalis Point"] = "Punto Narvalis",             --1.18.1
+    ["Shimmerstar Lake"] = "Lago Resplandestelar",     --1.18.1
+    ["Tablet of Kaz'gan"] = "Tableta de Kaz'gan",      -- 1.18.1 TODO
     --Timbermaw Hold
     ["Rune of Illumination"] = "Runas de Iluminación", -- 1.18.1 TODO
 })

@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Bosses", "zhCN", {
+AtlasCFM.Localization:RegisterNamespace("Bosses", "zhCN", {
     ["Broodcommander Axelus"] = "巢群指挥官阿克塞勒斯",
     ["Ezzel Darkbrewer"] = "埃泽尔·暗酿",
     ["High Speaker Jam'wahli"] = "高阶代言者 贾姆瓦利", -- TODO
@@ -154,6 +154,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "zhCN", {
     ["Sapphiron"] = "萨菲隆",
     ["Kel'Thuzad"] = "克尔苏加德",
     ["Nefarian"] = "奈法利安",
+    ["Elementium Decapitator MK III"] = "第3型元素核心重击者", -- VP
     ["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
     ["Razorgore the Untamed"] = "狂野的拉佐格尔",
     ["Broodlord Lashlayer"] = "勒什雷尔",
@@ -183,6 +184,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "zhCN", {
     ["Ostarius"] = "奥兹塔里亚斯",
     ["Cla'ckora"] = "克拉科拉",
     ["Lord Kazzak"] = "卡扎克",
+    ["King Mosh"] = "摩什领主", --VP
+    ["Teremus the Devourer"] = "特雷姆斯·吞噬者", --VP
     ["Ysondre"] = "伊森德雷",
     ["Emeriss"] = "艾莫莉丝",
     ["Taerar"] = "泰拉尔",
@@ -200,6 +203,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "zhCN", {
     ["Renataki"] = "雷纳塔基",
     ["Wushoolay"] = "乌苏雷",
     ["Hakkar"] = "哈卡",
+    ["Azus the Bloodseeker"] = "血腥搜寻者阿祖斯", --VP
+    ["Nameless Hermit"] = "无名隐士", --VP
     ["Ayamiss the Hunter"] = "狩猎者阿亚米斯",
     ["Buru the Gorger"] = "吞咽者布鲁",
     ["General Rajaxx"] = "拉贾克斯将军",
@@ -328,6 +333,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "zhCN", {
     ["Razorclaw the Butcher"] = "屠夫拉佐克劳",
     ["Wolf Master Nandos"] = "狼王南杜斯",
     ["Kurinnaxx"] = "库林纳克斯",
+    ["Lady Hederine"] = "塞拉摩·风歌",
     ["Oggleflint"] = "奥格弗林特",
     ["Taragaman the Hungerer"] = "饥饿者塔拉加曼",
     ["Jergosh the Invoker"] = "祈求者耶戈什",

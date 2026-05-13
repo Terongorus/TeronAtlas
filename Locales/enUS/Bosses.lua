@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
+AtlasCFM.Localization:RegisterNamespace("Bosses", "enUS", {
     --************************************************
     -- TW 1.18.1 Additions TODO
     --************************************************
@@ -27,22 +27,22 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     ["Ursol"] = true,
     ["Peroth'arn"] = true,
     --frostmane hollow
-    ["Handler Oboka"] = true, --1*
-    ["Tan'sha The Sleek"] = true, --1
-    ["Battlemaster Ubukaz"] = true, --2
-    ["Kan'za The Seer"] = true, --3
-    ["Hailar The Frigid"] = true, --4
-    ["Ranix Crackbolt"] = true, --1'
-    ["Archaeologist Evenpike"] = true, --2'
+    ["Handler Oboka"] = true,             --1*
+    ["Tan'sha The Sleek"] = true,         --1
+    ["Battlemaster Ubukaz"] = true,       --2
+    ["Kan'za The Seer"] = true,           --3
+    ["Hailar The Frigid"] = true,         --4
+    ["Ranix Crackbolt"] = true,           --1'
+    ["Archaeologist Evenpike"] = true,    --2'
     --windhorn canyon
-    ["Pathun Duskhide"] = true, --1
-    ["Ahgk'tos the Pure"] = true, --2
-    ["Ambassador Vortalus"] = true, -- 3
-    ["Walgan Bloodcaller"] = true, -- 4
-    ["Bonespeaker Narlgom"] = true, -- 5
-    ["Spirit of Champion Rotag"] = true, -- 5'
-    ["Prophet Stormhoof"] = true, -- 6
-    ["Grand Elder Skystrider"] = true, --1'
+    ["Pathun Duskhide"] = true,           --1
+    ["Ahgk'tos the Pure"] = true,         --2
+    ["Ambassador Vortalus"] = true,       -- 3
+    ["Walgan Bloodcaller"] = true,        -- 4
+    ["Bonespeaker Narlgom"] = true,       -- 5
+    ["Spirit of Champion Rotag"] = true,  -- 5'
+    ["Prophet Stormhoof"] = true,         -- 6
+    ["Grand Elder Skystrider"] = true,    --1'
     ["Chieftain Shalk Blackwind"] = true, --7
     --************************************************
     -- TW 1.18 Additions
@@ -182,6 +182,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     ["Azuregos"] = true,
     ["Spirit of Azuregos"] = true,
     ["Lord Kazzak"] = true,
+    ["King Mosh"] = true,            --VP
+    ["Teremus the Devourer"] = true, --VP
     ["Ysondre"] = true,
     ["Emeriss"] = true,
     ["Taerar"] = true,
@@ -214,6 +216,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     -- Blackwing Lair
     --************************************************
     ["Nefarian"] = true,
+    ["Elementium Decapitator MK III"] = true, -- VP
     ["Vaelastrasz the Corrupt"] = true,
     ["Razorgore the Untamed"] = true,
     ["Broodlord Lashlayer"] = true,
@@ -269,6 +272,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     ["Renataki"] = true,
     ["Wushoolay"] = true,
     ["Hakkar"] = true,
+    ["Azus the Bloodseeker"] = true, --VP
+    ["Nameless Hermit"] = true,      --VP
 
     --************************************************
     -- Ruins of Ahn'Qiraj
@@ -281,6 +286,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     ["Ossirian the Unscarred"] = true,
     ["Kurinnaxx"] = true,
 
+    ["Lady Hederine"] = true,
     --************************************************
     -- Temple of Ahn'Qiraj
     --************************************************
@@ -829,19 +835,19 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "enUS", {
     ["Mayva Togview"] = true,
     -- Survival (TW custom)
     ["Rufus Hardwick"] = true,
-    ["Hellador Swiftluck"] = true, --1.18.1
-    ["Krennan Wildberry"] = true, --1.18.1
-    ["Karolina Cloven"] = true, --1.18.1
-    ["Nallaeth"] = true, --1.18.1
+    ["Hellador Swiftluck"] = true,    --1.18.1
+    ["Krennan Wildberry"] = true,     --1.18.1
+    ["Karolina Cloven"] = true,       --1.18.1
+    ["Nallaeth"] = true,              --1.18.1
     ["Dyrohrinn Boulderhorn"] = true, --1.18.1
-    ["Eissinn Cragbelly"] = true, --1.18.1
-    ["Brakan"] = true, --1.18.1
-    ["Cynthessa Grimblood"] = true, --1.18.1
-    ["Thonk"] = true, --1.18.1
-    ["Nasnan Hillcreek"] = true, --1.18.1
-    ["Feebeld"] = true, --1.18.1
-    ["Nerean Stagtree"] = true, --1.18.1
-    ["Swampwalker Krug"] = true, --1.18.1
+    ["Eissinn Cragbelly"] = true,     --1.18.1
+    ["Brakan"] = true,                --1.18.1
+    ["Cynthessa Grimblood"] = true,   --1.18.1
+    ["Thonk"] = true,                 --1.18.1
+    ["Nasnan Hillcreek"] = true,      --1.18.1
+    ["Feebeld"] = true,               --1.18.1
+    ["Nerean Stagtree"] = true,       --1.18.1
+    ["Swampwalker Krug"] = true,      --1.18.1
     -- Poisons (Rogue)
     ["Master Mathias Shaw"] = true,
     ["Shenthul"] = true,

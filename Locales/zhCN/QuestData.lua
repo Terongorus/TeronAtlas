@@ -1,9 +1,9 @@
 ---
 --- QuestData_enUS.lua - Atlas quest data definitions for English localization
 ---
---- This file contains all quest data definitions for Atlas-TW in English.
+--- This file contains all quest data definitions for Atlas-CFM in English.
 --- It includes quest 信息, rewards, locations, and requirements
---- for all instances and zones supported by Atlas-TW.
+--- for all instances and zones supported by Atlas-CFM.
 ---
 --- Features:
 --- - Complete quest database for all instances
@@ -16,18 +16,18 @@
 ---
 
 local _G = getfenv()
-AtlasTW = _G.AtlasTW
+AtlasCFM = _G.AtlasCFM
 
 if GetLocale() ~= "zhCN" then return end
 
 ---------------
 --- COLOURS ---
 ---------------
-local red = AtlasTW.Colors.RED
-local white = AtlasTW.Colors.WHITE
-local green = AtlasTW.Colors.GREEN2
-local blue = AtlasTW.Colors.BLUE
-local yellow = AtlasTW.Colors.YELLOW2
+local red = AtlasCFM.Colors.RED
+local white = AtlasCFM.Colors.WHITE
+local green = AtlasCFM.Colors.GREEN2
+local blue = AtlasCFM.Colors.BLUE
+local yellow = AtlasCFM.Colors.YELLOW2
 
 ----------------------------------------------
 ------------- Quest Instance Data ------------
@@ -50,7 +50,8 @@ end
 
 --------------- The Deadmines ---------------
 kQuestInstanceData.TheDeadmines = {
-    Story = "死亡矿井曾是人类王国中最伟大的黄金生产中心，但在第一次战争中部落洗劫暴风城后便被废弃了。如今迪菲亚兄弟会占据了这里，将黑暗的隧道变成了他们的私人圣所。据传这些盗贼征募了狡猾的地精，帮助他们在矿井深处建造某种可怕的东西——但究竟是什么仍不得而知。传言进入死亡矿井的道路要经过那个宁静而不起眼的村庄——月溪镇。",
+    Story =
+    "死亡矿井曾是人类王国中最伟大的黄金生产中心，但在第一次战争中部落洗劫暴风城后便被废弃了。如今迪菲亚兄弟会占据了这里，将黑暗的隧道变成了他们的私人圣所。据传这些盗贼征募了狡猾的地精，帮助他们在矿井深处建造某种可怕的东西——但究竟是什么仍不得而知。传言进入死亡矿井的道路要经过那个宁静而不起眼的村庄——月溪镇。",
     Caption = "死亡矿井",
     Alliance = {},
     Horde = {}
@@ -105,7 +106,8 @@ kQuestInstanceData.TheDeadmines.Alliance[4] = {
     Attain = 15,
     Aim = "从死亡矿井中带回小型高能发动机，将其带给暴风城矮人区中的沉默的舒尼。",
     Location = "肖尼沉默者 (暴风城 - 矮人区 " .. yellow .. "55,12" .. white .. ")",
-    Note = "前置任务可以从 诺恩 (丹莫罗 - 诺莫瑞根复兴城 " .. yellow .. "24.5,30.4" .. white .. ") 处获得。\n斯尼德的伐木机掉落 小型高能发动机 " .. yellow .. "[3]" .. white .. "。",
+    Note = "前置任务可以从 诺恩 (丹莫罗 - 诺莫瑞根复兴城 " ..
+        yellow .. "24.5,30.4" .. white .. ") 处获得。\n斯尼德的伐木机掉落 小型高能发动机 " .. yellow .. "[3]" .. white .. "。",
     Prequest = "沉默的舒尼",
     Rewards = {
         Text = "奖励：任选其一",
@@ -120,7 +122,8 @@ kQuestInstanceData.TheDeadmines.Alliance[5] = {
     Attain = 14,
     Aim = "格里安·斯托曼要求你去和湖畔镇的威利谈一谈。",
     Location = "格里安·斯托曼 (西部荒野 - 哨兵岭 " .. yellow .. "56,47" .. white .. ")",
-    Note = "你从这里开始这个任务线 格里安·斯托曼 (西部荒野 - 哨兵岭 " .. yellow .. "56,47" .. white .. ").\n埃德温·范克里夫是死亡矿井的最终老板。你可以在他的船顶找到他" .. yellow .. "[6]" .. white .. ".",
+    Note = "你从这里开始这个任务线 格里安·斯托曼 (西部荒野 - 哨兵岭 " ..
+        yellow .. "56,47" .. white .. ").\n埃德温·范克里夫是死亡矿井的最终老板。你可以在他的船顶找到他" .. yellow .. "[6]" .. white .. ".",
     Prequest = "迪菲亚兄弟会",
     Rewards = {
         Text = "奖励：任选其一",
@@ -157,6 +160,7 @@ kQuestInstanceData.TheDeadmines.Alliance[7] = {
 
 }
 kQuestInstanceData.TheDeadmines.Alliance[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "葛瑞森船长的复仇",
     Id = 40396,
     Level = 22,
@@ -171,13 +175,19 @@ kQuestInstanceData.TheDeadmines.Alliance[8] = {
     }
 }
 kQuestInstanceData.TheDeadmines.Alliance[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "收获傀儡之谜之一",
     Id = 40478,
     Level = 19,
     Attain = 15,
     Aim = "冒险进入死亡矿井并杀死收割者-最后杰作，完成后回到西部荒野加特赛德地块的马尔蒂莫·加特赛德身边。",
     Location = "马尔蒂莫·加特赛德 (西部荒野 - 北 from 金海岸矿洞 " .. yellow .. "31.3,37.6" .. white .. ")",
-    Note = "你从这里开始这个任务线 克里斯托弗·赫温 (西部荒野 - 哨兵岭旅店 " .. yellow .. "52.3,52.8" .. white .. ")。\n任务线共有16步。最终奖励蓝色物品：1) 副手 智力/暗影抗性/伤害和治疗，2) 锁甲护肩 力量/耐力，3) 皮甲手套 力量/敏捷/耐力\n收割者-最后杰作 " .. yellow .. "[6]" .. white .. "。",
+    Note = "你从这里开始这个任务线 克里斯托弗·赫温 (西部荒野 - 哨兵岭旅店 " ..
+        yellow ..
+        "52.3,52.8" ..
+        white ..
+        ")。\n任务线共有16步。最终奖励蓝色物品：1) 副手 智力/暗影抗性/伤害和治疗，2) 锁甲护肩 力量/耐力，3) 皮甲手套 力量/敏捷/耐力\n收割者-最后杰作 " ..
+        yellow .. "[6]" .. white .. "。",
     Prequest = "丰收傀儡之谜 VIII",
     Folgequest = "丰收傀儡之谜 X",
     Rewards = {
@@ -188,6 +198,7 @@ kQuestInstanceData.TheDeadmines.Alliance[9] = {
     }
 }
 kQuestInstanceData.TheDeadmines.Alliance[10] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "关上水龙头",
     Id = 41392,
     Level = 20,
@@ -203,6 +214,7 @@ kQuestInstanceData.TheDeadmines.Alliance[10] = {
     }
 }
 kQuestInstanceData.TheDeadmines.Horde[1] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "原型机图纸",
     Id = 55005,
     Level = 18,
@@ -217,6 +229,7 @@ kQuestInstanceData.TheDeadmines.Horde[1] = {
     }
 }
 kQuestInstanceData.TheDeadmines.Horde[2] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "葛瑞森船长的复仇",
     Id = 40396,
     Level = 22,
@@ -231,13 +244,17 @@ kQuestInstanceData.TheDeadmines.Horde[2] = {
     }
 }
 kQuestInstanceData.TheDeadmines.Horde[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "部落防御者之斧",
     Id = 39998,
     Level = 18,
     Attain = 15,
     Aim = "在十字路口与部落守卫交谈",
     Location = "比尔吉特·克兰斯顿 <Portal Trainer> (雷霆崖" .. yellow .. "34.4,20.3" .. white .. ")",
-    Note = "你从这里开始这个任务线 纳加尔·死眼 (十字路口 " .. yellow .. "51.2,29.1" .. white .. ")。\n此任务 " .. red .. "仅将你传送至西部荒野" .. white .. "。你可以完成此任务并在完成任务线后获得奖励，或者将其用作西部荒野传送点并重新接取任务。",
+    Note = "你从这里开始这个任务线 纳加尔·死眼 (十字路口 " ..
+        yellow ..
+        "51.2,29.1" ..
+        white .. ")。\n此任务 " .. red .. "仅将你传送至西部荒野" .. white .. "。你可以完成此任务并在完成任务线后获得奖励，或者将其用作西部荒野传送点并重新接取任务。",
     Prequest = "部落防御者之斧",
     Folgequest = "部落防御者之斧",
     Rewards = {
@@ -248,7 +265,8 @@ kQuestInstanceData.TheDeadmines.Horde[3] = {
 
 --------------- Wailing Caverns ---------------
 kQuestInstanceData.WailingCaverns = {
-    Story = "不久前，一位名叫纳拉雷克斯的暗夜精灵德鲁伊在贫瘠之地的中心发现了一个地下洞穴网络。这些被称作'哀嚎洞穴'的天然洞穴中布满了蒸汽裂隙，喷发时会发出悠长而悲伤的哀号。纳拉雷克斯相信他可以利用洞穴中的地下泉水为贫瘠之地恢复生机和肥沃——但这需要汲取传说中翡翠梦境的能量。然而一旦与梦境连接，德鲁伊的愿景不知怎地变成了噩梦。很快哀嚎洞穴开始改变——水源变得污浊，洞内原本温驯的生物蜕变成了凶残致命的掠食者。据说纳拉雷克斯本人仍然留在迷宫的深处，被困在翡翠梦境的边缘之外。就连他曾经的弟子也被主人的梦魇所腐化——变成了邪恶的尖牙德鲁伊。",
+    Story =
+    "不久前，一位名叫纳拉雷克斯的暗夜精灵德鲁伊在贫瘠之地的中心发现了一个地下洞穴网络。这些被称作'哀嚎洞穴'的天然洞穴中布满了蒸汽裂隙，喷发时会发出悠长而悲伤的哀号。纳拉雷克斯相信他可以利用洞穴中的地下泉水为贫瘠之地恢复生机和肥沃——但这需要汲取传说中翡翠梦境的能量。然而一旦与梦境连接，德鲁伊的愿景不知怎地变成了噩梦。很快哀嚎洞穴开始改变——水源变得污浊，洞内原本温驯的生物蜕变成了凶残致命的掠食者。据说纳拉雷克斯本人仍然留在迷宫的深处，被困在翡翠梦境的边缘之外。就连他曾经的弟子也被主人的梦魇所腐化——变成了邪恶的尖牙德鲁伊。",
     Caption = "哀嚎洞穴",
     Alliance = {},
     Horde = {}
@@ -264,7 +282,7 @@ kQuestInstanceData.WailingCaverns.Alliance[1] = {
     Rewards = {
         Text = "奖励：任选其一",
         { id = 6480 }, --Slick Deviate Leggings Legs, Leather
-        { id = 918 }, --Deviate Hide Pack Bag
+        { id = 918 },  --Deviate Hide Pack Bag
     }
 }
 kQuestInstanceData.WailingCaverns.Alliance[2] = {
@@ -317,6 +335,7 @@ kQuestInstanceData.WailingCaverns.Alliance[5] = {
     }
 }
 kQuestInstanceData.WailingCaverns.Alliance[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "毒蛇花",
     Id = 60125,
     Level = 18,
@@ -331,6 +350,7 @@ kQuestInstanceData.WailingCaverns.Alliance[6] = {
     }
 }
 kQuestInstanceData.WailingCaverns.Alliance[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "陷入梦魇",
     Id = 60124,
     Level = 19,
@@ -345,6 +365,7 @@ kQuestInstanceData.WailingCaverns.Alliance[7] = {
     }
 }
 kQuestInstanceData.WailingCaverns.Alliance[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "杂草丛生",
     Id = 41363,
     Level = 20,
@@ -367,7 +388,8 @@ kQuestInstanceData.WailingCaverns.Horde[3] = {
     Attain = 14,
     Aim = "为雷霆崖的药剂师扎玛收集10朵毒蛇花。",
     Location = "药剂师扎玛 (雷霆崖 - 灵魂高地 " .. yellow .. "22,20" .. white .. ")",
-    Note = "药剂师扎玛 位于 灵魂高地 下方的一个洞穴中。你可以从 药剂师赫布瑞姆 (贫瘠之地 - 十字路口 " .. yellow .. "51,30" .. white .. ") 处获得前置任务。\n你可以在副本前的洞穴内和副本内获得 毒蛇花。拥有草药学技能的玩家可以在小地图上看到这些植物。",
+    Note = "药剂师扎玛 位于 灵魂高地 下方的一个洞穴中。你可以从 药剂师赫布瑞姆 (贫瘠之地 - 十字路口 " ..
+        yellow .. "51,30" .. white .. ") 处获得前置任务。\n你可以在副本前的洞穴内和副本内获得 毒蛇花。拥有草药学技能的玩家可以在小地图上看到这些植物。",
     Prequest = "菌类孢子 -> 药剂师扎玛",
     Rewards = {
         Text = "奖励：",
@@ -383,7 +405,8 @@ kQuestInstanceData.WailingCaverns.Horde[6] = {
     Attain = 11,
     Aim = "将考布莱恩宝石、安娜科德拉宝石、皮萨斯宝石和瑟芬迪斯宝石交给雷霆崖的纳拉·蛮鬃。",
     Location = "纳拉·蛮鬃 (雷霆崖 - 长者高地 " .. yellow .. "75,31" .. white .. ")",
-    Note = "任务线开始于 哈缪尔·符文图腾 (雷霆崖 - 长者高地 " .. yellow .. "78,28" .. white .. ")\n这4位德鲁伊掉落宝石 " .. yellow .. "[2]" .. white ..
+    Note = "任务线开始于 哈缪尔·符文图腾 (雷霆崖 - 长者高地 " ..
+        yellow .. "78,28" .. white .. ")\n这4位德鲁伊掉落宝石 " .. yellow .. "[2]" .. white ..
         ", " .. yellow .. "[3]" .. white .. ", " .. yellow .. "[5]" .. white .. ", " .. yellow .. "[7]" .. white .. "。",
     Prequest = "贫瘠之地的绿洲 -> 纳拉·蛮鬃",
     Rewards = {
@@ -394,13 +417,17 @@ kQuestInstanceData.WailingCaverns.Horde[6] = {
 }
 kQuestInstanceData.WailingCaverns.Horde[7] = kQuestInstanceData.WailingCaverns.Alliance[5]
 kQuestInstanceData.WailingCaverns.Horde[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "奥术武器",
     Id = 80312,
     Level = 18,
     Attain = 14,
     Aim = "从哀嚎洞穴中给卓克盖洛克带去5块月光木材、一块巨蛇水晶和一份变换精华。",
     Location = "卓克盖洛克 <Stonemaul Clan> (on a bank of 怒水河 in the 贫瘠之地 " .. yellow .. "62.4,10.8" .. white .. ")",
-    Note = red .. "法师专用。" .. white .. " 任务线开始于 幽若达 <法师训练师> (奥格瑞玛)，任务为 '掌握奥术'。\n你可以从 " .. yellow .. "小怪" .. white .. " 身上获得 月光木材，从 瑟芬迪斯领主 <尖牙德鲁伊首领> " ..
+    Note = red ..
+        "法师专用。" ..
+        white ..
+        " 任务线开始于 幽若达 <法师训练师> (奥格瑞玛)，任务为 '掌握奥术'。\n你可以从 " .. yellow .. "小怪" .. white .. " 身上获得 月光木材，从 瑟芬迪斯领主 <尖牙德鲁伊首领> " ..
         yellow .. "[7]" .. white .. " 处获得 巨蛇水晶，从 皮萨斯领主 <尖牙德鲁伊首领> " .. yellow .. "[5]" .. white .. " 处获得 变换精华。",
     Prequest = "掌握奥术",
     Rewards = {
@@ -410,6 +437,7 @@ kQuestInstanceData.WailingCaverns.Horde[8] = {
     }
 }
 kQuestInstanceData.WailingCaverns.Horde[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "与科卡尔的梦对抗",
     Id = 41367,
     Level = 23,
@@ -425,7 +453,8 @@ kQuestInstanceData.WailingCaverns.Horde[9] = {
 
 --------------- Ragefire Chasm ---------------
 kQuestInstanceData.RagefireChasm = {
-    Story = "怒焰裂谷是一个火山洞穴网络，位于兽人的新首都奥格瑞玛的地下。最近有传言称，一个效忠于恶魔暗影议会的邪教组织已在裂谷的火焰深处建立了据点。这个被称作灼热之刃的邪教组织威胁着杜隆塔尔的主权。许多人相信兽人大酋长萨尔知晓刀锋的存在，之所以没有摧毁它，是希望其成员能将他直接引向暗影议会。无论如何，从怒焰裂谷中散发出的黑暗力量可能会毁掉兽人们奋战至今所取得的一切。",
+    Story =
+    "怒焰裂谷是一个火山洞穴网络，位于兽人的新首都奥格瑞玛的地下。最近有传言称，一个效忠于恶魔暗影议会的邪教组织已在裂谷的火焰深处建立了据点。这个被称作灼热之刃的邪教组织威胁着杜隆塔尔的主权。许多人相信兽人大酋长萨尔知晓刀锋的存在，之所以没有摧毁它，是希望其成员能将他直接引向暗影议会。无论如何，从怒焰裂谷中散发出的黑暗力量可能会毁掉兽人们奋战至今所取得的一切。",
     Caption = "怒焰裂谷",
     Horde = {}
 }
@@ -475,7 +504,8 @@ kQuestInstanceData.RagefireChasm.Horde[4] = {
     Attain = 9,
     Aim = "将军官的徽章交给奥格瑞玛的萨尔。",
     Location = "萨尔 (奥格瑞玛 - 智慧谷 " .. yellow .. "31,37" .. white .. ")",
-    Note = "你可以在 " .. yellow .. "[4]" .. white .. " 找到 巴札兰，在 " .. yellow .. "[3]" .. white .. " 找到 祈求者耶戈什。任务线开始于 奥格瑞玛 的大酋长 萨尔。",
+    Note = "你可以在 " ..
+        yellow .. "[4]" .. white .. " 找到 巴札兰，在 " .. yellow .. "[3]" .. white .. " 找到 祈求者耶戈什。任务线开始于 奥格瑞玛 的大酋长 萨尔。",
     Prequest = "隐藏的敌人",
     Folgequest = "隐藏的敌人",
     Rewards = {
@@ -498,7 +528,8 @@ kQuestInstanceData.RagefireChasm.Horde[5] = {
 
 --------------- Uldaman ---------------
 kQuestInstanceData.Uldaman = {
-    Story = "奥达曼是一座古老的泰坦地下城，自世界诞生以来就深埋于地底。矮人的挖掘工作最近打通了这座被遗忘的城市，释放出了泰坦最初失败的造物：石腭怪。传说泰坦用石头创造了石腭怪。当他们认为实验失败后，泰坦将石腭怪封印起来并再次尝试——最终创造了矮人种族。矮人诞生的秘密被记录在传说中的诺甘农圆盘上——巨大的泰坦神器，位于这座古城的最深处。最近，黑铁矮人对奥达曼发起了一系列入侵，希望为他们的火焰主人拉格纳罗斯夺取这些圆盘。然而，守护着这座地下城的是几位守护者——巨大的活石构造体，会碾碎任何不幸的入侵者。圆盘本身由一位巨大而有知觉的石头守护者阿扎达斯看守。甚至有传言称，矮人那些石肤祖先——土灵，仍然栖息在这座城市隐秘的深处。",
+    Story =
+    "奥达曼是一座古老的泰坦地下城，自世界诞生以来就深埋于地底。矮人的挖掘工作最近打通了这座被遗忘的城市，释放出了泰坦最初失败的造物：石腭怪。传说泰坦用石头创造了石腭怪。当他们认为实验失败后，泰坦将石腭怪封印起来并再次尝试——最终创造了矮人种族。矮人诞生的秘密被记录在传说中的诺甘农圆盘上——巨大的泰坦神器，位于这座古城的最深处。最近，黑铁矮人对奥达曼发起了一系列入侵，希望为他们的火焰主人拉格纳罗斯夺取这些圆盘。然而，守护着这座地下城的是几位守护者——巨大的活石构造体，会碾碎任何不幸的入侵者。圆盘本身由一位巨大而有知觉的石头守护者阿扎达斯看守。甚至有传言称，矮人那些石肤祖先——土灵，仍然栖息在这座城市隐秘的深处。",
     Caption = "奥达曼",
     Alliance = {},
     Horde = {}
@@ -510,7 +541,8 @@ kQuestInstanceData.Uldaman.Alliance[1] = {
     Attain = 33,
     Aim = "找到勘察员雷杜尔，告诉他铁趾格雷兹还活着。",
     Location = "勘察员雷杜尔 (荒芜之地 " .. yellow .. "53,43" .. white .. ")",
-    Note = "前置任务开始于 弄皱的地图 (荒芜之地 " .. yellow .. "53,33" .. white .. ")。\n你可以在进入副本前找到 铁趾格雷兹，位于入口地图上的 " .. yellow .. "[1]" .. white .. " 处",
+    Note = "前置任务开始于 弄皱的地图 (荒芜之地 " ..
+        yellow .. "53,33" .. white .. ")。\n你可以在进入副本前找到 铁趾格雷兹，位于入口地图上的 " .. yellow .. "[1]" .. white .. " 处",
     Prequest = "一线希望",
     Folgequest = "铁趾的护符",
 }
@@ -549,7 +581,7 @@ kQuestInstanceData.Uldaman.Alliance[4] = {
     Note = "这些能量石可以在副本前和副本内的任何暗炉敌人身上找到。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 9522 }, --Energized Stone Circle Shield
+        { id = 9522 },  --Energized Stone Circle Shield
         { id = 10358 }, --Duracin Bracers Wrist, Mail
         { id = 10359 }, --Everlast Boots Feet, Cloth
     }
@@ -599,7 +631,11 @@ kQuestInstanceData.Uldaman.Alliance[8] = {
     Attain = 35,
     Aim = "阅读巴尔洛戈的日记，探索密室，然后向铁炉堡的勘察员塔伯斯·雷矛汇报。",
     Location = "巴尔洛戈 (奥达曼 " .. yellow .. "[1]" .. white .. ")",
-    Note = "密室位于 " .. yellow .. "[4]" .. white .. "。要打开密室，你需要从 鲁维罗什 " .. yellow .. "[3]" .. white .. " 处获得 索尔之杖，并从 巴尔洛戈的箱子 " .. yellow .. "[1]" .. white ..
+    Note = "密室位于 " ..
+        yellow ..
+        "[4]" ..
+        white ..
+        "。要打开密室，你需要从 鲁维罗什 " .. yellow .. "[3]" .. white .. " 处获得 索尔之杖，并从 巴尔洛戈的箱子 " .. yellow .. "[1]" .. white ..
         " 中获得 尼基夫徽章。将这两件物品组合成 史前法杖。在 " .. yellow .. "[3] 和 [4]" .. white .. " 之间的地图室使用法杖召唤 艾隆纳亚。杀死她后，跑进她出来的房间以完成任务。",
     Prequest = "失踪的矮人",
     Rewards = {
@@ -685,11 +721,12 @@ kQuestInstanceData.Uldaman.Alliance[15] = {
     Attain = 40,
     Aim = "和石头守护者交谈，从他那里了解更多古代的知识。一旦你了解到了所有的内容之后就激活诺甘农圆盘。",
     Location = "诺甘农圆盘 (奥达曼 " .. yellow .. "[11]" .. white .. ")",
-    Note = "接取任务后，与圆盘左侧的岩石看守者交谈。然后再次使用白金圆盘以获取微型圆盘，你需要将其带给 资深探险家麦格拉斯 (铁炉堡 - 探险者协会 " .. yellow .. "69,18" .. white .. ")。后续任务由附近的另一个NPC开始。",
+    Note = "接取任务后，与圆盘左侧的岩石看守者交谈。然后再次使用白金圆盘以获取微型圆盘，你需要将其带给 资深探险家麦格拉斯 (铁炉堡 - 探险者协会 " ..
+        yellow .. "69,18" .. white .. ")。后续任务由附近的另一个NPC开始。",
     Folgequest = "奥丹姆的线索",
     Rewards = {
         Text = "奖励：1 和 2 或 3",
-        { id = 9587 }, --Thawpelt Sack Bag
+        { id = 9587 },               --Thawpelt Sack Bag
         { id = 3928, quantity = 5 }, --Superior Healing Potion Potion
         { id = 6149, quantity = 5 }, --Greater Mana Potion Potion
     }
@@ -705,14 +742,19 @@ kQuestInstanceData.Uldaman.Alliance[16] = {
     Prequest = "驱除魔鬼",
     Folgequest = "法力怒灵",
 }
-kQuestInstanceData.Uldaman.Alliance[17] = { --1.18
+kQuestInstanceData.Uldaman.Alliance[17] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --1.18
     Title = "偷一个核心",
     Id = 40129,
     Level = 45,
     Attain = 45,
     Aim = "从奥达曼的古代宝藏中获得完好的动力核心。",
     Location = "托宝·光链 (贫瘠之地 " .. yellow .. "48.6,83" .. white .. " 戴着紫色护目镜的侏儒，在帐篷下，矮人旁边)",
-    Note = "完好的动力核心 " .. yellow .. "[11]" .. white .. "，位于最后一个Boss身后的白金圆盘房间内，右侧柱子后面的箱子里。\n任务线开始于 南贫瘠之地 -> 巴尔莫丹 -> 通往巴尔丹城堡的道路北侧一点的帐篷下。第一个任务可在18级接取，最后一个在53级。",
+    Note = "完好的动力核心 " ..
+        yellow ..
+        "[11]" ..
+        white .. "，位于最后一个Boss身后的白金圆盘房间内，右侧柱子后面的箱子里。\n任务线开始于 南贫瘠之地 -> 巴尔莫丹 -> 通往巴尔丹城堡的道路北侧一点的帐篷下。第一个任务可在18级接取，最后一个在53级。",
     Prequest = "古老的收获",
     Folgequest = "激活",
     Rewards = {
@@ -773,18 +815,24 @@ kQuestInstanceData.Uldaman.Horde[9] = createInheritedQuest(
     kQuestInstanceData.Uldaman.Alliance[15],
     {
         Aim = "和石头守护者交谈，从他那里了解更多古代的知识。一旦你了解到了所有的内容之后就激活诺甘农圆盘。",
-        Note = "接取任务后，与圆盘左侧的岩石看守者交谈。然后再次使用白金圆盘以获取微型圆盘，你需要将其带给 圣者图希克 (雷霆崖 " .. yellow .. "34,46" .. white .. ")。后续任务由附近的另一个NPC开始。",
+        Note = "接取任务后，与圆盘左侧的岩石看守者交谈。然后再次使用白金圆盘以获取微型圆盘，你需要将其带给 圣者图希克 (雷霆崖 " ..
+            yellow .. "34,46" .. white .. ")。后续任务由附近的另一个NPC开始。",
     }
 )
 kQuestInstanceData.Uldaman.Horde[10] = kQuestInstanceData.Uldaman.Alliance[16]
 kQuestInstanceData.Uldaman.Horde[11] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "征用一个核心",
     Id = 40131,
     Level = 45,
     Attain = 45,
     Aim = "从奥达曼的古代宝藏中获得完好的动力核心。",
     Location = "凯科斯·击王 (贫瘠之地 " .. yellow .. "45.7,83.6" .. white .. " 帐篷下的地精。",
-    Note = "完好的动力核心 " .. yellow .. "[11]" .. white .. "，位于最后一个Boss身后的白金圆盘房间内，右侧柱子后面的箱子里。\n任务线开始于 南贫瘠之地 -> 巴尔莫丹 -> 通往千针石林的道路西侧，巴尔莫丹挖掘场对面。第一个任务可在18级接取，最后一个在53级。",
+    Note = "完好的动力核心 " ..
+        yellow ..
+        "[11]" ..
+        white ..
+        "，位于最后一个Boss身后的白金圆盘房间内，右侧柱子后面的箱子里。\n任务线开始于 南贫瘠之地 -> 巴尔莫丹 -> 通往千针石林的道路西侧，巴尔莫丹挖掘场对面。第一个任务可在18级接取，最后一个在53级。",
     Prequest = "有利可图的收获",
     Folgequest = "有利可图的激活",
     Rewards = {
@@ -795,7 +843,8 @@ kQuestInstanceData.Uldaman.Horde[11] = {
 
 --------------- Blackrock Depths ---------------
 kQuestInstanceData.BlackrockDepths = {
-    Story = "这座火山迷宫曾是黑铁矮人的首都，现在成为了炎魔之王拉格纳罗斯的权力中心。拉格纳罗斯发现了用石头创造生命的秘密，并计划建造一支无法阻挡的魔像军队，帮助他征服整座黑石山。痴迷于击败奈法利安和他的龙类仆从，拉格纳罗斯将不择手段以取得最终胜利。",
+    Story =
+    "这座火山迷宫曾是黑铁矮人的首都，现在成为了炎魔之王拉格纳罗斯的权力中心。拉格纳罗斯发现了用石头创造生命的秘密，并计划建造一支无法阻挡的魔像军队，帮助他征服整座黑石山。痴迷于击败奈法利安和他的龙类仆从，拉格纳罗斯将不择手段以取得最终胜利。",
     Caption = "黑石深渊",
     Alliance = {},
     Horde = {}
@@ -807,7 +856,8 @@ kQuestInstanceData.BlackrockDepths.Alliance[1] = {
     Attain = 48,
     Aim = "如果你想要得到进入这座城市主城区的钥匙，就去和弗兰克罗恩·铸铁谈一谈。",
     Location = "弗兰克罗恩·铸铁 (黑石山 " .. yellow .. "[3] 在 入口 地图" .. white .. ")",
-    Note = "弗兰克罗恩位于黑石山中部，在他的坟墓上方。你必须处于灵魂状态才能看到他！与他交谈两次以开始任务。\n弗诺斯·达克维尔位于 " .. yellow .. "[9]" .. white .. ". 神龛位于竞技场旁边 " .. yellow .. "[7]" .. white .. ".",
+    Note = "弗兰克罗恩位于黑石山中部，在他的坟墓上方。你必须处于灵魂状态才能看到他！与他交谈两次以开始任务。\n弗诺斯·达克维尔位于 " ..
+        yellow .. "[9]" .. white .. ". 神龛位于竞技场旁边 " .. yellow .. "[7]" .. white .. ".",
     Prequest = "黑铁的遗产",
     Rewards = {
         Text = "奖励：",
@@ -821,7 +871,8 @@ kQuestInstanceData.BlackrockDepths.Alliance[2] = {
     Attain = 48,
     Aim = "把雷布里的头颅交给燃烧平原的尤卡·斯库比格特。",
     Location = "尤卡·斯库比格特 (燃烧平原 - 烈焰峰 " .. yellow .. "65,22" .. white .. ")",
-    Note = "前置任务来自 尤尔巴·斯库比格特 (塔纳利斯 - 热砂港 " .. yellow .. "67,23" .. white .. ").\n雷布里位于 " .. yellow .. "[15]" .. white .. ".",
+    Note = "前置任务来自 尤尔巴·斯库比格特 (塔纳利斯 - 热砂港 " ..
+        yellow .. "67,23" .. white .. ").\n雷布里位于 " .. yellow .. "[15]" .. white .. ".",
     Prequest = "尤卡·斯库比格特",
     Rewards = {
         Text = "奖励：任选其一",
@@ -837,7 +888,8 @@ kQuestInstanceData.BlackrockDepths.Alliance[3] = {
     Attain = 50,
     Aim = "将4份格罗姆之血、10块巨型银矿和装满水的娜玛拉之瓶交给黑石深渊的娜玛拉小姐。",
     Location = "娜玛拉小姐 (黑石深渊 " .. yellow .. "[15]" .. white .. ")",
-    Note = "你可以从艾萨拉的巨人那里获得巨大的银矿脉。格罗姆之血最容易从草药师那里获得，或者在拍卖行购买。最后，小瓶可以在戈拉卡陨石坑（安戈洛环形山 " .. yellow .. "31,50" .. white .. "）装满。完成任务后，你可以使用后门而不是杀死法拉克斯。",
+    Note = "你可以从艾萨拉的巨人那里获得巨大的银矿脉。格罗姆之血最容易从草药师那里获得，或者在拍卖行购买。最后，小瓶可以在戈拉卡陨石坑（安戈洛环形山 " ..
+        yellow .. "31,50" .. white .. "）装满。完成任务后，你可以使用后门而不是杀死法拉克斯。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 11962 }, --Manacle Cuffs Wrist, Cloth
@@ -851,13 +903,14 @@ kQuestInstanceData.BlackrockDepths.Alliance[4] = {
     Attain = 50,
     Aim = "把遗失的雷酒秘方带给卡拉诺斯的拉格纳·雷酒。",
     Location = "拉格纳·雷酒 (丹莫罗 - 卡拉诺斯 " .. yellow .. "46,52" .. white .. ")",
-    Note = "前置任务来自 恩诺哈尔·雷酒 (诅咒之地 - 守望堡 " .. yellow .. "61,18" .. white .. ").\n如果你摧毁了麦酒 " .. yellow .. "[15]" .. white .. "，卫兵就会出现，配方就掉落自其中一个卫兵。",
+    Note = "前置任务来自 恩诺哈尔·雷酒 (诅咒之地 - 守望堡 " ..
+        yellow .. "61,18" .. white .. ").\n如果你摧毁了麦酒 " .. yellow .. "[15]" .. white .. "，卫兵就会出现，配方就掉落自其中一个卫兵。",
     Prequest = "拉格纳·雷酒",
     Rewards = {
         Text = "奖励：1 和 2 或 3",
         { id = 12003, quantity = 10 }, --Dark Dwarven Lager Potion
-        { id = 11964 }, --Swiftstrike Cudgel Main Hand, Mace
-        { id = 12000 }, --Limb Cleaver Two-Hand, Axe
+        { id = 11964 },                --Swiftstrike Cudgel Main Hand, Mace
+        { id = 12000 },                --Limb Cleaver Two-Hand, Axe
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[5] = {
@@ -906,7 +959,8 @@ kQuestInstanceData.BlackrockDepths.Alliance[8] = {
     Attain = 48,
     Aim = "到西北部的黑石山脉去，在黑石深渊中找到温德索尔元帅的下落。$B$B狼狈不堪的约翰曾告诉你说温德索尔被关进了一个监狱。",
     Location = "麦克斯韦尔元帅 (燃烧平原 - 摩根的岗哨 " .. yellow .. "84,68" .. white .. ")",
-    Note = "这是奥妮克希亚钥匙任务线的一部分。它开始于 赫林迪斯·河角 (燃烧平原 - 摩根的岗哨 " .. yellow .. "85,68" .. white .. ").\n温德索尔元帅位于 " .. yellow .. "[4]" .. white .. ". 完成此任务后你必须回到麦克斯韦尔那里。",
+    Note = "这是奥妮克希亚钥匙任务线的一部分。它开始于 赫林迪斯·河角 (燃烧平原 - 摩根的岗哨 " ..
+        yellow .. "85,68" .. white .. ").\n温德索尔元帅位于 " .. yellow .. "[4]" .. white .. ". 完成此任务后你必须回到麦克斯韦尔那里。",
     Prequest = "黑龙的威胁 -> 真正的主人",
     Folgequest = "被遗弃的希望",
     Rewards = {
@@ -991,7 +1045,8 @@ kQuestInstanceData.BlackrockDepths.Alliance[14] = {
     Attain = 50,
     Aim = "回到黑石深渊，从达格兰·索瑞森大帝的魔掌中救出铁炉堡公主茉埃拉·铜须。",
     Location = "国王麦格尼·铜须 (铁炉堡 " .. yellow .. "39,55" .. white .. ")",
-    Note = "铁炉堡公主茉艾拉·铜须位于 " .. yellow .. "[21]" .. white .. ". 在战斗中她可能会治疗达格兰。尽量打断她，但要快，因为她不能死，否则你无法完成任务！与她交谈后，你必须回到麦格尼·铜须那里。",
+    Note = "铁炉堡公主茉艾拉·铜须位于 " ..
+        yellow .. "[21]" .. white .. ". 在战斗中她可能会治疗达格兰。尽量打断她，但要快，因为她不能死，否则你无法完成任务！与她交谈后，你必须回到麦格尼·铜须那里。",
     Prequest = "糟糕的消息",
     Folgequest = "语出惊人的公主",
     Rewards = {
@@ -1027,9 +1082,13 @@ kQuestInstanceData.BlackrockDepths.Alliance[17] = {
     Attain = 40,
     Aim = "把这些找到的宝石放入鬼魂之杯",
     Location = "格鲁雷尔 (黑石深渊 " .. yellow .. "[18]" .. white .. ")",
-    Note = red .. "只有技能 230 或更高的矿工才能接取此任务以学习熔炼黑铁。" .. white .. " 杯子的材料: 2 [红宝石], 20 [金锭], 10 [真银锭]. 之后，如果你有 [黑铁矿石]，你可以把它带到 " .. yellow .. "[22]" .. white .. " 的黑铁熔炉进行熔炼。",
+    Note = red ..
+        "只有技能 230 或更高的矿工才能接取此任务以学习熔炼黑铁。" ..
+        white ..
+        " 杯子的材料: 2 [红宝石], 20 [金锭], 10 [真银锭]. 之后，如果你有 [黑铁矿石]，你可以把它带到 " .. yellow .. "[22]" .. white .. " 的黑铁熔炉进行熔炼。",
 }
 kQuestInstanceData.BlackrockDepths.Alliance[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "行动：帮助杰比",
     Id = 40757,
     Level = 58,
@@ -1046,13 +1105,15 @@ kQuestInstanceData.BlackrockDepths.Alliance[18] = {
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[19] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "黑铁亵渎者",
     Id = 40762,
     Level = 60,
     Attain = 55,
     Aim = "在泰拉比姆的比克瑟仓库，为比克瑟·螺熔收集一支黑铁步枪、一个熔岩冷凝器、一个复杂的奥金炮管和一个熔岩碎片。",
     Location = "比克瑟·螺熔 (泰拉比姆 岛，塔纳利斯以东)",
-    Note = "此任务需要收集4件物品：1) 熔岩冷凝器 (黑石深渊，在熔岩冷凝器箱中)；2) 复杂的奥金炮管 (黑石塔，在复杂的奥金锭桶容器中)；\n3) 熔岩碎片 (熔火之心，来自熔核摧毁者)；4) 黑铁步枪 (由工程师制作)。为了完成建造，我还需要在熔火之心找到炽热之核(x3)，以及附魔瑟银锭(x10)。",
+    Note =
+    "此任务需要收集4件物品：1) 熔岩冷凝器 (黑石深渊，在熔岩冷凝器箱中)；2) 复杂的奥金炮管 (黑石塔，在复杂的奥金锭桶容器中)；\n3) 熔岩碎片 (熔火之心，来自熔核摧毁者)；4) 黑铁步枪 (由工程师制作)。为了完成建造，我还需要在熔火之心找到炽热之核(x3)，以及附魔瑟银锭(x10)。",
     Prequest = "行动：帮助杰比 -> 黑铁亵渎者的秘密",
     Rewards = {
         Text = "奖励：",
@@ -1060,6 +1121,7 @@ kQuestInstanceData.BlackrockDepths.Alliance[19] = {
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[20] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "参议员复仇",
     Id = 40464,
     Level = 56,
@@ -1074,6 +1136,7 @@ kQuestInstanceData.BlackrockDepths.Alliance[20] = {
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[21] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "奥术傀儡核心",
     Id = 40467,
     Level = 55,
@@ -1088,13 +1151,17 @@ kQuestInstanceData.BlackrockDepths.Alliance[21] = {
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[22] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "建造一个重击者",
     Id = 80401,
     Level = 60,
     Attain = 30,
     Aim = "从血色修道院的军械库中获取瑟银微调舵机，从傀儡统帅阿格曼奇处获得黑石深渊的完美魔像核心，在斯坦索姆找到精金棒，然后回到奥格索普·奥布诺提斯身边。",
     Location = "奥格索普·奥布诺提斯 <侏儒技师大师> (荆棘谷; 藏宝海湾 " .. yellow .. "28.4,76.3" .. white .. ").",
-    Note = red .. "(仅限工程师)" .. white .. "此任务需要收集 3 件物品。\n1) 瑟银微调舵机 (血色修道院 掉落自 血色仆从)\n2) 完整的魔像核心 (黑石深渊 掉落自 傀儡统帅阿格曼奇)\n3) 精金棒 (斯坦索姆 掉落自 红衣铸锤师)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，开始前置任务 '一个沉重的大脑'。",
+    Note = red ..
+        "(仅限工程师)" ..
+        white ..
+        "此任务需要收集 3 件物品。\n1) 瑟银微调舵机 (血色修道院 掉落自 血色仆从)\n2) 完整的魔像核心 (黑石深渊 掉落自 傀儡统帅阿格曼奇)\n3) 精金棒 (斯坦索姆 掉落自 红衣铸锤师)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，开始前置任务 '一个沉重的大脑'。",
     Prequest = "一个沉重的大脑" .. red .. "(仅限工程师)", --80398
     Rewards = {
         Text = "奖励：任选其一",
@@ -1105,6 +1172,7 @@ kQuestInstanceData.BlackrockDepths.Alliance[22] = {
     }
 }
 kQuestInstanceData.BlackrockDepths.Alliance[23] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "冬幕节酒。",
     Id = 40748,
     Level = 55,
@@ -1123,14 +1191,15 @@ kQuestInstanceData.BlackrockDepths.Horde[4] = {
     Attain = 50,
     Aim = "把遗失的雷酒秘方交给卡加斯的薇薇安·拉格雷。",
     Location = "暗法师薇薇安·拉格雷 (荒芜之地 - 卡加斯 " .. yellow .. "2,47" .. white .. ")",
-    Note = "前置任务来自 幽暗城 - 炼金房 (" .. yellow .. "50,68" .. white .. ") 的 药剂师金格。\n如果你摧毁了麦酒 " .. yellow .. "[15]" .. white .. "，卫兵就会出现，配方就掉落自其中一个卫兵。",
+    Note = "前置任务来自 幽暗城 - 炼金房 (" ..
+        yellow .. "50,68" .. white .. ") 的 药剂师金格。\n如果你摧毁了麦酒 " .. yellow .. "[15]" .. white .. "，卫兵就会出现，配方就掉落自其中一个卫兵。",
     Prequest = "薇薇安·拉格雷",
     Rewards = {
         Text = "奖励：1 和 2 和 3 或 4",
         { id = 3928, quantity = 5 }, --Superior Healing Potion Potion
         { id = 6149, quantity = 5 }, --Greater Mana Potion Potion
-        { id = 11964 }, --Swiftstrike Cudgel Main Hand, Mace
-        { id = 12000 }, --Limb Cleaver Two-Hand, Axe
+        { id = 11964 },              --Swiftstrike Cudgel Main Hand, Mace
+        { id = 12000 },              --Limb Cleaver Two-Hand, Axe
     }
 }
 kQuestInstanceData.BlackrockDepths.Horde[5] = {
@@ -1159,7 +1228,12 @@ kQuestInstanceData.BlackrockDepths.Horde[7] = {
     Attain = 50,
     Aim = "到黑石深渊去消灭那些邪恶的侵略者！$B$B高图斯军阀要你杀死10个铁怒医师，、10个铁怒士兵和10个铁怒军官。完成任务之后回去向他复命。",
     Location = "告示牌 (荒芜之地 - 卡加斯 " .. yellow .. "3,47" .. white .. ")",
-    Note = "你在 贝尔加 " .. yellow .. "[11]" .. white .. " 附近找到矮人。你在 卡加斯 的塔顶 (荒芜之地, " .. yellow .. "5,47" .. white .. ") 找到 军官高图斯。\n后续任务开始于 雷克斯洛特 (荒芜之地 - 卡加斯 " .. yellow .. "5,47" .. white ..
+    Note = "你在 贝尔加 " ..
+        yellow ..
+        "[11]" ..
+        white ..
+        " 附近找到矮人。你在 卡加斯 的塔顶 (荒芜之地, " ..
+        yellow .. "5,47" .. white .. ") 找到 军官高图斯。\n后续任务开始于 雷克斯洛特 (荒芜之地 - 卡加斯 " .. yellow .. "5,47" .. white ..
         ")。你在 燃烧平原 (" .. yellow .. "38,35" .. white .. ") 找到 格拉克·洛克鲁布。你必须将他的生命值降至 50% 以下才能束缚他并开始护送任务。",
     Prequest = "格杀勿论：黑铁矮人",
     Folgequest = "格拉克·洛克鲁布 -> 押送囚徒 (Escort quest)",
@@ -1171,7 +1245,8 @@ kQuestInstanceData.BlackrockDepths.Horde[8] = {
     Attain = 52,
     Aim = "到黑石深渊去杀掉安格弗将军！当任务完成之后向军官高图斯复命。",
     Location = "军官高图斯 (荒芜之地 - 卡加斯 " .. yellow .. "5,47" .. white .. ")",
-    Note = "你在 " .. yellow .. "[13]" .. white .. " 找到 安格弗将军。他在 30% 以下会呼叫帮助！\n任务线开始于 雷克斯洛特 (荒芜之地 - 卡加斯, 塔上)，任务是 '格拉克·洛克鲁布'。",
+    Note = "你在 " ..
+        yellow .. "[13]" .. white .. " 找到 安格弗将军。他在 30% 以下会呼叫帮助！\n任务线开始于 雷克斯洛特 (荒芜之地 - 卡加斯, 塔上)，任务是 '格拉克·洛克鲁布'。",
     Prequest = "格拉克·洛克鲁布 -> 押送囚徒",
     Rewards = {
         Text = "奖励：",
@@ -1185,7 +1260,8 @@ kQuestInstanceData.BlackrockDepths.Horde[9] = {
     Attain = 52,
     Aim = "到燃烧平原去为圣职者塞朵拉·穆瓦丹尼收集10块断裂的元素碎片。$b$b塞多拉曾经说过，那里的机械傀儡和元素生物是这种碎片的主要来源。",
     Location = "鲁特维尔·沃拉图斯 (荒芜之地 " .. yellow .. "25,44" .. white .. ")",
-    Note = "前置任务来自 圣职者塞朵拉·穆瓦丹尼 (荒芜之地 - 卡加斯 " .. yellow .. "3,47" .. white .. ").\n你在 " .. yellow .. "[14]" .. white .. " 找到 阿格曼奇。",
+    Note = "前置任务来自 圣职者塞朵拉·穆瓦丹尼 (荒芜之地 - 卡加斯 " ..
+        yellow .. "3,47" .. white .. ").\n你在 " .. yellow .. "[14]" .. white .. " 找到 阿格曼奇。",
     Prequest = "机器的崛起",
     Rewards = {
         Text = "奖励：任选其一",
@@ -1250,7 +1326,8 @@ kQuestInstanceData.BlackrockDepths.Horde[13] = {
     Aim = "在黑石深渊里找到指挥官哥沙克。$B$B在那幅草图上画着的是一个铁栏后面的兽人，也许你应该到某个类似监狱的地方去找找看。",
     Location = "神射手贾拉玛弗 (荒芜之地 - 卡加斯 " .. yellow .. "5,47" .. white .. ")",
     Note = "前置任务来自 桑德哈特 (荒芜之地 - 卡加斯 " .. yellow .. "3,48" .. white .. ").\n你在 " ..
-        yellow .. "[3]" .. white .. " 找到 指挥官哥沙克。打开监狱的钥匙 掉落自 审讯官格斯塔恩 " .. yellow .. "[5]" .. white .. ". 如果你与他交谈并开始下一个任务，敌人会出现。",
+        yellow ..
+        "[3]" .. white .. " 找到 指挥官哥沙克。打开监狱的钥匙 掉落自 审讯官格斯塔恩 " .. yellow .. "[5]" .. white .. ". 如果你与他交谈并开始下一个任务，敌人会出现。",
     Prequest = "不和谐的烈焰",
     Folgequest = "出了什么事？",
 }
@@ -1261,7 +1338,8 @@ kQuestInstanceData.BlackrockDepths.Horde[14] = {
     Attain = 48,
     Aim = "杀掉达格兰·索瑞森大帝，然后将铁炉堡公主茉埃拉·铜须从他的邪恶诅咒中拯救出来。",
     Location = "萨尔 (奥格瑞玛 " .. yellow .. "31,37" .. white .. ")",
-    Note = "在与 卡兰·巨锤 和 萨尔 交谈后，你获得此任务。\n你在 " .. yellow .. "[21]" .. white .. " 找到 达格兰·索瑞森大帝。公主会治疗达格兰，但你不能杀死她以完成任务！尽量打断她的治疗法术。",
+    Note = "在与 卡兰·巨锤 和 萨尔 交谈后，你获得此任务。\n你在 " ..
+        yellow .. "[21]" .. white .. " 找到 达格兰·索瑞森大帝。公主会治疗达格兰，但你不能杀死她以完成任务！尽量打断她的治疗法术。",
     Prequest = "指挥官哥沙克 -> 出了什么事？ (x2) -> The Eastern Kingdom",
     Folgequest = "拯救公主？",
     Rewards = {
@@ -1278,8 +1356,10 @@ end
 kQuestInstanceData.BlackwingLair = {
     Story = {
         ["Page1"] = "黑翼之巢位于黑石尖塔的最高处。它坐落在山峰的暗黑裂缝中，奈法利安正于此展开计划的最后阶段，意图彻底摧毁拉格纳罗斯，并率领他的军团在整个艾泽拉斯取得无可争议的统治。",
-        ["Page2"] = "这座雄伟的堡垒雕刻于黑石山炽热的岩浆深处，由大师矮人建筑师弗兰克隆·弗格赖特设计。它原本是暗铁力量的象征，数个世纪以来被邪恶矮人所掌控。然而，奈法利安——这条龙之子、死亡之翼——另有图谋。他与他的龙裔爪牙夺取了上层尖塔，并在山体的火山深处向矮人的领地发动战争，这里正是火焰领主拉格纳罗斯的权力中心。拉格纳罗斯已发现利用石头制造生命的秘密，并计划召集一支不可阻挡的傀儡军团，以征服整座黑石山。",
-        ["Page3"] = "奈法利安誓言要粉碎拉格纳罗斯。为此，他最近开始加强自己的军队，正如其父亲死亡之翼在数千年前的尝试。虽然死亡之翼失败了，但狡诈的奈法利安似乎正在取得成功。奈法利安的疯狂野心已激怒红龙飞行，它一直是黑翼飞行最强大的对手。尽管奈法利安的意图已为人所知，他实现目标的手段仍是谜团。据信，奈法利安正在利用各种龙族的血液进行实验，以孕育出不可阻挡的战士。\n\n奈法利安的圣殿——黑翼之巢——同样位于黑石尖塔的最高处。它坐落在山峰的暗黑裂缝中，奈法利安正于此展开计划的最后阶段，意图彻底摧毁拉格纳罗斯，并率领他的军团在整个艾泽拉斯取得无可争议的统治。",
+        ["Page2"] =
+        "这座雄伟的堡垒雕刻于黑石山炽热的岩浆深处，由大师矮人建筑师弗兰克隆·弗格赖特设计。它原本是暗铁力量的象征，数个世纪以来被邪恶矮人所掌控。然而，奈法利安——这条龙之子、死亡之翼——另有图谋。他与他的龙裔爪牙夺取了上层尖塔，并在山体的火山深处向矮人的领地发动战争，这里正是火焰领主拉格纳罗斯的权力中心。拉格纳罗斯已发现利用石头制造生命的秘密，并计划召集一支不可阻挡的傀儡军团，以征服整座黑石山。",
+        ["Page3"] =
+        "奈法利安誓言要粉碎拉格纳罗斯。为此，他最近开始加强自己的军队，正如其父亲死亡之翼在数千年前的尝试。虽然死亡之翼失败了，但狡诈的奈法利安似乎正在取得成功。奈法利安的疯狂野心已激怒红龙飞行，它一直是黑翼飞行最强大的对手。尽管奈法利安的意图已为人所知，他实现目标的手段仍是谜团。据信，奈法利安正在利用各种龙族的血液进行实验，以孕育出不可阻挡的战士。\n\n奈法利安的圣殿——黑翼之巢——同样位于黑石尖塔的最高处。它坐落在山峰的暗黑裂缝中，奈法利安正于此展开计划的最后阶段，意图彻底摧毁拉格纳罗斯，并率领他的军团在整个艾泽拉斯取得无可争议的统治。",
         ["MaxPages"] = "3",
     },
     Caption = {
@@ -1313,7 +1393,8 @@ kQuestInstanceData.BlackwingLair.Alliance[2] = {
     Attain = 60,
     Aim = "将奈法利安的头颅交给暴风城的伯瓦尔·弗塔根公爵。",
     Location = "奈法利安的头颅 (掉落自 奈法利安 " .. yellow .. "[9]" .. white .. ")",
-    Note = "伯瓦尔·弗塔根公爵位于 (暴风城 - 暴风城要塞 " .. yellow .. "78,20" .. white .. ")。后续任务将你派往 艾法希比元帅 (暴风城 - 英雄谷 " .. yellow .. "67,72" .. white .. ") 领取奖励。",
+    Note = "伯瓦尔·弗塔根公爵位于 (暴风城 - 暴风城要塞 " ..
+        yellow .. "78,20" .. white .. ")。后续任务将你派往 艾法希比元帅 (暴风城 - 英雄谷 " .. yellow .. "67,72" .. white .. ") 领取奖励。",
     Folgequest = "黑石之王",
     Rewards = {
         Text = "奖励：任选其一",
@@ -1349,6 +1430,7 @@ kQuestInstanceData.BlackwingLair.Alliance[4] = {
     }
 }
 kQuestInstanceData.BlackwingLair.Alliance[5] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "卡拉赞的钥匙之九",
     Id = 40828,
     Level = 60,
@@ -1364,13 +1446,17 @@ kQuestInstanceData.BlackwingLair.Alliance[5] = {
     }
 }
 kQuestInstanceData.BlackwingLair.Alliance[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "女神的镰刀",
     Id = 41067,
     Level = 60,
     Attain = 58,
     Aim = "杀死爪王嚎牙并向埃伯洛克领主报告。",
     Location = "大德鲁伊梦风 (海加尔山 - 诺达纳尔 " .. yellow .. "84.8,29.3" .. white .. " 大树顶层)",
-    Note = "奈法利安 " .. yellow .. "[9]" .. white .. " 掉落 '沃根多尔的烧毁副本'。\n任务线开始于稀有掉落的传说物品 '艾露恩的镰刀'，掉落自首领 布莱克沃尔德勋爵二世，位于 " .. yellow .. "[卡拉赞]" .. white .. ".",
+    Note = "奈法利安 " ..
+        yellow ..
+        "[9]" ..
+        white .. " 掉落 '沃根多尔的烧毁副本'。\n任务线开始于稀有掉落的传说物品 '艾露恩的镰刀'，掉落自首领 布莱克沃尔德勋爵二世，位于 " .. yellow .. "[卡拉赞]" .. white .. ".",
     Prequest = "女神的镰刀",
     Folgequest = "女神的镰刀" .. yellow .. "[卡拉赞]" .. white .. " ", -- 41087
 }
@@ -1392,7 +1478,8 @@ end
 
 --------------- Blackfathom Deeps ---------------
 kQuestInstanceData.BlackfathomDeeps = {
-    Story = "黑暗深渊位于灰谷的佐拉姆海岸，曾是一座献给暗夜精灵月神艾露恩的辉煌神庙。然而，大灾变摧毁了神庙，将其沉入迷雾之海的波涛之下。它一直静静沉睡——直到被古老的力量吸引，娜迦和萨特出现来探索其秘密。传说古老的野兽阿库麦尔已在神庙废墟中安家。阿库麦尔是上古之神最宠爱的宠物，自那以后一直在该地区捕食。被阿库麦���的存在所吸引，暮光之锤教派也前来沐浴在上古之神的邪恶之中。",
+    Story =
+    "黑暗深渊位于灰谷的佐拉姆海岸，曾是一座献给暗夜精灵月神艾露恩的辉煌神庙。然而，大灾变摧毁了神庙，将其沉入迷雾之海的波涛之下。它一直静静沉睡——直到被古老的力量吸引，娜迦和萨特出现来探索其秘密。传说古老的野兽阿库麦尔已在神庙废墟中安家。阿库麦尔是上古之神最宠爱的宠物，自那以后一直在该地区捕食。被阿库麦���的存在所吸引，暮光之锤教派也前来沐浴在上古之神的邪恶之中。",
     Caption = "黑暗深渊",
     Alliance = {},
     Horde = {}
@@ -1442,7 +1529,10 @@ kQuestInstanceData.BlackfathomDeeps.Alliance[4] = {
     Attain = 18,
     Aim = "把梦游者克尔里斯的头颅交给达纳苏斯的哨兵塞尔高姆。",
     Location = "银月守卫塞尔瑞德 (黑暗深渊 " .. yellow .. "[4]" .. white .. ")",
-    Note = "梦游者克尔里斯位于 " .. yellow .. "[8]" .. white .. "。你在 达纳苏斯 - 工匠区 (" .. yellow .. "55,24" .. white .. ") 找到 哨兵塞尔高姆。\n\n注意！如果你点燃克尔里斯领主旁边的火焰，敌人会出现并攻击你。",
+    Note = "梦游者克尔里斯位于 " ..
+        yellow ..
+        "[8]" ..
+        white .. "。你在 达纳苏斯 - 工匠区 (" .. yellow .. "55,24" .. white .. ") 找到 哨兵塞尔高姆。\n\n注意！如果你点燃克尔里斯领主旁边的火焰，敌人会出现并攻击你。",
     Prequest = "寻找塞尔瑞德",
     Rewards = {
         Text = "奖励：任选其一",
@@ -1471,14 +1561,21 @@ kQuestInstanceData.BlackfathomDeeps.Alliance[6] = {
     Attain = 20,
     Aim = "找到3块索兰鲁克宝珠的碎片和1块索兰鲁克宝珠的大碎片，把它们交给贫瘠之地的杜安·卡汉。",
     Location = "杜安·卡汉 (贫瘠之地 " .. yellow .. "49,57" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 你从 " .. yellow .. "[黑暗深渊]" .. white .. " 的 暮光之锤 侍僧那里获得 3 个 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙 黑暗灵魂那里获得 索兰鲁克宝珠的大碎片。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 你从 " ..
+        yellow ..
+        "[黑暗深渊]" ..
+        white .. " 的 暮光之锤 侍僧那里获得 3 个 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙 黑暗灵魂那里获得 索兰鲁克宝珠的大碎片。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 6898 }, --Orb of Soran'ruk Held In Off-hand
+        { id = 6898 },  --Orb of Soran'ruk Held In Off-hand
         { id = 15109 }, --Staff of Soran'ruk Staff
     }
 }
 kQuestInstanceData.BlackfathomDeeps.Alliance[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "月神圣地废墟",
     Id = 41812,
     Level = 26,
@@ -1509,7 +1606,8 @@ kQuestInstanceData.BlackfathomDeeps.Horde[2] = {
     Attain = 17,
     Aim = "把潮湿的便笺交给灰谷的耶努·萨克雷。",
     Location = "潮湿的便笺 (掉落 - 见备注)",
-    Note = "你从 黑暗深渊海潮女祭司 那里获得 潮湿的便笺 (5% 掉率)。然后把它带给 耶努·萨克雷 (灰谷 - 佐拉姆加前哨站 " .. yellow .. "11,33" .. white .. ")。洛古斯·杰特位于 " .. yellow .. "[6]" .. white .. "。",
+    Note = "你从 黑暗深渊海潮女祭司 那里获得 潮湿的便笺 (5% 掉率)。然后把它带给 耶努·萨克雷 (灰谷 - 佐拉姆加前哨站 " ..
+        yellow .. "11,33" .. white .. ")。洛古斯·杰特位于 " .. yellow .. "[6]" .. white .. "。",
     Prequest = "上古之神的仆从",
     Rewards = {
         Text = "奖励：任选其一",
@@ -1533,7 +1631,10 @@ kQuestInstanceData.BlackfathomDeeps.Horde[4] = {
     Attain = 18,
     Aim = "把梦游者克尔里斯的头颅交给达纳苏斯的哨兵塞尔高姆。",
     Location = "银月守卫塞尔瑞德 (黑暗深渊 " .. yellow .. "[4]" .. white .. ")",
-    Note = "梦游者克尔里斯位于 " .. yellow .. "[8]" .. white .. "。你在 雷霆崖 - 长者高地 (" .. yellow .. "70,33" .. white .. ") 找到 巴珊娜·符文图腾。\n\n注意！如果你点燃克尔里斯领主旁边的火焰，敌人会出现并攻击你。",
+    Note = "梦游者克尔里斯位于 " ..
+        yellow ..
+        "[8]" ..
+        white .. "。你在 雷霆崖 - 长者高地 (" .. yellow .. "70,33" .. white .. ") 找到 巴珊娜·符文图腾。\n\n注意！如果你点燃克尔里斯领主旁边的火焰，敌人会出现并攻击你。",
     Rewards = kQuestInstanceData.BlackfathomDeeps.Alliance[4].Rewards
 }
 kQuestInstanceData.BlackfathomDeeps.Horde[5] = {
@@ -1543,10 +1644,16 @@ kQuestInstanceData.BlackfathomDeeps.Horde[5] = {
     Attain = 20,
     Aim = "找到3块索兰鲁克宝珠的碎片和1块索兰鲁克宝珠的大碎片，把它们交给贫瘠之地的杜安·卡汉。",
     Location = "杜安·卡汉 (贫瘠之地 " .. yellow .. "49,57" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 你从 " .. yellow .. "[黑暗深渊]" .. white .. " 的 暮光之锤 侍僧那里获得 3 个 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙 黑暗灵魂那里获得 索兰鲁克宝珠的大碎片。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 你从 " ..
+        yellow ..
+        "[黑暗深渊]" ..
+        white .. " 的 暮光之锤 侍僧那里获得 3 个 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙 黑暗灵魂那里获得 索兰鲁克宝珠的大碎片。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 6898 }, --Orb of Soran'ruk Held In Off-hand
+        { id = 6898 },  --Orb of Soran'ruk Held In Off-hand
         { id = 15109 }, --Staff of Soran'ruk Staff
     }
 }
@@ -1568,7 +1675,8 @@ kQuestInstanceData.BlackfathomDeeps.Horde[7] = kQuestInstanceData.BlackfathomDee
 
 --------------- Lower Blackrock Spire ---------------
 kQuestInstanceData.BlackrockSpireLower = {
-    Story = "这座雕刻在黑石山炽热深处的宏伟堡垒由矮人大师石匠弗兰克罗恩·铸铁设计。作为黑铁矮人力量的象征，这座堡垒被邪恶的矮人占据了数个世纪。然而，奈法利安——巨龙死亡之翼狡猾的儿子——对这座伟大的要塞另有打算。他和他的龙类仆从控制了黑石塔上层，并对矮人在山脉火山深处的领地发动了战争。意识到矮人由强大的火焰元素拉格纳罗斯领导后——奈法利安发誓要粉碎他的敌人，并将整座黑石山据为己有。",
+    Story =
+    "这座雕刻在黑石山炽热深处的宏伟堡垒由矮人大师石匠弗兰克罗恩·铸铁设计。作为黑铁矮人力量的象征，这座堡垒被邪恶的矮人占据了数个世纪。然而，奈法利安——巨龙死亡之翼狡猾的儿子——对这座伟大的要塞另有打算。他和他的龙类仆从控制了黑石塔上层，并对矮人在山脉火山深处的领地发动了战争。意识到矮人由强大的火焰元素拉格纳罗斯领导后——奈法利安发誓要粉碎他的敌人，并将整座黑石山据为己有。",
     Caption = "下层 黑石塔",
     Alliance = {},
     Horde = {}
@@ -1580,7 +1688,8 @@ kQuestInstanceData.BlackrockSpireLower.Alliance[1] = {
     Attain = 40,
     Aim = "将第五块和第六块摩沙鲁石板交给塔纳利斯的勘查员铁靴。",
     Location = "勘查员铁靴 (塔纳利斯 - 热砂港 " .. yellow .. "66,23" .. white .. ")",
-    Note = "你在 " .. yellow .. "[7]" .. white .. " 和 " .. yellow .. "[9]" .. white .. " 附近找到石板。\n奖励属于 '面对叶基亚'。你在 勘查员铁靴 附近找到 叶基亚。",
+    Note = "你在 " ..
+        yellow .. "[7]" .. white .. " 和 " .. yellow .. "[9]" .. white .. " 附近找到石板。\n奖励属于 '面对叶基亚'。你在 勘查员铁靴 附近找到 叶基亚。",
     Prequest = "失落的摩沙鲁石板",
     Folgequest = "面对叶基亚",
     Rewards = {
@@ -1664,7 +1773,8 @@ kQuestInstanceData.BlackrockSpireLower.Alliance[7] = {
     Attain = 55,
     Aim = "找到比修的装置并把它们还给她。你记得她说过她把装置藏在城市的最底层。",
     Location = "比修 (黑石塔 " .. yellow .. "[3]" .. white .. ")",
-    Note = "你在前往 烟网蛛后 " .. yellow .. "[13]" .. white .. " 的路上找到 比修的装置。\n麦克斯韦尔位于 (燃烧平原 - 摩根的岗哨 " .. yellow .. "84,58" .. white .. ")。",
+    Note = "你在前往 烟网蛛后 " ..
+        yellow .. "[13]" .. white .. " 的路上找到 比修的装置。\n麦克斯韦尔位于 (燃烧平原 - 摩根的岗哨 " .. yellow .. "84,58" .. white .. ")。",
     Folgequest = "给麦克斯韦尔的消息",
 }
 kQuestInstanceData.BlackrockSpireLower.Alliance[8] = {
@@ -1693,7 +1803,8 @@ kQuestInstanceData.BlackrockSpireLower.Alliance[9] = {
     Attain = 57,
     Aim = "找到三块命令宝石：燃棘宝钻、尖石宝钻和血斧宝钻。把它们和原始晋升印章一起交给维埃兰。$B$B可能携带者三块宝石的将军是：燃棘氏族的指挥官沃恩、尖石氏族的欧莫克大王，以及血斧氏族的督军维姆萨拉克。",
     Location = "维埃兰 (黑石塔 " .. yellow .. "[1]" .. white .. ")",
-    Note = "你从 " .. yellow .. "[5]" .. white .. " 的 欧莫克大王 那里获得 尖石宝钻，从 " .. yellow .. "[9]" .. white .. " 的 指挥官沃恩 那里获得 燃棘宝钻，从 " ..
+    Note = "你从 " ..
+        yellow .. "[5]" .. white .. " 的 欧莫克大王 那里获得 尖石宝钻，从 " .. yellow .. "[9]" .. white .. " 的 指挥官沃恩 那里获得 燃棘宝钻，从 " ..
         yellow .. "[19]" .. white .. " 的 维姆萨拉克 那里获得 血斧宝钻。原始晋升印章 几乎可以从 黑石塔下层 的所有敌人身上掉落。如果你完成此任务线，你将获得 黑石塔上层 的钥匙。",
     Folgequest = "晋升印章",
 }
@@ -1749,7 +1860,10 @@ kQuestInstanceData.BlackrockSpireLower.Alliance[14] = {
     Attain = 60,
     Aim = "世界上一定有人知道关于这副手套的事情，祝你好运！",
     Location = "人类遗骸 (黑石塔下层 " .. yellow .. "[9]" .. white .. ")",
-    Note = "锻造任务。务必在 " .. yellow .. "[11]" .. white .. " 的 人类遗骸 附近拾取 未淬火的板甲护手。交给 玛雷弗斯·暗锤 (冬泉谷 - 永望镇 " .. yellow .. "61,39" .. white .. ")。列出的奖励是后续任务的。",
+    Note = "锻造任务。务必在 " ..
+        yellow ..
+        "[11]" ..
+        white .. " 的 人类遗骸 附近拾取 未淬火的板甲护手。交给 玛雷弗斯·暗锤 (冬泉谷 - 永望镇 " .. yellow .. "61,39" .. white .. ")。列出的奖励是后续任务的。",
     Folgequest = "炽热板甲护手",
     Rewards = {
         Text = "奖励：任选其一",
@@ -1758,13 +1872,15 @@ kQuestInstanceData.BlackrockSpireLower.Alliance[14] = {
     }
 }
 kQuestInstanceData.BlackrockSpireLower.Alliance[15] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "黑铁亵渎者",
     Id = 40762,
     Level = 60,
     Attain = 55,
     Aim = "在泰拉比姆的比克瑟仓库，为比克瑟·螺熔收集一支黑铁步枪、一个熔岩冷凝器、一个复杂的奥金炮管和一个熔岩碎片。",
     Location = "比克瑟·螺熔 (泰拉比姆 " .. yellow .. "52,34" .. white .. ")",
-    Note = "此任务需要收集 4 件物品。\n1) 熔岩冷凝器 (黑石深渊，在 熔岩冷凝器箱 中) \n2) 复杂的奥金炮管 (黑石塔，在 复杂的奥金锭桶 容器中)\n3) 熔岩碎片 (熔火之心，来自 熔核摧毁者)。\n4) 黑铁步枪 (由工程师制作)。\n炽热之核(x3) 在 熔火之心 中找到，以及 附魔瑟银锭(x10)。",
+    Note =
+    "此任务需要收集 4 件物品。\n1) 熔岩冷凝器 (黑石深渊，在 熔岩冷凝器箱 中) \n2) 复杂的奥金炮管 (黑石塔，在 复杂的奥金锭桶 容器中)\n3) 熔岩碎片 (熔火之心，来自 熔核摧毁者)。\n4) 黑铁步枪 (由工程师制作)。\n炽热之核(x3) 在 熔火之心 中找到，以及 附魔瑟银锭(x10)。",
     Prequest = "黑铁亵渎者的秘密",
     Rewards = {
         Text = "奖励：",
@@ -1835,6 +1951,7 @@ for i = 11, 15 do
     kQuestInstanceData.BlackrockSpireLower.Horde[i] = kQuestInstanceData.BlackrockSpireLower.Alliance[i]
 end
 kQuestInstanceData.BlackrockSpireLower.Horde[16] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "森林巨魔的败类",
     Id = 40495,
     Level = 60,
@@ -1848,6 +1965,7 @@ kQuestInstanceData.BlackrockSpireLower.Horde[16] = {
     }
 }
 kQuestInstanceData.BlackrockSpireLower.Horde[17] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "掠夺者的突袭",
     Id = 40498,
     Level = 58,
@@ -1864,6 +1982,7 @@ kQuestInstanceData.BlackrockSpireLower.Horde[17] = {
     }
 }
 kQuestInstanceData.BlackrockSpireLower.Horde[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "最后的裂缝",
     Id = 40509,
     Level = 59,
@@ -1879,7 +1998,8 @@ kQuestInstanceData.BlackrockSpireLower.Horde[18] = {
 
 --------------- Upper Blackrock Spire ---------------
 kQuestInstanceData.BlackrockSpireUpper = {
-    Story = "这座雕刻在黑石山炽热深处的宏伟堡垒由矮人大师石匠弗兰克罗恩·铸铁设计。作为黑铁矮人力量的象征，这座堡垒被邪恶的矮人占据了数个世纪。然而，奈法利安——巨龙死亡之翼狡猾的儿子——对这座伟大的要塞另有打算。他和他的龙类仆从控制了黑石塔上层，并对矮人在山脉火山深处的领地发动了战争。意识到矮人由强大的火焰元素拉格纳罗斯领导后——奈法利安发誓要粉碎他的敌人，并将整座黑石山据为己有。",
+    Story =
+    "这座雕刻在黑石山炽热深处的宏伟堡垒由矮人大师石匠弗兰克罗恩·铸铁设计。作为黑铁矮人力量的象征，这座堡垒被邪恶的矮人占据了数个世纪。然而，奈法利安——巨龙死亡之翼狡猾的儿子——对这座伟大的要塞另有打算。他和他的龙类仆从控制了黑石塔上层，并对矮人在山脉火山深处的领地发动了战争。意识到矮人由强大的火焰元素拉格纳罗斯领导后——奈法利安发誓要粉碎他的敌人，并将整座黑石山据为己有。",
     Caption = "上层 黑石塔",
     Alliance = {},
     Horde = {}
@@ -1891,7 +2011,9 @@ kQuestInstanceData.BlackrockSpireUpper.Alliance[1] = {
     Attain = 57,
     Aim = "到冬泉谷去找到哈尔琳，把奥比的鳞片交给她。",
     Location = "奥比 (黑石塔 " .. yellow .. "[7]" .. white .. ")",
-    Note = "你在竞技场后的房间 " .. yellow .. "[7]" .. white .. " 找到 奥比。她站在一个突出的岩石上。\n哈尔琳 在 冬泉谷 (" .. yellow .. "54,51" .. white .. ")。使用洞穴尽头的传送门标志到达她那里。",
+    Note = "你在竞技场后的房间 " ..
+        yellow ..
+        "[7]" .. white .. " 找到 奥比。她站在一个突出的岩石上。\n哈尔琳 在 冬泉谷 (" .. yellow .. "54,51" .. white .. ")。使用洞穴尽头的传送门标志到达她那里。",
     Folgequest = "蓝龙之怒",
 }
 kQuestInstanceData.BlackrockSpireUpper.Alliance[2] = {
@@ -1949,7 +2071,8 @@ kQuestInstanceData.BlackrockSpireUpper.Alliance[6] = {
     Attain = 57,
     Aim = "将末日扣环交给燃烧平原的玛亚拉·布莱特文。",
     Location = "玛亚拉·布莱特文 (燃烧平原 - 摩根的岗哨 " .. yellow .. "84,69" .. white .. ")",
-    Note = "你从 (暴风城 - 暴风城要塞 " .. yellow .. "74,30" .. white .. ") 的 雷明顿·瑞治维尔伯爵 那里获得前置任务。\n\n末日扣环 在 " .. yellow .. "[3]" .. white .. " 的一个箱子里。",
+    Note = "你从 (暴风城 - 暴风城要塞 " ..
+        yellow .. "74,30" .. white .. ") 的 雷明顿·瑞治维尔伯爵 那里获得前置任务。\n\n末日扣环 在 " .. yellow .. "[3]" .. white .. " 的一个箱子里。",
     Prequest = "玛亚拉·布莱特文",
     Folgequest = "瑞治维尔的箱子",
     Rewards = {
@@ -2019,19 +2142,21 @@ kQuestInstanceData.BlackrockSpireUpper.Alliance[11] = {
     Prequest = "罗拉克斯的故事",
     Rewards = {
         Text = "奖励：1 和 2 和 3",
-        { id = 12696 }, --Plans: Demon Forged Breastplate Pattern
+        { id = 12696 },              --Plans: Demon Forged Breastplate Pattern
         { id = 9224, quantity = 5 }, --Elixir of Demonslaying Potion
-        { id = 12849 }, --Demon Kissed Sack Container
+        { id = 12849 },              --Demon Kissed Sack Container
     }
 }
 kQuestInstanceData.BlackrockSpireUpper.Alliance[12] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "护腕的上半部分之一",
     Id = 41011,
     Level = 60,
     Attain = 55,
     Aim = "为了吉尔尼斯的帕纳布斯从黑石塔的黑色龙人身上收集一块龙族能量。",
     Location = "帕纳布斯 <流浪巫师> (吉尔尼斯 " .. yellow .. "[22.9,74.4]" .. white .. ", 吉尔尼斯城 最南端, 河流以西。在一座孤独的房子里)。",
-    Note = "强烈建议从 正义的汉瓦 (逆风小径 卡拉赞 外面的小教堂 " .. yellow .. "[40.9,79.3]" .. white .. ") 那里接取前置任务 '桑萨尔的护腕'。\n上层束缚 任务链的最后一个任务的奖励将是用于任务 '桑萨尔的护腕' 的任务物品 '桑萨尔上部护腕'。",
+    Note = "强烈建议从 正义的汉瓦 (逆风小径 卡拉赞 外面的小教堂 " ..
+        yellow .. "[40.9,79.3]" .. white .. ") 那里接取前置任务 '桑萨尔的护腕'。\n上层束缚 任务链的最后一个任务的奖励将是用于任务 '桑萨尔的护腕' 的任务物品 '桑萨尔上部护腕'。",
     Prequest = "桑萨尔护腕",
     Folgequest = "护腕的上半部分之二 -> 护腕的上半部分之三" .. yellow .. "[厄运之槌 西]" .. white .. " -> 护腕的上半部分之四",
     Rewards = {
@@ -2049,7 +2174,8 @@ kQuestInstanceData.BlackrockSpireUpper.Horde[5] = {
     Attain = 57,
     Aim = "将黑暗石板交给卡加斯的暗法师薇薇安·拉格雷。",
     Location = "暗法师薇薇安·拉格雷 (荒芜之地 - 卡加斯 " .. yellow .. "2,47" .. white .. ")",
-    Note = "你从 幽暗城 - 炼金房 (" .. yellow .. "50,68" .. white .. ") 的 药剂师金格 那里获得前置任务。\n\n黑暗石板 在 " .. yellow .. "[3]" .. white .. " 的一个箱子里。",
+    Note = "你从 幽暗城 - 炼金房 (" ..
+        yellow .. "50,68" .. white .. ") 的 药剂师金格 那里获得前置任务。\n\n黑暗石板 在 " .. yellow .. "[3]" .. white .. " 的一个箱子里。",
     Prequest = "薇薇安·拉格雷和黑暗石板",
     Rewards = {
         Text = "奖励：任选其一",
@@ -2107,7 +2233,8 @@ kQuestInstanceData.BlackrockSpireUpper.Horde[13] = kQuestInstanceData.BlackrockS
 
 --------------- Dire Maul (东) ---------------
 kQuestInstanceData.DireMaulEast = {
-    Story = "一万两千年前由暗夜精灵巫师秘密组织建造，古老的艾萨拉城用来保护女王艾萨拉最珍贵的奥术秘密。尽管它在世界大灾变中遭到摧残，这座奇妙城市的大部分仍以厄运之槌的姿态傲然屹立。废墟的三个不同区域已被各种生物占领——尤其是幽灵上层精灵、邪恶萨特和野蛮的食人魔。只有最勇敢的冒险队伍才能进入这座破碎的城市，面对锁在其古老地窖中的远古邪恶。",
+    Story =
+    "一万两千年前由暗夜精灵巫师秘密组织建造，古老的艾萨拉城用来保护女王艾萨拉最珍贵的奥术秘密。尽管它在世界大灾变中遭到摧残，这座奇妙城市的大部分仍以厄运之槌的姿态傲然屹立。废墟的三个不同区域已被各种生物占领——尤其是幽灵上层精灵、邪恶萨特和野蛮的食人魔。只有最勇敢的冒险队伍才能进入这座破碎的城市，面对锁在其古老地窖中的远古邪恶。",
     Caption = "厄运之槌 (东)",
     Alliance = {},
     Horde = {}
@@ -2119,7 +2246,8 @@ kQuestInstanceData.DireMaulEast.Alliance[1] = {
     Attain = 54,
     Aim = "到厄运之槌去找到小鬼普希林。你可以使用任何手段从小鬼那里得到埃斯托尔迪的咒术之书。$B$B找到咒术之书后，回到拉瑞斯小亭的埃斯托尔迪那里。",
     Location = "埃斯托尔迪 (菲拉斯 - 拉里斯凉亭 " .. yellow .. "76,37" .. white .. ")",
-    Note = "普希林 在 厄运之槌 " .. yellow .. "东" .. white .. " 的 " .. yellow .. "[1]" .. white .. "。他会在你与他交谈时逃跑，但在以下地点会停下来战斗：" .. yellow ..
+    Note = "普希林 在 厄运之槌 " ..
+        yellow .. "东" .. white .. " 的 " .. yellow .. "[1]" .. white .. "。他会在你与他交谈时逃跑，但在以下地点会停下来战斗：" .. yellow ..
         "[2]" .. white .. "。他会掉落月牙钥匙，用于厄运之槌的北区和西区。",
     Rewards = {
         Text = "奖励：任选其一",
@@ -2134,7 +2262,8 @@ kQuestInstanceData.DireMaulEast.Alliance[2] = {
     Attain = 54,
     Aim = "把蕾瑟塔蒂丝的网交给菲拉斯羽月要塞的拉托尼库斯·月矛。",
     Location = "拉托尼库斯·月矛 (菲拉斯 - 羽月要塞 " .. yellow .. "30,46" .. white .. ")",
-    Note = "蕾瑟塔蒂丝 在 厄运之槌 " .. yellow .. "东" .. white .. " 的 " .. yellow .. "[3]" .. white .. "。前置任务来自 铁炉堡 的 信使落锤。他在整个城市巡逻。",
+    Note = "蕾瑟塔蒂丝 在 厄运之槌 " ..
+        yellow .. "东" .. white .. " 的 " .. yellow .. "[3]" .. white .. "。前置任务来自 铁炉堡 的 信使落锤。他在整个城市巡逻。",
     Prequest = "羽月要塞",
     Rewards = {
         Text = "奖励：",
@@ -2186,7 +2315,11 @@ kQuestInstanceData.DireMaulEast.Alliance[6] = {
     Attain = 60,
     Aim = "到菲拉斯的厄运之槌去，从扭木广场的荒野萨特身上找到15份萨特之血，然后把它们交给腐烂之痕的戴奥。",
     Location = "衰老的戴奥 (诅咒之地 - 腐烂之痕 " .. yellow .. "34,50" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 这与 衰老的戴奥 给出的另一个任务都是为了 末日仪式 法术的术士专属任务。找到 荒野萨特 最简单的方法是通过 拉里斯凉亭 (菲拉斯 " .. yellow .. "77,37" .. white .. ") 的 '后门' 进入 厄运之槌 东。但是，你需要 月牙钥匙。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 这与 衰老的戴奥 给出的另一个任务都是为了 末日仪式 法术的术士专属任务。找到 荒野萨特 最简单的方法是通过 拉里斯凉亭 (菲拉斯 " ..
+        yellow .. "77,37" .. white .. ") 的 '后门' 进入 厄运之槌 东。但是，你需要 月牙钥匙。",
 }
 kQuestInstanceData.DireMaulEast.Alliance[7] = {
     Title = "久违的法师",
@@ -2203,6 +2336,7 @@ kQuestInstanceData.DireMaulEast.Alliance[7] = {
     }
 }
 kQuestInstanceData.DireMaulEast.Alliance[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "狂野变形者",
     Id = 41016,
     Level = 60,
@@ -2217,6 +2351,7 @@ kQuestInstanceData.DireMaulEast.Alliance[8] = {
     }
 }
 kQuestInstanceData.DireMaulEast.Alliance[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "缠绕扭木",
     Id = 41376,
     Level = 61,
@@ -2238,7 +2373,8 @@ kQuestInstanceData.DireMaulEast.Horde[2] = {
     Attain = 54,
     Aim = "把蕾瑟塔蒂丝的网交给菲拉斯羽月要塞的拉托尼库斯·月矛。",
     Location = "塔罗·刺蹄 (菲拉斯 - 莫沙彻营地 " .. yellow .. "76,43" .. white .. ")",
-    Note = "蕾瑟塔蒂丝 在 厄运之槌 " .. yellow .. "东" .. white .. " 的 " .. yellow .. "[3]" .. white .. "。前置任务来自 奥格瑞玛 的 公告员高拉克。他在整个城市巡逻。",
+    Note = "蕾瑟塔蒂丝 在 厄运之槌 " ..
+        yellow .. "东" .. white .. " 的 " .. yellow .. "[3]" .. white .. "。前置任务来自 奥格瑞玛 的 公告员高拉克。他在整个城市巡逻。",
     Prequest = "莫沙彻营地",
     Rewards = kQuestInstanceData.DireMaulEast.Alliance[2].Rewards
 }
@@ -2291,7 +2427,9 @@ kQuestInstanceData.DireMaulNorth.Alliance[4] = {
     Attain = 56,
     Aim = "找到戈多克力量护手，并将它交给厄运之槌的克罗卡斯。$B根据克罗卡斯所说的，“传说”自称是王子的精灵托塞德林从一名戈多克食人魔手中偷走了那件神器。",
     Location = "克罗卡斯 (厄运之槌 " .. yellow .. "北, [5]" .. white .. ")",
-    Note = "王子 在 厄运之槌 " .. yellow .. "西" .. white .. " 的 " .. yellow .. "[7]" .. white .. "。护手在他附近的一个箱子里。你只能在完成“戈多克贡品”之后，并且拥有“戈多克大王”增益效果时才能接受此任务。",
+    Note = "王子 在 厄运之槌 " ..
+        yellow ..
+        "西" .. white .. " 的 " .. yellow .. "[7]" .. white .. "。护手在他附近的一个箱子里。你只能在完成“戈多克贡品”之后，并且拥有“戈多克大王”增益效果时才能接受此任务。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 18369 }, --Gordok's Handwraps Hands, Cloth
@@ -2325,7 +2463,8 @@ kQuestInstanceData.DireMaulWest.Alliance[2] = {
     Id = 7461,
     Level = 60,
     Attain = 56,
-    Aim = "你必须干掉5座水晶塔周围的守卫，那5座水晶塔维持着关押伊莫塔尔的监狱。一旦水晶塔的能量被削弱，伊莫塔尔周围的能量力场就会消散。$B$B进入伊莫塔尔的监狱，干掉站在中间的那个恶魔。最后，在图书馆挑战托塞德林王子。$B$B当任务完成之后，到庭院中去找辛德拉古灵。",
+    Aim =
+    "你必须干掉5座水晶塔周围的守卫，那5座水晶塔维持着关押伊莫塔尔的监狱。一旦水晶塔的能量被削弱，伊莫塔尔周围的能量力场就会消散。$B$B进入伊莫塔尔的监狱，干掉站在中间的那个恶魔。最后，在图书馆挑战托塞德林王子。$B$B当任务完成之后，到庭院中去找辛德拉古灵。",
     Location = "辛德拉古灵 (厄运之槌 " .. yellow .. "西, [1] (上方)" .. white .. ")",
     Note = "水晶塔标记为 " .. blue ..
         "[B]" .. white .. "。伊莫塔尔 在 " .. yellow .. "[6]" .. white .. "，托塞德林王子 在 " .. yellow .. "[7]" .. white .. "。",
@@ -2354,7 +2493,17 @@ kQuestInstanceData.DireMaulWest.Alliance[4] = {
     Attain = 60,
     Aim = "阅读莫苏尔的指南，并召唤出一匹克索诺斯恐惧战马，击败它，然后控制它的灵魂。",
     Location = "莫苏尔·召血者 (燃烧平原 " .. yellow .. "12,31" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 术士史诗坐骑任务链的最后一步。首先你必须关闭所有标记为 " .. blue .. "[B]" .. white .. " 的水晶塔，然后在 " .. yellow .. "[6]" .. white .. " 杀死 伊莫塔尔。之后，你可以开始召唤仪式。务必准备好 20 个以上的 灵魂碎片，并指派一名术士专门负责维持 钟、蜡烛 和 车轮。出现的 末日守卫 可以被奴役。完成后，与 恐惧战马之魂 交谈以完成任务。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 术士史诗坐骑任务链的最后一步。首先你必须关闭所有标记为 " ..
+        blue ..
+        "[B]" ..
+        white ..
+        " 的水晶塔，然后在 " ..
+        yellow ..
+        "[6]" ..
+        white .. " 杀死 伊莫塔尔。之后，你可以开始召唤仪式。务必准备好 20 个以上的 灵魂碎片，并指派一名术士专门负责维持 钟、蜡烛 和 车轮。出现的 末日守卫 可以被奴役。完成后，与 恐惧战马之魂 交谈以完成任务。",
     Prequest = "瓶中的小鬼 (" .. yellow .. "通灵学院" .. white .. ")", -- 7629",
 }
 kQuestInstanceData.DireMaulWest.Alliance[5] = {
@@ -2481,7 +2630,8 @@ kQuestInstanceData.DireMaulWest.Alliance[14] = {
     Attain = 58,
     Aim = "将一本专注圣契、1颗原始黑钻石、4块大魔光碎片和2块暗影之皮带给厄运之槌的博学者莱德罗斯，以获得专注秘药。",
     Location = "博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")",
-    Note = "这不是一个前置任务，但必须先完成“精灵的传说”才能开始此任务。这本圣典是厄运之槌的随机掉落物品，并且可以交易，因此可以在拍卖行找到。暗影之皮是灵魂绑定的，可以从一些首领、复活的构造体和复活的骷髅守卫身上掉落，在" .. yellow .. "通灵学院" .. white .. "。",
+    Note = "这不是一个前置任务，但必须先完成“精灵的传说”才能开始此任务。这本圣典是厄运之槌的随机掉落物品，并且可以交易，因此可以在拍卖行找到。暗影之皮是灵魂绑定的，可以从一些首领、复活的构造体和复活的骷髅守卫身上掉落，在" ..
+        yellow .. "通灵学院" .. white .. "。",
     Rewards = {
         Text = "奖励：",
         { id = 18330 }, --Arcanum of Focus Enchant
@@ -2494,7 +2644,9 @@ kQuestInstanceData.DireMaulWest.Alliance[15] = {
     Attain = 58,
     Aim = "将防护圣契、1颗原始黑钻石、2大块魔光碎片和1条磨损的憎恶缝合线带给厄运之槌的博学者莱德罗斯，以获得防护秘药。",
     Location = "博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")",
-    Note = "这不是一个前置任务，但必须先完成精灵的传说才能开始此任务。这本圣典是厄运之槌的随机掉落物品，并且可以交易，因此可以在拍卖行找到。磨损的憎恶缝合线是灵魂绑定的，可以从吞咽者拉姆斯登、毒液喷射者、喷胆者和缝补憎恶身上掉落，在" .. yellow .. "斯坦索姆" .. white .. "。",
+    Note =
+        "这不是一个前置任务，但必须先完成精灵的传说才能开始此任务。这本圣典是厄运之槌的随机掉落物品，并且可以交易，因此可以在拍卖行找到。磨损的憎恶缝合线是灵魂绑定的，可以从吞咽者拉姆斯登、毒液喷射者、喷胆者和缝补憎恶身上掉落，在" ..
+        yellow .. "斯坦索姆" .. white .. "。",
     Rewards = {
         Text = "奖励：",
         { id = 18331 }, --Arcanum of Protection Enchant
@@ -2520,17 +2672,21 @@ kQuestInstanceData.DireMaulWest.Alliance[17] = {
     Attain = 60,
     Aim = "将《弗洛尔的屠龙技术纲要》还回图书馆。",
     Location = "弗洛尔的屠龙技术纲要 (随机掉落自 " .. yellow .. "厄运之槌" .. white .. " 首领)",
-    Note = red .. "战士或圣骑士任务。" .. white .. " 交给 博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")。完成此任务可以开始 奎尔塞拉 的任务。",
+    Note = red ..
+        "战士或圣骑士任务。" .. white .. " 交给 博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")。完成此任务可以开始 奎尔塞拉 的任务。",
     Folgequest = "铸造奎尔塞拉",
 }
 kQuestInstanceData.DireMaulWest.Alliance[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "保守秘密",
     Id = 40254,
     Level = 58,
     Attain = 45,
     Aim = "前往厄运之槌，杀死上层精灵正在吸取能量的大恶魔，从中获取纯净魔之精华。回到艾萨拉的守护者拉恩那那里。",
     Location = "守护者拉恩那 (艾萨拉 " .. yellow .. "44,45.4" .. white .. ")",
-    Note = "伊莫塔尔 " .. yellow .. "[6]" .. white .. " 掉落 纯净魔之精华。\n任务链开始于 艾萨拉 东北角海岸的 守护者艾瑟勒斯 " .. yellow .. "89,8,33.8" .. white .. " 的任务 '守护者的责任'。",
+    Note = "伊莫塔尔 " ..
+        yellow ..
+        "[6]" .. white .. " 掉落 纯净魔之精华。\n任务链开始于 艾萨拉 东北角海岸的 守护者艾瑟勒斯 " .. yellow .. "89,8,33.8" .. white .. " 的任务 '守护者的责任'。",
     Prequest = "恢复魔网线",
     Rewards = {
         Text = "奖励：任选其一",
@@ -2539,13 +2695,19 @@ kQuestInstanceData.DireMaulWest.Alliance[18] = {
     }
 }
 kQuestInstanceData.DireMaulWest.Alliance[19] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "护腕的上半部分之三",
     Id = 41013,
     Level = 60,
     Attain = 55,
     Aim = "为了吉尔尼斯的帕纳布斯从厄运之槌西的任意奥术元素身上收集一个奥术超载谐振器。",
     Location = "帕纳布斯 <流浪巫师> (吉尔尼斯 " .. yellow .. "[22.9,74.4]" .. white .. ", 吉尔尼斯城 最南端, 河流以西。在一座孤独的房子里)。",
-    Note = "强烈建议从 正义的汉瓦 (逆风小径 卡拉赞 外面的小教堂 " .. yellow .. "[40.9,79.3]" .. white .. ") 那里接取前置任务 '桑萨尔的护腕'。\n上层束缚 任务链的最后一个任务的奖励将是用于任务 '桑萨尔的护腕' 的任务物品 '桑萨尔上部护腕'。\n" .. yellow .. "[6]" .. white .. " 周围圆圈里的大型元素生物 奥术洪流 掉落 奥术超载谐振器。",
+    Note = "强烈建议从 正义的汉瓦 (逆风小径 卡拉赞 外面的小教堂 " ..
+        yellow ..
+        "[40.9,79.3]" ..
+        white ..
+        ") 那里接取前置任务 '桑萨尔的护腕'。\n上层束缚 任务链的最后一个任务的奖励将是用于任务 '桑萨尔的护腕' 的任务物品 '桑萨尔上部护腕'。\n" ..
+        yellow .. "[6]" .. white .. " 周围圆圈里的大型元素生物 奥术洪流 掉落 奥术超载谐振器。",
     Prequest = "桑萨尔护腕 -> 护腕的上半部分之一" .. yellow .. "[黑石塔上层]" .. white .. " -> 上层束缚 II", --41015, 41011, 41012",
     Folgequest = "护腕的上半部分之四",
     Rewards = {
@@ -2554,6 +2716,7 @@ kQuestInstanceData.DireMaulWest.Alliance[19] = {
     }
 }
 kQuestInstanceData.DireMaulWest.Alliance[20] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "卡拉赞的钥匙之八",
     Id = 40827,
     Level = 60,
@@ -2565,6 +2728,7 @@ kQuestInstanceData.DireMaulWest.Alliance[20] = {
     Folgequest = "卡拉赞的钥匙之九 (黑翼之巢) -> 卡拉赞的钥匙之十",
 }
 kQuestInstanceData.DireMaulWest.Alliance[21] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "寐入梦境之三",
     Id = 40959,
     Level = 60,
@@ -2594,7 +2758,8 @@ end
 
 --------------- Maraudon ---------------
 kQuestInstanceData.Maraudon = {
-    Story = "在凶猛的玛拉顿半人马保护下，玛拉顿是凄凉之地最神圣的地方之一。这座宏伟的神庙/洞穴是扎尔塔的安葬之地，他是半神塞纳留斯两个不朽儿子之一。传说扎尔塔和大地元素公主瑟莱德丝生下了不幸的半人马种族。据说在诞生之时，野蛮的半人马背叛并杀死了他们的父亲。有人相信瑟莱德丝在悲痛中将扎尔塔的灵魂困在蜿蜒的洞穴中——为某种邪恶目的利用其能量。地下隧道中居住着凶恶、早已死去的半人马可汗幽灵，以及瑟莱德丝自己狂暴的元素仆从。",
+    Story =
+    "在凶猛的玛拉顿半人马保护下，玛拉顿是凄凉之地最神圣的地方之一。这座宏伟的神庙/洞穴是扎尔塔的安葬之地，他是半神塞纳留斯两个不朽儿子之一。传说扎尔塔和大地元素公主瑟莱德丝生下了不幸的半人马种族。据说在诞生之时，野蛮的半人马背叛并杀死了他们的父亲。有人相信瑟莱德丝在悲痛中将扎尔塔的灵魂困在蜿蜒的洞穴中——为某种邪恶目的利用其能量。地下隧道中居住着凶恶、早已死去的半人马可汗幽灵，以及瑟莱德丝自己狂暴的元素仆从。",
     Caption = "玛拉顿",
     Alliance = {},
     Horde = {}
@@ -2706,10 +2871,12 @@ kQuestInstanceData.Maraudon.Alliance[8] = {
     Attain = 45,
     Aim = "到月光林地去找到雷姆洛斯，将生命之种交给他。",
     Location = "扎尔塔之魂 (玛拉顿 " .. yellow .. "[11]" .. white .. ")",
-    Note = "扎尔塔之魂 在杀死 瑟莱德丝公主 " .. yellow .. "[11]" .. white .. " 后出现。你在 (月光林地 - 雷姆洛斯神殿 " .. yellow .. "36,41" .. white .. ") 找到 守护者雷姆洛斯。",
+    Note = "扎尔塔之魂 在杀死 瑟莱德丝公主 " ..
+        yellow .. "[11]" .. white .. " 后出现。你在 (月光林地 - 雷姆洛斯神殿 " .. yellow .. "36,41" .. white .. ") 找到 守护者雷姆洛斯。",
     Prequest = "大地的污染",
 }
 kQuestInstanceData.Maraudon.Alliance[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "奇美兰的挽具",
     Id = 41052,
     Level = 48,
@@ -2724,6 +2891,7 @@ kQuestInstanceData.Maraudon.Alliance[9] = {
     }
 }
 kQuestInstanceData.Maraudon.Alliance[10] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "为什么不两者兼得？",
     Id = 41142,
     Level = 50,
@@ -2739,6 +2907,7 @@ kQuestInstanceData.Maraudon.Alliance[10] = {
     }
 }
 kQuestInstanceData.Maraudon.Alliance[11] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "准备",
     Id = 41281,
     Level = 48,
@@ -2785,6 +2954,7 @@ kQuestInstanceData.Maraudon.Horde[7] = {
 }
 kQuestInstanceData.Maraudon.Horde[8] = kQuestInstanceData.Maraudon.Alliance[8]
 kQuestInstanceData.Maraudon.Horde[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "准备",
     Id = 41281,
     Level = 48,
@@ -2795,7 +2965,9 @@ kQuestInstanceData.Maraudon.Horde[9] = {
     Prequest = "掌握宝石学 -> 生命之源 -> 展示",
     Folgequest = "最终的切割",
 }
-kQuestInstanceData.Maraudon.Horde[10] = { --TODO translate
+kQuestInstanceData.Maraudon.Horde[10] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "被污染的水域",
     Id = 41943,
     Level = 47,
@@ -2813,7 +2985,8 @@ kQuestInstanceData.Maraudon.Horde[10] = { --TODO translate
 
 --------------- Molten Core ---------------
 kQuestInstanceData.MoltenCore = {
-    Story = "熔火之心位于黑石深渊的最底部。它是黑石山的心脏，也是很久以前，索瑞森大帝在绝境中试图扭转矮人内战局势，将元素炎魔之王拉格纳罗斯召唤到这个世界的确切地点。尽管炎魔之王无法远离炽热的核心，但人们相信他的元素仆从指挥着黑铁矮人，他们正在用活石创造军队。拉格纳罗斯沉睡的燃烧之湖充当连接火元素位面的裂隙，允许恶意的元素穿过。拉格纳罗斯的代理人中最重要的是管理者埃克索图斯——因为这个狡猾的元素是唯一能够将炎魔之王从沉睡中唤醒的存在。",
+    Story =
+    "熔火之心位于黑石深渊的最底部。它是黑石山的心脏，也是很久以前，索瑞森大帝在绝境中试图扭转矮人内战局势，将元素炎魔之王拉格纳罗斯召唤到这个世界的确切地点。尽管炎魔之王无法远离炽热的核心，但人们相信他的元素仆从指挥着黑铁矮人，他们正在用活石创造军队。拉格纳罗斯沉睡的燃烧之湖充当连接火元素位面的裂隙，允许恶意的元素穿过。拉格纳罗斯的代理人中最重要的是管理者埃克索图斯——因为这个狡猾的元素是唯一能够将炎魔之王从沉睡中唤醒的存在。",
     Caption = "熔火之心",
     Alliance = {},
     Horde = {}
@@ -2849,7 +3022,11 @@ kQuestInstanceData.MoltenCore.Alliance[3] = {
     Attain = 60,
     Aim = "要想将逐风者桑德兰从他的监狱中解救出来，你就必须找到左右两个逐风者禁锢镣铐，10块源质锭，以及火焰之王的精华，把它们交给大领主德米提恩。",
     Location = "大领主德米提恩 (希利苏斯 " .. yellow .. "22,9" .. white .. ")",
-    Note = "雷霆之怒，逐风者的祝福之剑 任务链的一部分。在从 " .. yellow .. "[4]" .. white .. " 的 加尔 或 " .. yellow .. "[6]" .. white .. " 的 迦顿男爵 处获得左侧或右侧 逐风者禁锢镣铐 后开始。然后与 大领主德米提恩 交谈开始任务链。火焰之王的精华 从 " ..
+    Note = "雷霆之怒，逐风者的祝福之剑 任务链的一部分。在从 " ..
+        yellow ..
+        "[4]" ..
+        white ..
+        " 的 加尔 或 " .. yellow .. "[6]" .. white .. " 的 迦顿男爵 处获得左侧或右侧 逐风者禁锢镣铐 后开始。然后与 大领主德米提恩 交谈开始任务链。火焰之王的精华 从 " ..
         yellow .. "[10]" .. white .. " 的 拉格纳罗斯 处掉落。完成此任务后，桑德兰王子 会被召唤，你必须杀死他。他是一个 40 人团队首领。",
     Prequest = "复生之瓶",
     Folgequest = "觉醒吧，雷霆之怒",
@@ -2988,7 +3165,8 @@ end
 
 --------------- Onyxias Lair ---------------
 kQuestInstanceData.OnyxiasLair = {
-    Story = "奥妮克希亚是强大巨龙死亡之翼的女儿，也是黑石塔诡计多端的统治者奈法利安的妹妹。据说奥妮克希亚喜欢通过干涉凡人种族的政治事务来腐化他们。为此，人们相信她会化身为各种类人生物，利用她的魅力和力量影响不同种族之间的微妙事务。有人相信奥妮克希亚甚至采用了她父亲曾用过的化名——普瑞斯托王室的头衔。当不干涉凡人事务时，奥妮克希亚居住在龙沼下方的火焰洞穴中，那是位于尘泥沼泽中的阴郁沼泽。在那里，她受到她的亲族——黑龙军团残余成员的守卫。",
+    Story =
+    "奥妮克希亚是强大巨龙死亡之翼的女儿，也是黑石塔诡计多端的统治者奈法利安的妹妹。据说奥妮克希亚喜欢通过干涉凡人种族的政治事务来腐化他们。为此，人们相信她会化身为各种类人生物，利用她的魅力和力量影响不同种族之间的微妙事务。有人相信奥妮克希亚甚至采用了她父亲曾用过的化名——普瑞斯托王室的头衔。当不干涉凡人事务时，奥妮克希亚居住在龙沼下方的火焰洞穴中，那是位于尘泥沼泽中的阴郁沼泽。在那里，她受到她的亲族——黑龙军团残余成员的守卫。",
     Caption = "奥妮克希亚的巢穴",
     Alliance = {},
     Horde = {}
@@ -3013,7 +3191,8 @@ kQuestInstanceData.OnyxiasLair.Alliance[2] = {
     Level = 60,
     Attain = 60,
     Aim = "把8章《龙语傻瓜教程》的章节用魔法书封面合起来，然后把完整的《龙语傻瓜教程：第二卷》交给塔纳利斯的纳瑞安。",
-    Location = "纳瑞安 (塔纳利斯 " .. yellow .. "65, 18" .. white .. ")" .. "龙语傻瓜教程 (掉落自 奥妮克希亚 " .. yellow .. "[3]" .. white .. ")",
+    Location = "纳瑞安 (塔纳利斯 " ..
+        yellow .. "65, 18" .. white .. ")" .. "龙语傻瓜教程 (掉落自 奥妮克希亚 " .. yellow .. "[3]" .. white .. ")",
     Note = "只有一个人可以拾取章节。龙语傻瓜教程 VI (掉落自 奥妮克希亚 " .. yellow .. "[3]" .. white .. ")",
     Prequest = "螳螂捕蝉！",
     Folgequest = "好消息和坏消息 (必须完成 斯图沃尔，前任死党 和 永远别问我的生意 任务链)",
@@ -3052,7 +3231,8 @@ kQuestInstanceData.OnyxiasLair.Horde[3] = createInheritedQuest(
 
 --------------- Razorfen Downs ---------------
 kQuestInstanceData.RazorfenDowns = {
-    Story = "与剃刀沼泽用同样强大的藤蔓建造，剃刀高地是钢鬃种族的传统首都。这座蔓延的、荆棘丛生的迷宫容纳着一支真正的忠诚钢鬃军队以及他们的高级祭司——死亡之头部族。然而最近，一道阴影笼罩在这个简陋的巢穴上。亡灵天灾的代理人——由巫妖寒冰使者阿曼纳领导——已经控制了钢鬃种族，并将荆棘迷宫变成了亡灵力量的堡垒。现在钢鬃正进行着绝望的战斗，试图在阿曼纳将他的控制扩展到整个贫瘠之地之前夺回他们心爱的城市。",
+    Story =
+    "与剃刀沼泽用同样强大的藤蔓建造，剃刀高地是钢鬃种族的传统首都。这座蔓延的、荆棘丛生的迷宫容纳着一支真正的忠诚钢鬃军队以及他们的高级祭司——死亡之头部族。然而最近，一道阴影笼罩在这个简陋的巢穴上。亡灵天灾的代理人——由巫妖寒冰使者阿曼纳领导——已经控制了钢鬃种族，并将荆棘迷宫变成了亡灵力量的堡垒。现在钢鬃正进行着绝望的战斗，试图在阿曼纳将他的控制扩展到整个贫瘠之地之前夺回他们心爱的城市。",
     Caption = "剃刀高地",
     Alliance = {},
     Horde = {}
@@ -3140,6 +3320,7 @@ kQuestInstanceData.RazorfenDowns.Horde[4] = {
     }
 }
 kQuestInstanceData.RazorfenDowns.Horde[5] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "超越的力量",
     Id = 40995,
     Level = 44,
@@ -3159,7 +3340,8 @@ kQuestInstanceData.RazorfenDowns.Horde[5] = {
 
 --------------- Razorfen Kraul ---------------
 kQuestInstanceData.RazorfenKraul = {
-    Story = "一万年前——在上古之战期间，强大的半神阿迦玛甘挺身而出对抗燃烧军团。尽管这头巨大的野猪倒在了战斗中,他的行动帮助拯救了艾泽拉斯免于毁灭。然而随着时间推移，在他鲜血洒落的地方，巨大的荆棘藤蔓从地下冒出。钢鬃——被认为是强大之神的凡人后代——来到这些区域占据并视之为圣地。这些荆棘殖民地的中心被称为剃刀。剃刀沼泽的大片区域被老巫婆查尔加·剃刀征服。在她的统治下，萨满钢鬃对敌对部落和部落村庄发动攻击。有人推测查尔加甚至一直在与天灾的代理人谈判——为了某种险恶目的将她毫无戒心的部落与亡灵的队伍结盟。",
+    Story =
+    "一万年前——在上古之战期间，强大的半神阿迦玛甘挺身而出对抗燃烧军团。尽管这头巨大的野猪倒在了战斗中,他的行动帮助拯救了艾泽拉斯免于毁灭。然而随着时间推移，在他鲜血洒落的地方，巨大的荆棘藤蔓从地下冒出。钢鬃——被认为是强大之神的凡人后代——来到这些区域占据并视之为圣地。这些荆棘殖民地的中心被称为剃刀。剃刀沼泽的大片区域被老巫婆查尔加·剃刀征服。在她的统治下，萨满钢鬃对敌对部落和部落村庄发动攻击。有人推测查尔加甚至一直在与天灾的代理人谈判——为了某种险恶目的将她毫无戒心的部落与亡灵的队伍结盟。",
     Caption = "剃刀沼泽",
     Alliance = {},
     Horde = {}
@@ -3169,7 +3351,8 @@ kQuestInstanceData.RazorfenKraul.Alliance[1] = {
     Id = 1221,
     Level = 26,
     Attain = 20,
-    Aim = "找到一个开孔的箱子。$B找到一根地鼠指挥棒。$B找到并阅读《地鼠指挥手册》。$B$B在剃刀沼泽里用开孔的箱子召唤一只地鼠，然后用指挥棒驱使它去搜寻蓝叶薯。$B$B把地鼠指挥棒、开孔的箱子和6块蓝叶薯交给棘齿城的麦伯克·米希瑞克斯。",
+    Aim =
+    "找到一个开孔的箱子。$B找到一根地鼠指挥棒。$B找到并阅读《地鼠指挥手册》。$B$B在剃刀沼泽里用开孔的箱子召唤一只地鼠，然后用指挥棒驱使它去搜寻蓝叶薯。$B$B把地鼠指挥棒、开孔的箱子和6块蓝叶薯交给棘齿城的麦伯克·米希瑞克斯。",
     Location = "麦伯克·米希瑞克斯 (贫瘠之地 - 棘齿城 " .. yellow .. "62,37" .. white .. ")",
     Note = "箱子、棒子和手册都可以在 麦伯克·米希瑞克斯 附近找到。",
     Rewards = {
@@ -3229,7 +3412,9 @@ kQuestInstanceData.RazorfenKraul.Alliance[5] = {
     Attain = 20,
     Aim = "收集必需的材料，将它们交给暴风城的弗伦·长须。",
     Location = "弗伦·长须 (暴风城 - 矮人区 " .. yellow .. "57,16" .. white .. ")",
-    Note = red .. "仅限战士" .. white .. ": 你从鲁古格那里获得燃素 " .. yellow .. "[1]" .. white .. "。\n后续任务因种族而异。人类是 燃烧之血，矮人和侏儒是 铁珊瑚，暗夜精灵是 晒焦的蛋壳。", -- 1705, 1710, 1708 Prequest = "铸盾师",
+    Note = red ..
+        "仅限战士" ..
+        white .. ": 你从鲁古格那里获得燃素 " .. yellow .. "[1]" .. white .. "。\n后续任务因种族而异。人类是 燃烧之血，矮人和侏儒是 铁珊瑚，暗夜精灵是 晒焦的蛋壳。", -- 1705, 1710, 1708 Prequest = "铸盾师",
     Folgequest = "(见注释)",
 }
 kQuestInstanceData.RazorfenKraul.Horde[1] = kQuestInstanceData.RazorfenKraul.Alliance[1]
@@ -3285,6 +3470,7 @@ kQuestInstanceData.RazorfenKraul.Horde[5] = {
     Folgequest = "(见注释)",
 }
 kQuestInstanceData.RazorfenKraul.Horde[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "被污染的荆棘之心",
     Id = 41758,
     Level = 30,
@@ -3301,7 +3487,8 @@ kQuestInstanceData.RazorfenKraul.Horde[6] = {
 
 --------------- SM: library ---------------
 kQuestInstanceData.ScarletMonasteryLibrary = {
-    Story = "修道院曾是洛丹伦神职人员的骄傲堡垒——学习和启蒙的中心。随着第三次战争期间亡灵天灾的崛起，和平的修道院被转变为狂热的血色十字军的据点。十字军对所有非人类种族不容忍，无论其联盟或从属关系如何。他们相信任何和所有外来者都是亡灵瘟疫的潜在携带者——必须被消灭。报告显示进入修道院的冒险者被迫与血色指挥官莫格莱尼对抗——他指挥着一个狂热忠诚战士的大驻军。然而，修道院真正的主人是大检察官怀特迈恩——一位可怕的女祭司，拥有复活倒下的战士为她战斗的能力。",
+    Story =
+    "修道院曾是洛丹伦神职人员的骄傲堡垒——学习和启蒙的中心。随着第三次战争期间亡灵天灾的崛起，和平的修道院被转变为狂热的血色十字军的据点。十字军对所有非人类种族不容忍，无论其联盟或从属关系如何。他们相信任何和所有外来者都是亡灵瘟疫的潜在携带者——必须被消灭。报告显示进入修道院的冒险者被迫与血色指挥官莫格莱尼对抗——他指挥着一个狂热忠诚战士的大驻军。然而，修道院真正的主人是大检察官怀特迈恩——一位可怕的女祭司，拥有复活倒下的战士为她战斗的能力。",
     Caption = "血色修道院: 图书馆",
     Alliance = {},
     Horde = {}
@@ -3313,14 +3500,18 @@ kQuestInstanceData.ScarletMonasteryLibrary.Alliance[1] = {
     Attain = 34,
     Aim = "杀死大检察官怀特迈恩，血色十字军指挥官莫格莱尼，十字军的勇士赫洛德和驯犬者洛克希并向南海镇的莱雷恩复命。",
     Location = "虔诚的莱雷恩 (希尔斯布莱德丘陵 - 南海镇 " .. yellow .. "51,58" .. white .. ")",
-    Note = "此任务链开始于 暴风城 - 光明大教堂 (" .. yellow .. "42,24" .. white .. ") 的 克罗雷修士 的任务 '安东修士'。\n你可以在 " .. yellow .. "血色修道院: 大教堂 [2]" .. white .. " 找到 大检察官怀特迈恩 和 血色十字军指挥官莫格莱尼，在 " ..
+    Note = "此任务链开始于 暴风城 - 光明大教堂 (" ..
+        yellow ..
+        "42,24" ..
+        white ..
+        ") 的 克罗雷修士 的任务 '安东修士'。\n你可以在 " .. yellow .. "血色修道院: 大教堂 [2]" .. white .. " 找到 大检察官怀特迈恩 和 血色十字军指挥官莫格莱尼，在 " ..
         yellow .. "血色修道院: 军械库 [1]" .. white .. " 找到 赫洛德，在 " .. yellow .. "血色修道院: 图书馆 [1]" .. white .. " 找到 驯犬者洛克希。",
     Prequest = "安东修士 -> 血色之路",
     Rewards = {
         Text = "奖励：",
-        { id = 6829 }, --Sword of Serenity One-Hand, Sword
-        { id = 6830 }, --Bonebiter Two-Hand, Axe
-        { id = 6831 }, --Black Menace One-Hand, Dagger
+        { id = 6829 },  --Sword of Serenity One-Hand, Sword
+        { id = 6830 },  --Bonebiter Two-Hand, Axe
+        { id = 6831 },  --Black Menace One-Hand, Dagger
         { id = 11262 }, --Orb of Lorica Held In Off-hand
     }
 }
@@ -3369,8 +3560,8 @@ kQuestInstanceData.ScarletMonasteryLibrary.Horde[2] = {
         "血色修道院: 军械库 [1]" .. white .. " 找到 赫洛德，在 " .. yellow .. "血色修道院: 图书馆 [1]" .. white .. " 找到 驯犬者洛克希。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 6802 }, --Sword of Omen One-Hand, Sword
-        { id = 6803 }, --Prophetic Cane Held In Off-hand
+        { id = 6802 },  --Sword of Omen One-Hand, Sword
+        { id = 6803 },  --Prophetic Cane Held In Off-hand
         { id = 10711 }, --Dragon's Blood Necklace Neck
     }
 }
@@ -3384,9 +3575,9 @@ kQuestInstanceData.ScarletMonasteryLibrary.Horde[3] = {
     Note = "你可以在 血色修道院 的 图书馆 区域找到这本书。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 7747 }, --Vile Protector Shield
+        { id = 7747 },  --Vile Protector Shield
         { id = 17508 }, --Forcestone Buckler Shield
-        { id = 7749 }, --Omega Orb Held In Off-hand
+        { id = 7749 },  --Omega Orb Held In Off-hand
     }
 }
 kQuestInstanceData.ScarletMonasteryLibrary.Horde[4] = {
@@ -3423,6 +3614,7 @@ kQuestInstanceData.ScarletMonasteryArmory.Alliance[1] = kQuestInstanceData.Scarl
 kQuestInstanceData.ScarletMonasteryArmory.Horde[1] = kQuestInstanceData.ScarletMonasteryLibrary.Horde[1]
 kQuestInstanceData.ScarletMonasteryArmory.Horde[2] = kQuestInstanceData.ScarletMonasteryLibrary.Horde[2]
 kQuestInstanceData.ScarletMonasteryArmory.Horde[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "往日之钢",
     Id = 41368,
     Level = 39,
@@ -3446,6 +3638,7 @@ kQuestInstanceData.ScarletMonasteryCathedral = {
 }
 kQuestInstanceData.ScarletMonasteryCathedral.Alliance[1] = kQuestInstanceData.ScarletMonasteryLibrary.Alliance[1]
 kQuestInstanceData.ScarletMonasteryCathedral.Alliance[2] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "卡拉杜斯的宝珠",
     Id = 40233,
     Level = 38,
@@ -3462,6 +3655,7 @@ kQuestInstanceData.ScarletMonasteryCathedral.Alliance[2] = {
     }
 }
 kQuestInstanceData.ScarletMonasteryCathedral.Alliance[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "血色的堕落",
     Id = 40935,
     Level = 44,
@@ -3502,6 +3696,7 @@ kQuestInstanceData.ScarletMonasteryGraveyard.Horde[2] = {
     }
 }
 kQuestInstanceData.ScarletMonasteryGraveyard.Horde[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "染红玫瑰",
     Id = 60116,
     Level = 29,
@@ -3520,7 +3715,8 @@ kQuestInstanceData.ScarletMonasteryGraveyard.Horde[3] = {
 
 --------------- Scholomance ---------------
 kQuestInstanceData.Scholomance = {
-    Story = "通灵学院坐落在凯尔达隆废墟要塞下的一系列地穴中。凯尔达隆曾由高贵的巴罗夫家族拥有，在第二次战争后沦为废墟。当巫师克尔苏加德为他的诅咒教派招募追随者时，他经常承诺不朽以换取为他的巫妖王服务。巴罗夫家族屈服于克尔苏加德的魅力影响，将要塞及其地穴捐赠给了天灾。邪教徒随后杀死了巴罗夫一家，并将古老的地穴变成了被称为通灵学院的死灵法术学校。尽管克尔苏加德不再居住在地穴中，忠诚的邪教徒和导师仍然留在那里。强大的巫妖拉斯·霜语统治着这个地方并以天灾的名义守卫它——而凡人死灵法师，黑暗院长加丁，则担任学校阴险的校长。",
+    Story =
+    "通灵学院坐落在凯尔达隆废墟要塞下的一系列地穴中。凯尔达隆曾由高贵的巴罗夫家族拥有，在第二次战争后沦为废墟。当巫师克尔苏加德为他的诅咒教派招募追随者时，他经常承诺不朽以换取为他的巫妖王服务。巴罗夫家族屈服于克尔苏加德的魅力影响，将要塞及其地穴捐赠给了天灾。邪教徒随后杀死了巴罗夫一家，并将古老的地穴变成了被称为通灵学院的死灵法术学校。尽管克尔苏加德不再居住在地穴中，忠诚的邪教徒和导师仍然留在那里。强大的巫妖拉斯·霜语统治着这个地方并以天灾的名义守卫它——而凡人死灵法师，黑暗院长加丁，则担任学校阴险的校长。",
     Caption = "通灵学院",
     Alliance = {},
     Horde = {}
@@ -3660,6 +3856,7 @@ kQuestInstanceData.Scholomance.Alliance[11] = {
     Folgequest = "最后的准备 (" .. yellow .. "黑石塔上层" .. white .. ")", -- 8994",
 }
 kQuestInstanceData.Scholomance.Alliance[12] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "帮法杉的忙。",
     Id = 40237,
     Level = 58,
@@ -3689,7 +3886,8 @@ kQuestInstanceData.Scholomance.Horde[7] = createInheritedQuest(
 
 --------------- Shadowfang Keep ---------------
 kQuestInstanceData.ShadowfangKeep = {
-    Story = "在第三次战争期间，肯瑞托的巫师与天灾的亡灵军队作战。当达拉然的巫师在战斗中死去时，他们很快就会复活——将他们以前的力量加入不断壮大的天灾。由于缺乏进展感到沮丧（并违背同行的建议），大法师阿鲁高选择召唤超维度实体来增援达拉然日渐减少的队伍。阿鲁高的召唤将贪婪的狼人带入了艾泽拉斯世界。野蛮的狼人不仅屠杀了天灾，而且很快转向巫师们自己。狼人围攻了高贵的银莱恩男爵的要塞。位于派尔伍德小村庄之上，要塞很快陷入黑暗和废墟。被内疚逼疯，阿鲁高收养了狼人作为他的孩子，并撤退到新命名的'影牙城堡'。据说他仍然住在那里，受到他巨大的宠物芬鲁斯的保护——并被银莱恩男爵复仇的幽灵所困扰。",
+    Story =
+    "在第三次战争期间，肯瑞托的巫师与天灾的亡灵军队作战。当达拉然的巫师在战斗中死去时，他们很快就会复活——将他们以前的力量加入不断壮大的天灾。由于缺乏进展感到沮丧（并违背同行的建议），大法师阿鲁高选择召唤超维度实体来增援达拉然日渐减少的队伍。阿鲁高的召唤将贪婪的狼人带入了艾泽拉斯世界。野蛮的狼人不仅屠杀了天灾，而且很快转向巫师们自己。狼人围攻了高贵的银莱恩男爵的要塞。位于派尔伍德小村庄之上，要塞很快陷入黑暗和废墟。被内疚逼疯，阿鲁高收养了狼人作为他的孩子，并撤退到新命名的'影牙城堡'。据说他仍然住在那里，受到他巨大的宠物芬鲁斯的保护——并被银莱恩男爵复仇的幽灵所困扰。",
     Caption = "影牙城堡",
     Alliance = {},
     Horde = {}
@@ -3717,14 +3915,21 @@ kQuestInstanceData.ShadowfangKeep.Alliance[2] = {
     Attain = 20,
     Aim = "找到3块索兰鲁克宝珠的碎片和1块索兰鲁克宝珠的大碎片，把它们交给贫瘠之地的杜安·卡汉。",
     Location = "杜安·卡汉 (贫瘠之地 " .. yellow .. "49,57" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 你从 " .. yellow .. "[黑暗深渊]" .. white .. " 的 黑暗深渊侍僧 那里获得 3块 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙黑暗之魂 那里获得 索兰鲁克宝珠的大碎片。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 你从 " ..
+        yellow ..
+        "[黑暗深渊]" ..
+        white .. " 的 黑暗深渊侍僧 那里获得 3块 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙黑暗之魂 那里获得 索兰鲁克宝珠的大碎片。",
     Rewards = {
         Text = "奖励：任选其一",
-        { id = 6898 }, --Orb of Soran'ruk Held In Off-hand
+        { id = 6898 },  --Orb of Soran'ruk Held In Off-hand
         { id = 15109 }, --Staff of Soran'ruk Staff
     }
 }
 kQuestInstanceData.ShadowfangKeep.Alliance[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "阿鲁高的愚行",
     Id = 60108,
     Level = 27,
@@ -3737,6 +3942,7 @@ kQuestInstanceData.ShadowfangKeep.Alliance[3] = {
     }
 }
 kQuestInstanceData.ShadowfangKeep.Alliance[4] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "失踪的巫师",
     Id = 60109,
     Level = 24,
@@ -3746,6 +3952,7 @@ kQuestInstanceData.ShadowfangKeep.Alliance[4] = {
     Note = "巫师阿克鲁比 在笼子里 " .. yellow .. "[1]" .. white .. ".",
 }
 kQuestInstanceData.ShadowfangKeep.Alliance[5] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "沃根多尔之血",
     Id = 41378,
     Level = 60,
@@ -3803,20 +4010,30 @@ kQuestInstanceData.ShadowfangKeep.Horde[4] = {
     Attain = 20,
     Aim = "找到3块索兰鲁克宝珠的碎片和1块索兰鲁克宝珠的大碎片，把它们交给贫瘠之地的杜安·卡汉。",
     Location = "杜安·卡汉 (贫瘠之地 " .. yellow .. "49,57" .. white .. ")",
-    Note = red .. "此任务仅限术士完成。" .. white .. ": 你从 " .. yellow .. "[黑暗深渊]" .. white .. " 的 黑暗深渊侍僧 那里获得 3块 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙黑暗之魂 那里获得 索兰鲁克宝珠的大碎片。",
+    Note = red ..
+        "此任务仅限术士完成。" ..
+        white ..
+        ": 你从 " ..
+        yellow ..
+        "[黑暗深渊]" ..
+        white .. " 的 黑暗深渊侍僧 那里获得 3块 索兰鲁克碎片。你从 " .. yellow .. "[影牙城堡]" .. white .. " 的 影牙黑暗之魂 那里获得 索兰鲁克宝珠的大碎片。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 6898 }, --Orb of Soran'ruk Held In Off-hand
     }
 }
 kQuestInstanceData.ShadowfangKeep.Horde[5] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "虎口拔牙",
     Id = 40281,
     Level = 25,
     Attain = 15,
     Aim = "在影牙城堡中找到迈雷纳斯的财产，并将其交给幽暗城中的皮尔斯·沙克尔顿。",
     Location = "皮尔斯·沙克尔顿 (幽暗城 - 魔法区 " .. yellow .. "85.4,13.6" .. white .. ")",
-    Note = "你可以在 " .. yellow .. "[12]" .. white .. " 找到 迈雷纳斯的财产，它是位于左侧两个书架之间地板上的一个盒子。\n任务链开始于 纳格拉斯公爵 (提瑞斯法林地 - 格伦郡, 提瑞斯法林地 西部)。\n完成下一个任务后你将获得任务奖励。",
+    Note = "你可以在 " ..
+        yellow ..
+        "[12]" ..
+        white .. " 找到 迈雷纳斯的财产，它是位于左侧两个书架之间地板上的一个盒子。\n任务链开始于 纳格拉斯公爵 (提瑞斯法林地 - 格伦郡, 提瑞斯法林地 西部)。\n完成下一个任务后你将获得任务奖励。",
     Prequest = "达尔索斯遗产 -> 不同类型的锁 -> 魔法之道",
     Folgequest = "达尔索斯遗产",
     Rewards = {
@@ -3826,6 +4043,7 @@ kQuestInstanceData.ShadowfangKeep.Horde[5] = {
     }
 }
 kQuestInstanceData.ShadowfangKeep.Horde[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "主教末路",
     Id = 41366,
     Level = 22,
@@ -3840,6 +4058,7 @@ kQuestInstanceData.ShadowfangKeep.Horde[6] = {
     }
 }
 kQuestInstanceData.ShadowfangKeep.Horde[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "狼、巫婆与镰刀",
     Id = 41381,
     Level = 60,
@@ -3853,7 +4072,8 @@ kQuestInstanceData.ShadowfangKeep.Horde[7] = {
 
 --------------- Stratholme ---------------
 kQuestInstanceData.Stratholme = {
-    Story = "曾是洛丹伦北部的明珠，斯坦索姆是阿尔萨斯王子背叛他的导师乌瑟尔·光明使者，并屠杀数百名被认为感染了可怕的亡灵瘟疫的臣民的地方。阿尔萨斯的向下螺旋和最终向巫妖王投降紧随其后。这座破碎的城市现在由亡灵天灾占据——由强大的巫妖克尔苏加德领导。一支由大十字军达索汉领导的血色十字军部队也占据着被蹂躏城市的一部分。双方陷入持续的暴力战斗。那些足够勇敢（或愚蠢）进入斯坦索姆的冒险者不久就会被迫与两个派系对抗。据说这座城市由三座巨大的瞭望塔守卫，还有强大的死灵法师、女妖和憎恶。也有报告称一位邪恶的死亡骑士骑着邪恶的骏马——对所有冒险进入天灾领域的人施加无差别的愤怒。",
+    Story =
+    "曾是洛丹伦北部的明珠，斯坦索姆是阿尔萨斯王子背叛他的导师乌瑟尔·光明使者，并屠杀数百名被认为感染了可怕的亡灵瘟疫的臣民的地方。阿尔萨斯的向下螺旋和最终向巫妖王投降紧随其后。这座破碎的城市现在由亡灵天灾占据——由强大的巫妖克尔苏加德领导。一支由大十字军达索汉领导的血色十字军部队也占据着被蹂躏城市的一部分。双方陷入持续的暴力战斗。那些足够勇敢（或愚蠢）进入斯坦索姆的冒险者不久就会被迫与两个派系对抗。据说这座城市由三座巨大的瞭望塔守卫，还有强大的死灵法师、女妖和憎恶。也有报告称一位邪恶的死亡骑士骑着邪恶的骏马——对所有冒险进入天灾领域的人施加无差别的愤怒。",
     Caption = "斯坦索姆",
     Alliance = {},
     Horde = {}
@@ -3896,8 +4116,8 @@ kQuestInstanceData.Stratholme.Alliance[3] = {
         Text = "奖励：1 和 2 和 3 或 4",
         { id = 3928, quantity = 5 }, --Superior Healing Potion Potion
         { id = 6149, quantity = 5 }, --Greater Mana Potion Potion
-        { id = 13216 }, --Crown of the Penitent Head, Cloth
-        { id = 13217 }, --Band of the Penitent Ring
+        { id = 13216 },              --Crown of the Penitent Head, Cloth
+        { id = 13217 },              --Band of the Penitent Ring
     }
 }
 kQuestInstanceData.Stratholme.Alliance[4] = {
@@ -3934,7 +4154,8 @@ kQuestInstanceData.Stratholme.Alliance[6] = {
     Attain = 52,
     Aim = "到凯尔达隆岛去，寻找关于那副画的线索。凯尔达隆岛在瘟疫之地南部的湖中央。",
     Location = "画家瑞弗蕾 (西瘟疫之地 - 凯尔达隆 " .. yellow .. "65,75" .. white .. ")",
-    Note = "你从 提里奥·弗丁 (西瘟疫之地 " .. yellow .. "7,43" .. white .. ") 那里获得前置任务。你可以在 " .. yellow .. "[10]" .. white .. " 附近找到这幅画。",
+    Note = "你从 提里奥·弗丁 (西瘟疫之地 " ..
+        yellow .. "7,43" .. white .. ") 那里获得前置任务。你可以在 " .. yellow .. "[10]" .. white .. " 附近找到这幅画。",
     Prequest = "救赎 -> 爱与家庭",
     Folgequest = "寻找麦兰达",
 }
@@ -3945,7 +4166,8 @@ kQuestInstanceData.Stratholme.Alliance[7] = {
     Attain = 57,
     Aim = "到斯坦索姆城里去找到米奈希尔的礼物，把巫妖生前的遗物放在那块邪恶的土地上。",
     Location = "尊敬的莱尼德·巴萨罗梅 (东瘟疫之地 - 圣光之愿礼拜堂 " .. yellow .. "80,58" .. white .. ")",
-    Note = "你从 马杜克镇长 (西瘟疫之地 - 凯尔达隆 " .. yellow .. "70,73" .. white .. ") 那里获得前置任务。你可以在 " .. yellow .. "[19]" .. white .. " 附近找到标志。另见: 通灵学院 中的 " ..
+    Note = "你从 马杜克镇长 (西瘟疫之地 - 凯尔达隆 " ..
+        yellow .. "70,73" .. white .. ") 那里获得前置任务。你可以在 " .. yellow .. "[19]" .. white .. " 附近找到标志。另见: 通灵学院 中的 " ..
         yellow .. "[巫妖, 莱斯·霜语]" .. white .. "。",
     Prequest = "人类拉斯·霜语 -> 亡灵莱斯·霜语",
     Folgequest = "米奈希尔的礼物",
@@ -3957,7 +4179,10 @@ kQuestInstanceData.Stratholme.Alliance[8] = {
     Attain = 55,
     Aim = "杀死男爵。",
     Location = "奥里克斯 (斯坦索姆 " .. yellow .. "[13]" .. white .. ")",
-    Note = "要开始任务，你必须给 奥里克斯 [信仰奖章]。你从堡垒第一个房间（分岔路口前）的箱子 (麦洛尔的保险箱 " .. yellow .. "[7]" .. white .. ") 中获得奖章。给 奥里克斯 奖章后，他会支持你的队伍对抗 男爵 " .. yellow .. "[19]" .. white .. "。杀死男爵后，你必须再次与 奥里克斯 交谈以获得奖励。",
+    Note = "要开始任务，你必须给 奥里克斯 [信仰奖章]。你从堡垒第一个房间（分岔路口前）的箱子 (麦洛尔的保险箱 " ..
+        yellow ..
+        "[7]" ..
+        white .. ") 中获得奖章。给 奥里克斯 奖章后，他会支持你的队伍对抗 男爵 " .. yellow .. "[19]" .. white .. "。杀死男爵后，你必须再次与 奥里克斯 交谈以获得奖励。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 17044 }, --Will of the Martyr Neck
@@ -4008,7 +4233,9 @@ kQuestInstanceData.Stratholme.Alliance[12] = {
     Attain = 58,
     Aim = "进入斯坦索姆，从瑞文戴尔男爵手中救出伊思达。",
     Location = "安泰恩·哈尔蒙 (东瘟疫之地 - 斯坦索姆)",
-    Note = "安其奥就站在斯坦索姆传送门的外面。你需要超维度幽灵显形器才能看到他。它来自前置任务。任务线始于公平的补偿。联盟玩家可以在铁炉堡（" .. yellow .. "43,52" .. white .. "）找到德莉亚娜，部落玩家可以在奥格瑞玛（" .. yellow .. "38,37" .. white .. "）找到莫克瓦尔。\n这就是臭名昭著的“45分钟男爵跑”。",
+    Note = "安其奥就站在斯坦索姆传送门的外面。你需要超维度幽灵显形器才能看到他。它来自前置任务。任务线始于公平的补偿。联盟玩家可以在铁炉堡（" ..
+        yellow ..
+        "43,52" .. white .. "）找到德莉亚娜，部落玩家可以在奥格瑞玛（" .. yellow .. "38,37" .. white .. "）找到莫克瓦尔。\n这就是臭名昭著的“45分钟男爵跑”。",
     Prequest = "寻找安泰恩",
     Folgequest = "生命的证据",
 }
@@ -4078,13 +4305,18 @@ kQuestInstanceData.Stratholme.Alliance[17] = {
     }
 }
 kQuestInstanceData.Stratholme.Alliance[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "建造一个重击者",
     Id = 80401,
     Level = 60,
     Attain = 30,
     Aim = "从血色修道院的军械库中获取瑟银微调舵机，从傀儡统帅阿格曼奇处获得黑石深渊的完美魔像核心，在斯坦索姆找到精金棒，然后回到奥格索普·奥布诺提斯身边。",
     Location = "奥格索普·奥布诺提斯 <Master 侏儒技师> (荆棘谷; 藏宝海湾 " .. yellow .. "28.4,76.3" .. white .. ").",
-    Note = red .. "(仅限工程师)" .. white .. "此任务需要收集3个物品。 \n1) 瑟银微调舵机 (血色修道院 的 血色仆从 掉落)\n2) 完整的魔像核心 (黑石深渊 的 傀儡统帅阿格曼奇 掉落)\n3) 精金棒 (斯坦索姆 的 红衣铸锤师 " .. yellow .. "[8]" .. white .. " 掉落)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，这会开始前置任务 '一个沉重的大脑'。",
+    Note = red ..
+        "(仅限工程师)" ..
+        white ..
+        "此任务需要收集3个物品。 \n1) 瑟银微调舵机 (血色修道院 的 血色仆从 掉落)\n2) 完整的魔像核心 (黑石深渊 的 傀儡统帅阿格曼奇 掉落)\n3) 精金棒 (斯坦索姆 的 红衣铸锤师 " ..
+        yellow .. "[8]" .. white .. " 掉落)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，这会开始前置任务 '一个沉重的大脑'。",
     Prequest = "一个沉重的大脑",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4101,7 +4333,10 @@ kQuestInstanceData.Stratholme.Alliance[19] = {
     Attain = 60,
     Aim = "从斯坦索姆找回灰烬使者战袍（杀死大十字军战士达索汉）和亚历山德罗斯的披风。",
     Location = "提里奥·弗丁 (西瘟疫之地 - 圣光之愿礼拜堂 " .. yellow .. "67.3,24.2" .. white .. ").",
-    Note = "灰烬使者战袍 掉落自 大十字军战士达索汉 " .. yellow .. "[11]" .. white .. ", 亚历山德罗斯的披风 掉落自 瑞文戴尔男爵" .. yellow .. "[19]" .. white .. "\n任务链开始于 纳克萨玛斯，在杀死 4骑士 后接取任务 '纯净光芒之球'",
+    Note = "灰烬使者战袍 掉落自 大十字军战士达索汉 " ..
+        yellow ..
+        "[11]" ..
+        white .. ", 亚历山德罗斯的披风 掉落自 瑞文戴尔男爵" .. yellow .. "[19]" .. white .. "\n任务链开始于 纳克萨玛斯，在杀死 4骑士 后接取任务 '纯净光芒之球'",
     Prequest = "纯净光芒之球 -> 寻找其他帮助",
     Folgequest = "灰烬使者之魂",
     Rewards = {
@@ -4110,24 +4345,31 @@ kQuestInstanceData.Stratholme.Alliance[19] = {
     }
 }
 kQuestInstanceData.Stratholme.Alliance[20] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "罗斯伦家族胸针",
     Id = 41000,
     Level = 60,
     Attain = 55,
     Aim = "为卡拉赞的公爵罗斯伦找回罗斯伦家族胸针。",
     Location = "公爵罗斯伦 (卡拉赞 " .. yellow .. "[卡拉赞 - c]" .. white .. ")",
-    Note = "罗斯伦家族胸针 在首领 不可宽恕者 " .. yellow .. "[4]" .. white .. " 旁边的箱子里。\n任务链开始于 史诗物品随机掉落 '潦草的烹饪笔记' " .. yellow .. "[卡拉赞]" .. white .. ".",
+    Note = "罗斯伦家族胸针 在首领 不可宽恕者 " ..
+        yellow .. "[4]" .. white .. " 旁边的箱子里。\n任务链开始于 史诗物品随机掉落 '潦草的烹饪笔记' " .. yellow .. "[卡拉赞]" .. white .. ".",
     Prequest = "被撕碎的烹饪笔记" .. yellow .. "[卡拉赞]" .. white .. " -> 失而复得 " .. yellow .. "[卡拉赞]" .. white .. "", -- 40998, 40999",
     Folgequest = "神秘配方 (" .. yellow .. "[卡拉赞]" .. white .. ")",
 }
 kQuestInstanceData.Stratholme.Alliance[21] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "卡拉赞的钥匙之七",
     Id = 40826,
     Level = 60,
     Attain = 58,
     Aim = "找到四个麦迪文的回响。它们可能出现在对法师来说具有重要意义的地方。然后带着钥匙回到多万·布雷斯温德身边。",
     Location = "多万·布雷斯温德 (尘泥沼泽 - 西部避难所 " .. yellow .. "[71.1,73.2]" .. white .. ")",
-    Note = "麦迪文的第二根羽毛 在 遥语长者 (春节) " .. yellow .. "[5]" .. white .. " 所在的地面上。\n麦迪文的第一根羽毛 " .. yellow .. "[幽暗城]" .. white .. " 在入口王座后面。\n麦迪文的第三根羽毛 " .. yellow .. "[奥特兰克山脉]" ..
+    Note = "麦迪文的第二根羽毛 在 遥语长者 (春节) " ..
+        yellow ..
+        "[5]" ..
+        white ..
+        " 所在的地面上。\n麦迪文的第一根羽毛 " .. yellow .. "[幽暗城]" .. white .. " 在入口王座后面。\n麦迪文的第三根羽毛 " .. yellow .. "[奥特兰克山脉]" ..
         white .. " 在第一(西)悬崖的尽头 " .. yellow .. "[30.8,87.4]" .. white .. "。\n麦迪文的第四根羽毛 " .. yellow .. "[海加尔山]" ..
         white .. " 在悬崖的尽头 " .. yellow .. "[31.8,70.5]" .. white .. "。",
     Prequest = "卡拉赞的钥匙之六",
@@ -4152,13 +4394,18 @@ kQuestInstanceData.Stratholme.Horde[18] = {
     }
 }
 kQuestInstanceData.Stratholme.Horde[19] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "建造一个重击者",
     Id = 80401,
     Level = 60,
     Attain = 30,
     Aim = "从血色修道院的军械库中获取瑟银微调舵机，从傀儡统帅阿格曼奇处获得黑石深渊的完美魔像核心，在斯坦索姆找到精金棒，然后回到奥格索普·奥布诺提斯身边。",
     Location = "奥格索普·奥布诺提斯 <大师 侏儒技师> (荆棘谷; 藏宝海湾 " .. yellow .. "28.4,76.3" .. white .. ").",
-    Note = red .. "(仅限工程师)" .. white .. "此任务需要收集3个物品。 \n1) 瑟银微调舵机 (血色修道院 的 血色仆从 掉落)\n2) 完整的魔像核心 (黑石深渊 的 傀儡统帅阿格曼奇 掉落)\n3) 精金棒 (斯坦索姆 的 红衣铸锤师 " .. yellow .. "[8]" .. white .. " 掉落)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，这会开始前置任务 '一个沉重的大脑'。",
+    Note = red ..
+        "(仅限工程师)" ..
+        white ..
+        "此任务需要收集3个物品。 \n1) 瑟银微调舵机 (血色修道院 的 血色仆从 掉落)\n2) 完整的魔像核心 (黑石深渊 的 傀儡统帅阿格曼奇 掉落)\n3) 精金棒 (斯坦索姆 的 红衣铸锤师 " ..
+        yellow .. "[8]" .. white .. " 掉落)\n诺莫瑞根 的 '群体打击者9-60' 掉落 '完整的重击者主机'，这会开始前置任务 '一个沉重的大脑'。",
     Prequest = "一个沉重的大脑",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4173,7 +4420,8 @@ kQuestInstanceData.Stratholme.Horde[21] = kQuestInstanceData.Stratholme.Alliance
 
 --------------- Ruins of Ahn'Qiraj ---------------
 kQuestInstanceData.TheRuinsofAhnQiraj = {
-    Story = "在流沙之战的最后几小时，暗夜精灵和四大龙族的联合力量将战斗推向其拉帝国的心脏——安其拉要塞城市。然而在城门处，卡利姆多的军队遇到了比他们以前遇到的任何异种虫战争无人机都更大规模的集中。最终，异种虫和他们的其拉主人并没有被打败，而只是被囚禁在魔法屏障内，战争使这座被诅咒的城市成为废墟。自那天以来已过去一千年，但其拉势力并没有闲着。一支新的可怕军队从蜂巢中诞生，安其拉废墟再次充满了成群的异种虫和其拉。这个威胁必须被消除，否则整个艾泽拉斯可能会在新其拉军队的可怕力量面前倒下。",
+    Story =
+    "在流沙之战的最后几小时，暗夜精灵和四大龙族的联合力量将战斗推向其拉帝国的心脏——安其拉要塞城市。然而在城门处，卡利姆多的军队遇到了比他们以前遇到的任何异种虫战争无人机都更大规模的集中。最终，异种虫和他们的其拉主人并没有被打败，而只是被囚禁在魔法屏障内，战争使这座被诅咒的城市成为废墟。自那天以来已过去一千年，但其拉势力并没有闲着。一支新的可怕军队从蜂巢中诞生，安其拉废墟再次充满了成群的异种虫和其拉。这个威胁必须被消除，否则整个艾泽拉斯可能会在新其拉军队的可怕力量面前倒下。",
     Caption = "安其拉废墟",
     Alliance = {},
     Horde = {}
@@ -4214,13 +4462,18 @@ kQuestInstanceData.TheRuinsofAhnQiraj.Alliance[2] = {
     }
 }
 kQuestInstanceData.TheRuinsofAhnQiraj.Alliance[3] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "遗失于沙漠之中",
     Id = 70001,
     Level = 60,
     Attain = 60,
     Aim = "将一块完美黑曜石碎片带给大法师克希雷姆。",
     Location = "大法师克希雷姆 (艾萨拉 " .. yellow .. "28,47" .. white .. ")",
-    Note = red .. "法师专用" .. white .. ": pre-quest from 博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. "). 完美黑曜石碎片 掉落自 " .. yellow .. "[3]" .. white .. ".",
+    Note = red ..
+        "法师专用" ..
+        white ..
+        ": pre-quest from 博学者莱德罗斯 (厄运之槌 - 西 或 北 " ..
+        yellow .. "[1] 图书馆" .. white .. "). 完美黑曜石碎片 掉落自 " .. yellow .. "[3]" .. white .. ".",
     Prequest = "久违的法师 -> 一种特殊的传票",
     Rewards = {
         Text = "奖励：",
@@ -4228,6 +4481,7 @@ kQuestInstanceData.TheRuinsofAhnQiraj.Alliance[3] = {
     }
 }
 kQuestInstanceData.TheRuinsofAhnQiraj.Alliance[4] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "蠕动的眼睛",
     Id = 42002,
     Level = 60,
@@ -4243,7 +4497,8 @@ end
 
 --------------- The Stockade ---------------
 kQuestInstanceData.TheStockade = {
-    Story = "监狱是一个高度安全的监狱综合体，隐藏在暴风城运河区下方。由典狱官塞尔沃特主持，监狱是小偷、政治叛乱分子、杀人犯和这片土地上最危险罪犯的家园。最近，一场由囚犯领导的暴动导致监狱内一片混乱——守卫被赶出，罪犯自由漫游。典狱官塞尔沃特已设法逃离关押区，目前正在招募勇敢的寻求刺激者冒险进入监狱并杀死暴动的策划者——狡猾的重犯巴济尔·萨雷德。",
+    Story =
+    "监狱是一个高度安全的监狱综合体，隐藏在暴风城运河区下方。由典狱官塞尔沃特主持，监狱是小偷、政治叛乱分子、杀人犯和这片土地上最危险罪犯的家园。最近，一场由囚犯领导的暴动导致监狱内一片混乱——守卫被赶出，罪犯自由漫游。典狱官塞尔沃特已设法逃离关押区，目前正在招募勇敢的寻求刺激者冒险进入监狱并杀死暴动的策划者——狡猾的重犯巴济尔·萨雷德。",
     Caption = "监狱",
     Alliance = {},
     Horde = {}
@@ -4315,18 +4570,25 @@ kQuestInstanceData.TheStockade.Alliance[6] = {
     Attain = 16,
     Aim = "杀死巴基尔·斯瑞德，把他的头带给监狱的典狱官塞尔沃特。",
     Location = "典狱官塞尔沃特 (暴风城 - 监狱 " .. yellow .. "41,58" .. white .. ")",
-    Note = "关于前置任务的更多详情请见 " .. yellow .. "[死亡矿井, 迪菲亚兄弟会]" .. white .. "。\n你可以在 " .. yellow .. "[4]" .. white .. " 找到 巴基尔·斯瑞德。",
+    Note = "关于前置任务的更多详情请见 " ..
+        yellow .. "[死亡矿井, 迪菲亚兄弟会]" .. white .. "。\n你可以在 " .. yellow .. "[4]" .. white .. " 找到 巴基尔·斯瑞德。",
     Prequest = "迪菲亚兄弟会 -> 巴吉尔·特雷德",
     Folgequest = "好奇的访客",
 }
 kQuestInstanceData.TheStockade.Alliance[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "The Stockade's Search",
     Id = 55221,
     Level = 24,
     Attain = 18,
     Aim = "深入监狱并找到关于马丁·柯林斯的信息。",
     Location = "马迪亚斯·肖尔大师 <军情七处领袖> (暴风城 - 旧城区, 盗贼区 " .. yellow .. "75.8,59.8" .. white .. ")",
-    Note = "你可以在副本入口对面房间的 密封的公文箱 " .. yellow .. "[1]" .. white .. " 中找到 马丁·柯林斯的信息。\n任务链开始于 高级指挥官莱西 (湿地 - 鹰守堡 " .. yellow .. "36.4,67.3" .. white .. " 帐篷下) 的任务 '揭开谜团'\n完成任务链的最后一个任务后你将获得奖励。",
+    Note = "你可以在副本入口对面房间的 密封的公文箱 " ..
+        yellow ..
+        "[1]" ..
+        white ..
+        " 中找到 马丁·柯林斯的信息。\n任务链开始于 高级指挥官莱西 (湿地 - 鹰守堡 " ..
+        yellow .. "36.4,67.3" .. white .. " 帐篷下) 的任务 '揭开谜团'\n完成任务链的最后一个任务后你将获得奖励。",
     Prequest = "罗比的报告",
     Folgequest = "调查柯林斯",
     Rewards = {
@@ -4339,7 +4601,8 @@ kQuestInstanceData.TheStockade.Alliance[7] = {
 
 --------------- The Sunken Temple ---------------
 kQuestInstanceData.TheSunkenTemple = {
-    Story = "一千多年前，强大的古拉巴什帝国被一场大规模内战撕裂。一个有影响力的巨魔祭司团体，被称为阿塔莱，试图召回一位名叫灵魂剥夺者哈卡的古老血神。尽管祭司们被击败并最终流放，伟大的巨魔帝国自行崩溃。流放的祭司逃到遥远的北方，进入悲伤沼泽。在那里他们为哈卡建造了一座宏伟的神庙——在那里他们可以为他进入物质世界做准备。伟大的巨龙守护者伊瑟拉得知了阿塔莱的计划，并将神庙粉碎在沼泽之下。直到今天，神庙被淹没的废墟由绿龙守卫，他们阻止任何人进出。然而，人们相信一些狂热的阿塔莱可能在伊瑟拉的愤怒中幸存——并重新投身于哈卡的黑暗服务。",
+    Story =
+    "一千多年前，强大的古拉巴什帝国被一场大规模内战撕裂。一个有影响力的巨魔祭司团体，被称为阿塔莱，试图召回一位名叫灵魂剥夺者哈卡的古老血神。尽管祭司们被击败并最终流放，伟大的巨魔帝国自行崩溃。流放的祭司逃到遥远的北方，进入悲伤沼泽。在那里他们为哈卡建造了一座宏伟的神庙——在那里他们可以为他进入物质世界做准备。伟大的巨龙守护者伊瑟拉得知了阿塔莱的计划，并将神庙粉碎在沼泽之下。直到今天，神庙被淹没的废墟由绿龙守卫，他们阻止任何人进出。然而，人们相信一些狂热的阿塔莱可能在伊瑟拉的愤怒中幸存——并重新投身于哈卡的黑暗服务。",
     Caption = "沉没的神庙",
     Alliance = {},
     Horde = {}
@@ -4365,7 +4628,8 @@ kQuestInstanceData.TheSunkenTemple.Alliance[2] = {
     Attain = 47,
     Aim = "收集5份阿塔莱之雾的样本，然后向安戈洛环形山的穆尔金复命。",
     Location = "格雷甘·山酒 (菲拉斯 " .. yellow .. "45,25" .. white .. ")",
-    Note = "前置任务 '穆尔金和拉瑞安' 开始于 穆尔金 (安戈洛环形山 - 马绍尔营地 " .. yellow .. "42,9" .. white .. ")。你可以从神庙中的 深渊潜伏者, 黑暗蠕虫 或 软泥怪 身上获得阿塔莱之雾。",
+    Note = "前置任务 '穆尔金和拉瑞安' 开始于 穆尔金 (安戈洛环形山 - 马绍尔营地 " ..
+        yellow .. "42,9" .. white .. ")。你可以从神庙中的 深渊潜伏者, 黑暗蠕虫 或 软泥怪 身上获得阿塔莱之雾。",
     Prequest = "穆尔金和拉瑞安 -> 造访格雷甘",
 }
 kQuestInstanceData.TheSunkenTemple.Alliance[3] = {
@@ -4401,7 +4665,13 @@ kQuestInstanceData.TheSunkenTemple.Alliance[5] = {
     Attain = 40,
     Aim = "将装满的哈卡之卵交给塔纳利斯的叶基亚。",
     Location = "叶基亚 (塔纳利斯 - 热砂港 " .. yellow .. "66,22" .. white .. ")",
-    Note = "任务线开始于同一个NPC的 '尖啸者的灵魂' (见 " .. yellow .. "[祖尔法拉克]" .. white .. ")。\n你必须在 " .. yellow .. "[3]" .. white .. " 使用卵来开始事件。一旦开始，敌人就会出现并攻击你。其中一些会掉落哈卡之血。用这些血你可以熄灭圆圈周围的火炬。之后 哈卡的化身 会出现。杀死他并拾取 '哈卡精华'，用它来填满卵。",
+    Note = "任务线开始于同一个NPC的 '尖啸者的灵魂' (见 " ..
+        yellow ..
+        "[祖尔法拉克]" ..
+        white ..
+        ")。\n你必须在 " ..
+        yellow ..
+        "[3]" .. white .. " 使用卵来开始事件。一旦开始，敌人就会出现并攻击你。其中一些会掉落哈卡之血。用这些血你可以熄灭圆圈周围的火炬。之后 哈卡的化身 会出现。杀死他并拾取 '哈卡精华'，用它来填满卵。",
     Prequest = "尖啸者的灵魂 -> 远古之卵",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4431,7 +4701,9 @@ kQuestInstanceData.TheSunkenTemple.Alliance[7] = {
     Attain = 48,
     Aim = "把伊兰尼库斯精华放在精华之泉里，精华之泉就在沉没的神庙中，伊兰尼库斯的巢穴里。",
     Location = "伊兰尼库斯精华 (掉落自 伊兰尼库斯的阴影 " .. yellow .. "[6]" .. white .. ")",
-    Note = "你可以在 伊兰尼库斯的阴影 所在的 " .. yellow .. "[6]" .. white .. " 旁边找到精华之泉。\n" .. red .. "不要" .. white .. " 出售或扔掉奖励饰品 被禁锢的伊兰尼库斯精华。你在 伊萨里奥斯 (悲伤沼泽 - 伊萨里奥斯洞穴 " ..
+    Note = "你可以在 伊兰尼库斯的阴影 所在的 " ..
+        yellow ..
+        "[6]" .. white .. " 旁边找到精华之泉。\n" .. red .. "不要" .. white .. " 出售或扔掉奖励饰品 被禁锢的伊兰尼库斯精华。你在 伊萨里奥斯 (悲伤沼泽 - 伊萨里奥斯洞穴 " ..
         yellow .. "[13.6,71.7]" .. white .. " 的下一个任务中需要它，与他交谈后你将获得一个开始任务的物品。",
     Folgequest = "伊兰尼库斯精华",
     Rewards = {
@@ -4462,7 +4734,9 @@ kQuestInstanceData.TheSunkenTemple.Alliance[9] = {
     Attain = 50,
     Aim = "将你从沉没的神庙的巨魔身上得到的巫毒羽毛交给部落英雄的灵魂。",
     Location = "部落英雄的灵魂 (悲伤沼泽 " .. yellow .. "34,66" .. white .. ")",
-    Note = red .. "仅限战士" .. white .. ": 羽毛掉落自俯瞰中心有洞的大房间的壁架上的每个具名巨魔。\n部落任务线开始于 奥格瑞玛 的战士训练师 索瑞克 " .. yellow .. "80.4,32.3" .. white .. ".",
+    Note = red ..
+        "仅限战士" ..
+        white .. ": 羽毛掉落自俯瞰中心有洞的大房间的壁架上的每个具名巨魔。\n部落任务线开始于 奥格瑞玛 的战士训练师 索瑞克 " .. yellow .. "80.4,32.3" .. white .. ".",
     Prequest = "困扰的灵魂 -> 影誓者之战",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4526,7 +4800,10 @@ kQuestInstanceData.TheSunkenTemple.Alliance[13] = {
     Attain = 50,
     Aim = "前往沉没的阿塔哈卡神庙，杀死绿龙摩弗拉斯，将他的血液交给费伍德森林中的格雷塔·苔蹄。沉没的神庙的入口就在悲伤沼泽中。",
     Location = "奥汀克 (艾萨拉 " .. yellow .. "42,43" .. white .. ")",
-    Note = red .. "仅限牧师" .. white .. ": 摩弗拉斯 位于 " .. yellow .. "[5]" .. white .. "。 格雷塔·苔蹄 位于 费伍德森林 - 翡翠圣地 (" .. yellow .. "51,82" .. white .. ")。",
+    Note = red ..
+        "仅限牧师" ..
+        white ..
+        ": 摩弗拉斯 位于 " .. yellow .. "[5]" .. white .. "。 格雷塔·苔蹄 位于 费伍德森林 - 翡翠圣地 (" .. yellow .. "51,82" .. white .. ")。",
     Prequest = "塞纳里奥议会的求助 -> 亡灵的腐液",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4542,7 +4819,11 @@ kQuestInstanceData.TheSunkenTemple.Alliance[14] = {
     Attain = 50,
     Aim = "将碧蓝钥匙交给乔拉齐·拉文霍德公爵。",
     Location = "大法师克希雷姆 (艾萨拉 " .. yellow .. "29,40" .. white .. ")",
-    Note = red .. "仅限盗贼" .. white .. ": 碧蓝钥匙 掉落自 摩弗拉斯，位于 " .. yellow .. "[5]" .. white .. "。 乔拉齐·拉文霍德公爵 位于 奥特兰克山脉 - 拉文霍德 (" .. yellow .. "86,79" .. white .. ")。",
+    Note = red ..
+        "仅限盗贼" ..
+        white ..
+        ": 碧蓝钥匙 掉落自 摩弗拉斯，位于 " ..
+        yellow .. "[5]" .. white .. "。 乔拉齐·拉文霍德公爵 位于 奥特兰克山脉 - 拉文霍德 (" .. yellow .. "86,79" .. white .. ")。",
     Prequest = "简单的要求 -> 密文碎片",
     Rewards = {
         Text = "奖励：任选其一",
@@ -4563,6 +4844,7 @@ kQuestInstanceData.TheSunkenTemple.Alliance[15] = {
     Folgequest = "泰兰德和雷姆洛斯",
 }
 kQuestInstanceData.TheSunkenTemple.Alliance[16] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "采取必要的手段之四",
     Id = 40400,
     Level = 53,
@@ -4595,6 +4877,7 @@ kQuestInstanceData.TheSunkenTemple.Alliance[17] = {
     }
 }
 kQuestInstanceData.TheSunkenTemple.Alliance[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "寐入梦境之三",
     Id = 40959,
     Level = 60,
@@ -4611,13 +4894,15 @@ kQuestInstanceData.TheSunkenTemple.Alliance[18] = {
     }
 }
 kQuestInstanceData.TheSunkenTemple.Alliance[19] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "裂隙行者法杖",
     Id = 41323,
     Level = 54,
     Attain = 30,
     Aim = "将阿赫扎多尔的裂隙行者法杖和迦玛兰的魔精带回给艾萨拉的阿赫·扎多尔。",
     Location = "阿赫·扎多尔 (艾萨拉 " .. yellow .. "51,37" .. white .. ")",
-    Note = "任务线开始于 桑夫·科拉 (悲伤沼泽 " .. yellow .. "25, 30" .. white .. ")。 预言者迦玛兰 " .. yellow .. "[4]。" .. white .. "\n完成此任务线你将获得奖励 纯净德莱尼水晶宝石。",
+    Note = "任务线开始于 桑夫·科拉 (悲伤沼泽 " ..
+        yellow .. "25, 30" .. white .. ")。 预言者迦玛兰 " .. yellow .. "[4]。" .. white .. "\n完成此任务线你将获得奖励 纯净德莱尼水晶宝石。",
     Prequest = "桑夫的护身符 -> 寻找阿赫·扎多尔 -> 裂隙疲惫：身",
     Folgequest = "荒芜之地的徒弟",
     Rewards = {
@@ -4666,13 +4951,19 @@ kQuestInstanceData.TheSunkenTemple.Horde[17] = {
     }
 }
 kQuestInstanceData.TheSunkenTemple.Horde[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "莫尔奥格危机之七",
     Id = 40270,
     Level = 54,
     Attain = 45,
     Aim = "冒险进入阿塔哈卡神庙的深处，拿到阿塔莱神杖，把它带给英桑姆尼完成咒语。",
     Location = "英桑姆尼 <伟大的隐士> (卡松岛, 吉利吉姆之岛 北部 " .. yellow .. "57.2,10.1" .. white .. ")",
-    Note = "阿塔莱神杖 来自 预言者迦玛兰 " .. yellow .. "[4]" .. white .. " 后面地板上的绿色小木箱。\n任务线开始于 大先知海资高格 (荆棘谷 - 吉利吉姆之岛(藏宝海湾 西部) - 莫尔奥格避难所, 东南洞穴内 " .. yellow .. "78.1,81" .. white .. "。)\n完成任务链的最后一个任务后你将获得奖励。",
+    Note = "阿塔莱神杖 来自 预言者迦玛兰 " ..
+        yellow ..
+        "[4]" ..
+        white ..
+        " 后面地板上的绿色小木箱。\n任务线开始于 大先知海资高格 (荆棘谷 - 吉利吉姆之岛(藏宝海湾 西部) - 莫尔奥格避难所, 东南洞穴内 " ..
+        yellow .. "78.1,81" .. white .. "。)\n完成任务链的最后一个任务后你将获得奖励。",
     Prequest = "莫尔奥格危机之六",
     Folgequest = "莫尔奥格危机之八",
     Rewards = {
@@ -4683,6 +4974,7 @@ kQuestInstanceData.TheSunkenTemple.Horde[18] = {
     }
 }
 kQuestInstanceData.TheSunkenTemple.Horde[19] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "寐入梦境之三",
     Id = 40959,
     Level = 60,
@@ -4699,13 +4991,15 @@ kQuestInstanceData.TheSunkenTemple.Horde[19] = {
     }
 }
 kQuestInstanceData.TheSunkenTemple.Horde[20] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "裂隙行者法杖",
     Id = 41323,
     Level = 54,
     Attain = 30,
     Aim = "将阿赫扎多尔的裂隙行者法杖和迦玛兰的魔精带回给艾萨拉的阿赫·扎多尔。",
     Location = "阿赫·扎多尔 (艾萨拉 " .. yellow .. "51,37" .. white .. ")",
-    Note = "任务线开始于 桑夫·科拉 (悲伤沼泽 " .. yellow .. "25, 30" .. white .. ")。 预言者迦玛兰 " .. yellow .. "[4]。" .. white .. "\n完成此任务线你将获得奖励 纯净德莱尼水晶宝石。",
+    Note = "任务线开始于 桑夫·科拉 (悲伤沼泽 " ..
+        yellow .. "25, 30" .. white .. ")。 预言者迦玛兰 " .. yellow .. "[4]。" .. white .. "\n完成此任务线你将获得奖励 纯净德莱尼水晶宝石。",
     Prequest = "桑夫的护身符 -> 寻找阿赫·扎多尔 -> 裂隙疲惫：身",
     Folgequest = "荒芜之地的徒弟",
     Rewards = {
@@ -4716,7 +5010,8 @@ kQuestInstanceData.TheSunkenTemple.Horde[20] = {
 
 --------------- Temple of Ahn'Qiraj ---------------
 kQuestInstanceData.TheTempleofAhnQiraj = {
-    Story = "在安其拉的中心是一座古老的神庙建筑群。建于有记录历史之前的时代，它既是难以言喻的众神的纪念碑，也是其拉军队的大规模繁殖地。自从流沙之战在一千年前结束以来，其拉帝国的双子皇帝一直被困在他们的神庙里，勉强被青铜龙阿纳克洛斯和暗夜精灵建立的魔法屏障所遏制。现在流沙节杖已经重新组装，封印已被打破，进入安其拉内圣所的道路已经打开。在蜂巢爬行的疯狂之外，在安其拉神庙之下，成群的其拉准备入侵。必须不惜一切代价阻止他们，以免他们再次对卡利姆多释放贪婪的昆虫军队，第二次流沙之战爆发！",
+    Story =
+    "在安其拉的中心是一座古老的神庙建筑群。建于有记录历史之前的时代，它既是难以言喻的众神的纪念碑，也是其拉军队的大规模繁殖地。自从流沙之战在一千年前结束以来，其拉帝国的双子皇帝一直被困在他们的神庙里，勉强被青铜龙阿纳克洛斯和暗夜精灵建立的魔法屏障所遏制。现在流沙节杖已经重新组装，封印已被打破，进入安其拉内圣所的道路已经打开。在蜂巢爬行的疯狂之外，在安其拉神庙之下，成群的其拉准备入侵。必须不惜一切代价阻止他们，以免他们再次对卡利姆多释放贪婪的昆虫军队，第二次流沙之战爆发！",
     Caption = "神庙 安其拉",
     Alliance = {},
     Horde = {}
@@ -4751,7 +5046,8 @@ kQuestInstanceData.TheTempleofAhnQiraj.Horde[2] = kQuestInstanceData.TheTempleof
 
 --------------- Zul'Farrak ---------------
 kQuestInstanceData.ZulFarrak = {
-    Story = "这座被太阳炙烤的城市是沙怒巨魔的家园，以其特别的无情和黑暗神秘主义而闻名。巨魔传说讲述了一把名叫鞭笞者苏尔萨克的强大之剑，这是一种能够在即使是最强大的敌人中灌输恐惧和软弱的武器。很久以前，这把武器被分成两半。然而，有传言称这两半可能在祖尔法拉克的墙壁内某处被找到。报告还暗示一队逃离加基森的雇佣兵游荡进入这座城市并被困住。他们的命运仍然未知。但也许最令人不安的是关于一个古老生物在城市中心的神圣水池中沉睡的低语——一位强大的半神，将对任何愚蠢到唤醒他的冒险者造成难以言喻的破坏。",
+    Story =
+    "这座被太阳炙烤的城市是沙怒巨魔的家园，以其特别的无情和黑暗神秘主义而闻名。巨魔传说讲述了一把名叫鞭笞者苏尔萨克的强大之剑，这是一种能够在即使是最强大的敌人中灌输恐惧和软弱的武器。很久以前，这把武器被分成两半。然而，有传言称这两半可能在祖尔法拉克的墙壁内某处被找到。报告还暗示一队逃离加基森的雇佣兵游荡进入这座城市并被困住。他们的命运仍然未知。但也许最令人不安的是关于一个古老生物在城市中心的神圣水池中沉睡的低语——一位强大的半神，将对任何愚蠢到唤醒他的冒险者造成难以言喻的破坏。",
     Caption = "祖尔法拉克",
     Alliance = {},
     Horde = {}
@@ -4763,7 +5059,8 @@ kQuestInstanceData.ZulFarrak.Alliance[1] = {
     Attain = 40,
     Aim = "将耐克鲁姆的徽章交给诅咒之地的萨迪斯·酷影。",
     Location = "萨迪斯·酷影 (诅咒之地 - 守望堡 " .. yellow .. "66,19" .. white .. ")",
-    Note = "任务线开始于 狮鹫兽管理员沙拉克·鹰斧 (辛特兰 - 鹰巢山 " .. yellow .. "9,44" .. white .. ")。\n耐克鲁姆 在 " .. yellow .. "[4]" .. white .. " 与你在神庙事件中战斗的最后一群怪物一起生成。",
+    Note = "任务线开始于 狮鹫兽管理员沙拉克·鹰斧 (辛特兰 - 鹰巢山 " ..
+        yellow .. "9,44" .. white .. ")。\n耐克鲁姆 在 " .. yellow .. "[4]" .. white .. " 与你在神庙事件中战斗的最后一群怪物一起生成。",
     Prequest = "枯木巨魔的牢笼 -> 萨迪斯·酷影",
     Folgequest = "占卜",
 }
@@ -4783,7 +5080,8 @@ kQuestInstanceData.ZulFarrak.Alliance[3] = {
     Attain = 40,
     Aim = "给加基森的特兰雷克带去5个完整的圣甲虫壳。",
     Location = "特兰雷克 (塔纳利斯 - 加基森 " .. yellow .. "51,26" .. white .. ")",
-    Note = "前置任务开始于 克拉兹克 (荆棘谷 - 藏宝海湾 " .. yellow .. "25,77" .. white .. ")。\n每个圣甲虫都会掉落壳。很多圣甲虫在 " .. yellow .. "[2]" .. white .. "。",
+    Note = "前置任务开始于 克拉兹克 (荆棘谷 - 藏宝海湾 " ..
+        yellow .. "25,77" .. white .. ")。\n每个圣甲虫都会掉落壳。很多圣甲虫在 " .. yellow .. "[2]" .. white .. "。",
     Prequest = "特兰雷克",
 }
 kQuestInstanceData.ZulFarrak.Alliance[4] = {
@@ -4833,7 +5131,12 @@ kQuestInstanceData.ZulFarrak.Alliance[7] = {
     Attain = 40,
     Aim = "把加兹瑞拉的鳞片交给闪光平原的维兹尔·铜栓。",
     Location = "维兹尔·铜栓 (千针石林 - 闪光平原 " .. yellow .. "78,77" .. white .. ")",
-    Note = "你从 科罗莫特·钢尺 (丹莫罗 - 诺莫瑞根 " .. yellow .. "23.6,28" .. white .. ") 获得前置任务。获得 加兹瑞拉 任务不需要有前置任务。\n你在 " .. yellow .. "[6]" .. white .. " 使用 祖尔法拉克之槌 召唤 加兹瑞拉。\n神圣之槌 来自 守护者奇尔加 (辛特兰 - 祖尔祭坛 " ..
+    Note = "你从 科罗莫特·钢尺 (丹莫罗 - 诺莫瑞根 " ..
+        yellow ..
+        "23.6,28" ..
+        white ..
+        ") 获得前置任务。获得 加兹瑞拉 任务不需要有前置任务。\n你在 " ..
+        yellow .. "[6]" .. white .. " 使用 祖尔法拉克之槌 召唤 加兹瑞拉。\n神圣之槌 来自 守护者奇尔加 (辛特兰 - 祖尔祭坛 " ..
         yellow .. "49,70" .. white .. ") 并且必须在 辛特兰 的祭坛 " .. yellow .. "59,77" .. white .. " 完成后才能在 祖尔法拉克 使用。",
     Prequest = "防撞头盔",
     Rewards = {
@@ -4842,6 +5145,7 @@ kQuestInstanceData.ZulFarrak.Alliance[7] = {
     }
 }
 kQuestInstanceData.ZulFarrak.Alliance[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "沙地漂流",
     Id = 40519,
     Level = 46,
@@ -4855,6 +5159,7 @@ kQuestInstanceData.ZulFarrak.Alliance[8] = {
     }
 }
 kQuestInstanceData.ZulFarrak.Alliance[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "法拉基先人",
     Id = 41811,
     Level = 46,
@@ -4883,6 +5188,7 @@ for i = 2, 9 do
     kQuestInstanceData.ZulFarrak.Horde[i] = kQuestInstanceData.ZulFarrak.Alliance[i]
 end
 kQuestInstanceData.ZulFarrak.Horde[10] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "乌克兹·沙顶的尽头",
     Id = 40527,
     Level = 48,
@@ -4901,8 +5207,10 @@ kQuestInstanceData.ZulFarrak.Horde[10] = {
 --------------- Zul'Gurub ---------------
 kQuestInstanceData.ZulGurub = {
     Story = {
-        ["Page1"] = "一千多年前，强大的古拉巴什帝国因一场大规模内战而四分五裂。一个有影响力的巨魔祭司组织——阿塔拉伊（阿塔拉伊）召唤出了古老而恐怖的血神哈卡（哈卡（血灵者） ）的化身。尽管祭司们被击败并最终被流放，伟大的巨魔帝国仍然崩溃。被流放的祭司们逃往北方的悲伤沼泽，在那里他们建造了一座巨大的哈卡神庙，以准备他进入凡间。",
-        ["Page2"] = "随着时间推移，阿塔拉伊祭司们发现哈卡的实体只能在古拉巴什帝国的古都祖尔格拉布（祖尔法拉克）被召唤。遗憾的是，祭司们最近在召唤哈卡的任务中取得了成功——报告证实了这位可怕的血神已出现在古拉巴什废墟的中心。\n\n为了平息这位血神，土地上的巨魔们联手派遣了一支高阶祭司小队进入古城。每位祭司都是原始之神——蝙蝠、豹、虎、蜘蛛和蛇——的强大冠军，但尽管他们竭尽全力，仍被哈卡的力量所控制。如今，这些冠军及其原始之神的化身为血神提供了强大的力量。任何敢于踏入这座阴森废墟的冒险者，都必须击败高阶祭司，才能有希望面对这位强大的血神。",
+        ["Page1"] =
+        "一千多年前，强大的古拉巴什帝国因一场大规模内战而四分五裂。一个有影响力的巨魔祭司组织——阿塔拉伊（阿塔拉伊）召唤出了古老而恐怖的血神哈卡（哈卡（血灵者） ）的化身。尽管祭司们被击败并最终被流放，伟大的巨魔帝国仍然崩溃。被流放的祭司们逃往北方的悲伤沼泽，在那里他们建造了一座巨大的哈卡神庙，以准备他进入凡间。",
+        ["Page2"] =
+        "随着时间推移，阿塔拉伊祭司们发现哈卡的实体只能在古拉巴什帝国的古都祖尔格拉布（祖尔法拉克）被召唤。遗憾的是，祭司们最近在召唤哈卡的任务中取得了成功——报告证实了这位可怕的血神已出现在古拉巴什废墟的中心。\n\n为了平息这位血神，土地上的巨魔们联手派遣了一支高阶祭司小队进入古城。每位祭司都是原始之神——蝙蝠、豹、虎、蜘蛛和蛇——的强大冠军，但尽管他们竭尽全力，仍被哈卡的力量所控制。如今，这些冠军及其原始之神的化身为血神提供了强大的力量。任何敢于踏入这座阴森废墟的冒险者，都必须击败高阶祭司，才能有希望面对这位强大的血神。",
         ["MaxPages"] = "2",
     },
     Caption = {
@@ -4960,7 +5268,7 @@ kQuestInstanceData.ZulGurub.Alliance[4] = {
     Aim = "塞纳里奥要塞的德尔克·雷木让你把温诺希斯的毒囊和库林纳克斯的毒囊交给他。",
     Location = "德尔克·雷木 (希利苏斯 - 塞纳里奥要塞 " .. yellow .. "52,39" .. white .. ")",
     Note = "温诺希斯的毒囊 掉落自 " .. yellow .. "祖尔格拉布" .. white .. " 的 高阶祭司温诺希斯，位于 " .. yellow ..
-    "[2]" .. white .. "。 库林纳克斯的毒囊 掉落自 " .. yellow .. "安其拉废墟" .. white .. " 的 " .. yellow .. "[1]" .. white .. "。",
+        "[2]" .. white .. "。 库林纳克斯的毒囊 掉落自 " .. yellow .. "安其拉废墟" .. white .. " 的 " .. yellow .. "[1]" .. white .. "。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 22378 }, --Ravenholdt Slicer One-Hand, Sword
@@ -4971,25 +5279,29 @@ kQuestInstanceData.ZulGurub.Alliance[4] = {
         { id = 22380 }, --Simone's Cultivating Hammer Main Hand, Mace
     }
 }
-kQuestInstanceData.ZulGurub.Alliance[5] = { --TODO translate
+kQuestInstanceData.ZulGurub.Alliance[5] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
+    --TODO translate
     Title = "一计不成，再施一计",
     Id = 41960,
     Level = 60,
     Attain = 60,
     Aim = "潜入祖尔格拉布，带回大祭司贾姆瓦利的獠给吉尔吉姆岛附近的卡兹恩岛上的伊索姆尼。",
     Location = "伊索姆尼 (吉尔吉姆岛 - 卡兹恩岛 " .. yellow .. "56,16" .. white .. ")",
-    Note = "前置任务从纳索克（棘齿城 " .. yellow .. "39, 20" .. white .. "）开始。'大祭司贾姆瓦利'（祖尔格拉布 - " .. yellow .. "0, 0" .. white .. "）掉落'贾姆瓦利的獠'。",
+    Note = "前置任务从纳索克（棘齿城 " ..
+        yellow .. "39, 20" .. white .. "）开始。'大祭司贾姆瓦利'（祖尔格拉布 - " .. yellow .. "0, 0" .. white .. "）掉落'贾姆瓦利的獠'。",
     Prequest = "灵魂之笛",
     Folgequest = "藏在眼皮底下",
 }
 kQuestInstanceData.ZulGurub.Alliance[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "抽取夺灵者",
     Id = 70003,
     Level = 60,
     Attain = 60,
     Aim = "杀死夺灵者哈卡，并将井之精华带回给衰老的戴欧。",
     Location = "衰老的戴欧 (诅咒之地 - 腐烂之痕 " .. yellow .. "34, 50" .. white .. ")",
-    Note = red.."仅限术士！"..white.."“哈卡” " .. yellow .. "[11]" .. white .. ") 掉落“井之精华”。",
+    Note = red .. "仅限术士！" .. white .. "“哈卡” " .. yellow .. "[11]" .. white .. ") 掉落“井之精华”。",
     Prequest = "监狱的束缚，监狱的壳体 -> 压制 -> 疯子的引导",
 }
 for i = 1, 6 do
@@ -4998,7 +5310,8 @@ end
 
 --------------- Gnomeregan ---------------
 kQuestInstanceData.Gnomeregan = {
-    Story = "位于丹莫罗，被称为诺莫瑞根的技术奇迹数代以来一直是侏儒的首都。最近，一个敌对的变异石腭怪种族侵扰了丹莫罗的几个地区——包括伟大的侏儒城市。在绝望地试图摧毁入侵的石腭怪时，大工匠梅卡托克下令紧急排放城市的放射性废物罐。几个侏儒在等待石腭怪死亡或逃跑时寻求庇护免受空气传播的污染物。不幸的是，尽管石腭怪因有毒攻击而被辐射——他们的围攻继续不减。那些没有被有毒渗漏杀死的侏儒被迫逃离，在附近的矮人城市铁炉堡寻求避难。在那里，大工匠梅卡托克开始招募勇敢的灵魂来帮助他的人民夺回他们心爱的城市。有传言称梅卡托克曾经信任的顾问，工程师瑟玛普拉格，通过允许入侵发生背叛了他的人民。现在，他的理智破碎，瑟玛普拉格留在诺莫瑞根——推进他的黑暗阴谋并充当城市的新技术霸主。",
+    Story =
+    "位于丹莫罗，被称为诺莫瑞根的技术奇迹数代以来一直是侏儒的首都。最近，一个敌对的变异石腭怪种族侵扰了丹莫罗的几个地区——包括伟大的侏儒城市。在绝望地试图摧毁入侵的石腭怪时，大工匠梅卡托克下令紧急排放城市的放射性废物罐。几个侏儒在等待石腭怪死亡或逃跑时寻求庇护免受空气传播的污染物。不幸的是，尽管石腭怪因有毒攻击而被辐射——他们的围攻继续不减。那些没有被有毒渗漏杀死的侏儒被迫逃离，在附近的矮人城市铁炉堡寻求避难。在那里，大工匠梅卡托克开始招募勇敢的灵魂来帮助他的人民夺回他们心爱的城市。有传言称梅卡托克曾经信任的顾问，工程师瑟玛普拉格，通过允许入侵发生背叛了他的人民。现在，他的理智破碎，瑟玛普拉格留在诺莫瑞根——推进他的黑暗阴谋并充当城市的新技术霸主。",
     Caption = "诺莫瑞根",
     Alliance = {},
     Horde = {}
@@ -5010,7 +5323,8 @@ kQuestInstanceData.Gnomeregan.Alliance[1] = {
     Attain = 20,
     Aim = "将尖端机器人的存储器核心交给诺莫瑞根复兴城的工匠大师欧沃斯巴克。",
     Location = "工匠大师欧沃斯巴克 (丹莫罗 - 诺莫瑞根复兴城 " .. yellow .. "24.4,29.8" .. white .. ")",
-    Note = "前置任务来自 萨尔努修士 (暴风城 - 教堂广场 " .. yellow .. "40,30" .. white .. ")。\n你在进入副本之前的后门附近找到 尖端机器人，位于 " .. yellow .. "[4] 在 入口地图" .. white .. "。",
+    Note = "前置任务来自 萨尔努修士 (暴风城 - 教堂广场 " ..
+        yellow .. "40,30" .. white .. ")。\n你在进入副本之前的后门附近找到 尖端机器人，位于 " .. yellow .. "[4] 在 入口地图" .. white .. "。",
     Prequest = "工匠大师欧沃斯巴克",
 }
 kQuestInstanceData.Gnomeregan.Alliance[2] = {
@@ -5020,7 +5334,8 @@ kQuestInstanceData.Gnomeregan.Alliance[2] = {
     Attain = 20,
     Aim = "用空铅瓶对着辐射入侵者或者辐射抢劫者，从它们身上收集放射尘。瓶子装满之后，把它交给卡拉诺斯的奥齐·电环。",
     Location = "奥齐·电环 (丹莫罗 - 卡拉诺斯 " .. yellow .. "45,49" .. white .. ")",
-    Note = "前置任务来自 诺恩 (丹莫罗 - 诺莫瑞根复兴城 " .. yellow .. "24.5,30.4" .. white .. ")。\n要获得辐射尘，你必须对 " .. red .. "活着" .. white .. " 的 辐射入侵者 或 辐射抢劫者 使用铅瓶。",
+    Note = "前置任务来自 诺恩 (丹莫罗 - 诺莫瑞根复兴城 " ..
+        yellow .. "24.5,30.4" .. white .. ")。\n要获得辐射尘，你必须对 " .. red .. "活着" .. white .. " 的 辐射入侵者 或 辐射抢劫者 使用铅瓶。",
     Prequest = "灾难之后",
     Folgequest = "更多的辐射尘！",
 }
@@ -5065,8 +5380,15 @@ kQuestInstanceData.Gnomeregan.Alliance[6] = {
     Attain = 25,
     Aim = "将彩色穿孔卡片交给在丹莫罗的诺莫瑞根复兴城的大机械师卡斯派普。",
     Location = "大机械师卡斯派普 (丹莫罗 - 诺莫瑞根复兴城 " .. yellow .. "24.1,29.8" .. white .. ")",
-    Note = "前置任务来自 加克希姆·尘链 (石爪山脉 " .. yellow .. "59,67" .. white .. ")。 前置任务只是一个指引任务，不需要完成此任务。\n白色穿孔卡片是随机掉落的。你在进入副本之前的后门入口旁边找到第一个终端，位于 " .. yellow .. "[3] 在 入口地图" .. white .. "。 3005-B 位于 " ..
-        yellow .. "[3]" .. white .. "， 3005-C 位于 " .. yellow .. "[5]" .. white .. " ， 3005-D 位于 " .. yellow .. "[6]" .. white .. "。",
+    Note = "前置任务来自 加克希姆·尘链 (石爪山脉 " ..
+        yellow ..
+        "59,67" ..
+        white ..
+        ")。 前置任务只是一个指引任务，不需要完成此任务。\n白色穿孔卡片是随机掉落的。你在进入副本之前的后门入口旁边找到第一个终端，位于 " ..
+        yellow .. "[3] 在 入口地图" .. white .. "。 3005-B 位于 " ..
+        yellow ..
+        "[3]" ..
+        white .. "， 3005-C 位于 " .. yellow .. "[5]" .. white .. " ， 3005-D 位于 " .. yellow .. "[6]" .. white .. "。",
     Prequest = "卡斯派普的任务",
     Rewards = {
         Text = "奖励：",
@@ -5129,6 +5451,7 @@ kQuestInstanceData.Gnomeregan.Alliance[10] = {
     }
 }
 kQuestInstanceData.Gnomeregan.Alliance[11] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "一个沉重的大脑",
     Id = 80398,
     Level = 30,
@@ -5139,6 +5462,7 @@ kQuestInstanceData.Gnomeregan.Alliance[11] = {
     Folgequest = "建造一个重击者",
 }
 kQuestInstanceData.Gnomeregan.Alliance[12] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "高能调节器",
     Id = 40861,
     Level = 33,
@@ -5152,13 +5476,15 @@ kQuestInstanceData.Gnomeregan.Alliance[12] = {
     }
 }
 kQuestInstanceData.Gnomeregan.Alliance[13] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "备份系统激活",
     Id = 40856,
     Level = 33,
     Attain = 25,
     Aim = "为丹莫罗的技术大师维尔斯班纳激活诺莫瑞根深处的Alpha通道阀和备用的油泵杠杆。",
     Location = "技术大师维尔斯班纳 (丹莫罗 - 诺莫瑞根复兴城 " .. yellow .. "[26.8,31.1]" .. white .. ")",
-    Note = "阿尔法通道阀 在 " .. yellow .. "[6]" .. white .. "，使用电梯下去。中央机械装置的南侧。\n备用油泵通道杠杆 在 " .. yellow .. "[b]" .. white .. " 的地板上。",
+    Note = "阿尔法通道阀 在 " ..
+        yellow .. "[6]" .. white .. "，使用电梯下去。中央机械装置的南侧。\n备用油泵通道杠杆 在 " .. yellow .. "[b]" .. white .. " 的地板上。",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 61383 }, --Intricate Gnomish Blunderbuss Gun
@@ -5231,6 +5557,7 @@ kQuestInstanceData.Gnomeregan.Horde[5] = {
     }
 }
 kQuestInstanceData.Gnomeregan.Horde[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "一个沉重的大脑",
     Id = 80398,
     Level = 30,
@@ -5241,13 +5568,19 @@ kQuestInstanceData.Gnomeregan.Horde[6] = {
     Folgequest = "建造一个重击者",
 }
 kQuestInstanceData.Gnomeregan.Horde[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "后备电源",
     Id = 55006,
     Level = 34,
     Attain = 29,
     Aim = "将诺莫瑞根的百万瓦电容器带给技术员格瑞姆兹鲁。",
     Location = "技术员格瑞姆兹鲁 (杜隆塔尔 - 怒水港 " .. yellow .. "57.4,25.7" .. white .. ").",
-    Note = "前置任务 '马尔科维奇教授' 开始于 技术员斯帕兹奥(杜隆塔尔 - 怒水港 " .. yellow .. "57.4,25.8" .. white .. ")，等级 7。\n百万瓦电容器 掉落自 制造者瑟玛普拉格。你在 " .. yellow .. "[8]" .. white .. " 找到 制造者瑟玛普拉格。他是 诺莫瑞根 的最后一个首领。\n在战斗中，你必须通过按下侧面的按钮来禁用柱子。",
+    Note = "前置任务 '马尔科维奇教授' 开始于 技术员斯帕兹奥(杜隆塔尔 - 怒水港 " ..
+        yellow ..
+        "57.4,25.8" ..
+        white ..
+        ")，等级 7。\n百万瓦电容器 掉落自 制造者瑟玛普拉格。你在 " ..
+        yellow .. "[8]" .. white .. " 找到 制造者瑟玛普拉格。他是 诺莫瑞根 的最后一个首领。\n在战斗中，你必须通过按下侧面的按钮来禁用柱子。",
     Prequest = "马尔科维奇教授",
     Rewards = {
         Text = "奖励：任选其一",
@@ -5259,12 +5592,18 @@ kQuestInstanceData.Gnomeregan.Horde[7] = {
 --------------- Dragons of Nightmare ---------------
 kQuestInstanceData.FourDragons = {
     Story = {
-        ["Page1"] = "在伟大之树处出现了动荡。一股新威胁正威胁着位于灰谷、暮色森林、费拉斯和辛特兰的这些偏僻地区。四位来自梦境的绿龙军团伟大守护者降临，但这些曾经骄傲的守护者如今只追求毁灭与死亡。与同伴一起武装起来，前往这些隐藏的林地——只有你们能够保卫艾泽拉斯免受它们带来的腐化。",
-        ["Page2"] = "伊瑟拉，伟大的梦境之龙领主，统领神秘的绿龙军团。她的领地是奇幻而神秘的翡翠梦境——据说她从那里指引着世界本身的进化之路。她是自然与想象的守护者，职责是守护遍布世界的所有伟大之树，只有德鲁伊能够借此进入梦境。近来，伊瑟拉最信任的副官们被翡翠梦境中的一股黑暗新力量扭曲。如今这些迷失的哨兵穿过伟大之树进入艾泽拉斯，企图在凡人王国中散布疯狂与恐怖。即便是最强大的冒险者，也应明智地与这些龙保持距离，否则将承受其误导之怒的后果。",
-        ["Page3"] = "雷索恩在翡翠梦境的畸变中受到侵染，不仅使这条强大龙的鳞片颜色黯淡，还赋予他从敌人身上提取恶意阴影的能力。与其主人的阴影结合后，这些阴影为龙注入治愈能量。因此，雷索恩被视为伊瑟拉最强大的迷失副官之一并不令人惊讶。",
-        ["Page4"] = "翡翠梦境中神秘的黑暗力量将曾经雄伟的埃米尔斯变成了腐烂、疾病缠身的怪物。少数幸存于与其交锋的冒险者报告称，腐烂的蘑菇从死去同伴的尸体中喷涌而出，场面骇人。埃米尔斯无疑是伊瑟拉最离经叛道的绿龙中最残忍、最令人毛骨悚然的存在。",
-        ["Page5"] = "塔亚雷可能是伊瑟拉最受影响的叛逆副官。他与翡翠梦境中的黑暗力量交互，导致塔亚雷的理智以及实体形态崩溃。如今这条龙以幽灵形态存在，能够分裂为多个实体，每个实体都拥有毁灭性的魔法力量。塔亚雷是狡诈且毫不留情的敌人，意图将其存在的疯狂化为现实，侵扰艾泽拉斯的居民。",
-        ["Page6"] = "伊森德雷曾是伊瑟拉最信任的副官之一，如今却背离阵营，在艾泽拉斯大地上播撒恐惧与混乱。她原本仁慈的治愈力量已被黑暗魔法取代，使她能够释放炽热的闪电波并召唤恶魔德鲁伊的援助。伊森德雷及其同族还拥有诱导沉睡的能力，将不幸的凡人敌人送入他们最恐怖的噩梦之境。",
+        ["Page1"] =
+        "在伟大之树处出现了动荡。一股新威胁正威胁着位于灰谷、暮色森林、费拉斯和辛特兰的这些偏僻地区。四位来自梦境的绿龙军团伟大守护者降临，但这些曾经骄傲的守护者如今只追求毁灭与死亡。与同伴一起武装起来，前往这些隐藏的林地——只有你们能够保卫艾泽拉斯免受它们带来的腐化。",
+        ["Page2"] =
+        "伊瑟拉，伟大的梦境之龙领主，统领神秘的绿龙军团。她的领地是奇幻而神秘的翡翠梦境——据说她从那里指引着世界本身的进化之路。她是自然与想象的守护者，职责是守护遍布世界的所有伟大之树，只有德鲁伊能够借此进入梦境。近来，伊瑟拉最信任的副官们被翡翠梦境中的一股黑暗新力量扭曲。如今这些迷失的哨兵穿过伟大之树进入艾泽拉斯，企图在凡人王国中散布疯狂与恐怖。即便是最强大的冒险者，也应明智地与这些龙保持距离，否则将承受其误导之怒的后果。",
+        ["Page3"] =
+        "雷索恩在翡翠梦境的畸变中受到侵染，不仅使这条强大龙的鳞片颜色黯淡，还赋予他从敌人身上提取恶意阴影的能力。与其主人的阴影结合后，这些阴影为龙注入治愈能量。因此，雷索恩被视为伊瑟拉最强大的迷失副官之一并不令人惊讶。",
+        ["Page4"] =
+        "翡翠梦境中神秘的黑暗力量将曾经雄伟的埃米尔斯变成了腐烂、疾病缠身的怪物。少数幸存于与其交锋的冒险者报告称，腐烂的蘑菇从死去同伴的尸体中喷涌而出，场面骇人。埃米尔斯无疑是伊瑟拉最离经叛道的绿龙中最残忍、最令人毛骨悚然的存在。",
+        ["Page5"] =
+        "塔亚雷可能是伊瑟拉最受影响的叛逆副官。他与翡翠梦境中的黑暗力量交互，导致塔亚雷的理智以及实体形态崩溃。如今这条龙以幽灵形态存在，能够分裂为多个实体，每个实体都拥有毁灭性的魔法力量。塔亚雷是狡诈且毫不留情的敌人，意图将其存在的疯狂化为现实，侵扰艾泽拉斯的居民。",
+        ["Page6"] =
+        "伊森德雷曾是伊瑟拉最信任的副官之一，如今却背离阵营，在艾泽拉斯大地上播撒恐惧与混乱。她原本仁慈的治愈力量已被黑暗魔法取代，使她能够释放炽热的闪电波并召唤恶魔德鲁伊的援助。伊森德雷及其同族还拥有诱导沉睡的能力，将不幸的凡人敌人送入他们最恐怖的噩梦之境。",
         ["MaxPages"] = "6",
     },
     Caption = {
@@ -5292,7 +5631,9 @@ kQuestInstanceData.FourDragons.Alliance[1] = {
         { id = 20600 }, --Malfurion's Signet Ring Ring
     }
 }
-kQuestInstanceData.FourDragons.Alliance[2] = { --TODO translate
+kQuestInstanceData.FourDragons.Alliance[2] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "梦境之石，灰谷",
     Id = 41923,
     Level = 60,
@@ -5300,7 +5641,9 @@ kQuestInstanceData.FourDragons.Alliance[2] = { --TODO translate
     Location = "梦境之石，灰谷（ " .. yellow .. "94, 38" .. white .. "）",
     Note = "“伊瑟拉的哀嚎”掉落自“艾伦尼乌斯的恩赐”（索尔尼乌斯困难模式）（翡翠圣所 " .. yellow .. "[2]" .. white .. "）。",
 }
-kQuestInstanceData.FourDragons.Alliance[3] = { --TODO translate
+kQuestInstanceData.FourDragons.Alliance[3] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "梦境之石，菲拉斯",
     Id = 41924,
     Level = 60,
@@ -5309,6 +5652,7 @@ kQuestInstanceData.FourDragons.Alliance[3] = { --TODO translate
     Note = "“伊瑟拉的哀嚎”掉落自“艾伦尼乌斯的恩赐”（索尔尼乌斯困难模式）（翡翠圣所 " .. yellow .. "[2]" .. white .. "）。",
 }
 kQuestInstanceData.FourDragons.Alliance[4] = {
+    Servers = { AtlasCFM.Server.TURTLE },
     Title = "梦境之石，暮色森林",
     Id = 41925,
     Level = 60,
@@ -5316,7 +5660,9 @@ kQuestInstanceData.FourDragons.Alliance[4] = {
     Location = "梦境之石，暮色森林（ " .. yellow .. "46, 39" .. white .. "）",
     Note = "“伊瑟拉的哀嚎”掉落自“艾伦尼乌斯的恩赐”（索尔尼乌斯困难模式）（翡翠圣所 " .. yellow .. "[2]" .. white .. "）。",
 }
-kQuestInstanceData.FourDragons.Alliance[5] = { --TODO translate
+kQuestInstanceData.FourDragons.Alliance[5] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "梦境之石，辛特兰",
     Id = 41926,
     Level = 60,
@@ -5324,7 +5670,9 @@ kQuestInstanceData.FourDragons.Alliance[5] = { --TODO translate
     Location = "梦境之石，辛特兰（ " .. yellow .. "64, 28" .. white .. "）",
     Note = "“伊瑟拉的哀嚎”掉落自“艾伦尼乌斯的恩赐”（索尔尼乌斯困难模式）（翡翠圣所 " .. yellow .. "[2]" .. white .. "）。",
 }
-kQuestInstanceData.FourDragons.Alliance[6] = { --TODO translate
+kQuestInstanceData.FourDragons.Alliance[6] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
+    --TODO translate
     Title = "力量浸染",
     Id = 42004,
     Level = 60,
@@ -5344,7 +5692,9 @@ kQuestInstanceData.Reaver = {
     Alliance = {},
     Horde = {}
 }
-kQuestInstanceData.Reaver.Alliance[1] = { --TODO translate
+kQuestInstanceData.Reaver.Alliance[1] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "黑森公爵二世的骑乘哨",
     Id = 41927,
     Level = 60,
@@ -5357,7 +5707,8 @@ kQuestInstanceData.Reaver.Horde[1] = kQuestInstanceData.Reaver.Alliance[1]
 
 --------------- Cla'ckora ---------------
 kQuestInstanceData.Clackora = {
-    Story = "克拉克拉是一只古老而令人胆寒的巨型甲壳生物，自世界年轻之时起便在无尽之海的潮汐中徘徊。由于娜迦的入侵，这个庞然大物从长达数世纪的沉睡中苏醒，如今它用那粉碎性的巨钳和坚如附魔精金的甲壳守护着沉没的遗迹。那些胆敢深入深海的人将会发现，它不仅仅是一头野兽，更是海洋原始愤怒的活化身。",
+    Story =
+    "克拉克拉是一只古老而令人胆寒的巨型甲壳生物，自世界年轻之时起便在无尽之海的潮汐中徘徊。由于娜迦的入侵，这个庞然大物从长达数世纪的沉睡中苏醒，如今它用那粉碎性的巨钳和坚如附魔精金的甲壳守护着沉没的遗迹。那些胆敢深入深海的人将会发现，它不仅仅是一头野兽，更是海洋原始愤怒的活化身。",
     Caption = "克拉克拉",
     Alliance = {},
     Horde = {}
@@ -5380,8 +5731,10 @@ kQuestInstanceData.Clackora.Alliance[2] = { --TODO translate
     Level = 58,
     Attain = 58,
     Location = "克拉克拉祭坛 (艾萨拉 " .. yellow .. "66, 9" .. white .. ")",
-    Note = "要召唤克拉克拉，你需要“克拉克拉的远古神像”的3个部分、10个“元素之水”和5个“闪电鳗鱼”。\n“远古神像的上半部分”可通过钓鱼从“发光的极地灰鳞鱼”中获得。\n“远古神像的中间部分”掉落自祖尔格拉布 - 加兹兰卡 " .. yellow .. "[7]" .. white ..
-         ",\n“远古神像的下半部分”是任务“苔藓之谜”的奖励。",
+    Note =
+        "要召唤克拉克拉，你需要“克拉克拉的远古神像”的3个部分、10个“元素之水”和5个“闪电鳗鱼”。\n“远古神像的上半部分”可通过钓鱼从“发光的极地灰鳞鱼”中获得。\n“远古神像的中间部分”掉落自祖尔格拉布 - 加兹兰卡 " ..
+        yellow .. "[7]" .. white ..
+        ",\n“远古神像的下半部分”是任务“苔藓之谜”的奖励。",
 }
 for i = 1, 2 do
     kQuestInstanceData.Clackora.Horde[i] = kQuestInstanceData.Clackora.Alliance[i]
@@ -5389,12 +5742,15 @@ end
 
 --------------- Concavius ---------------
 kQuestInstanceData.Concavius = {
-    Story = "康卡维斯曾是一个在虚空风暴混沌气流中漂泊的次级元素灵体，后来被鲁莽的火刃氏族邪教徒从以太位面强行扯出，并束缚在凄凉之地荒芜的土地上。如今，他已化身为一个巨大的水晶虚空行者，依靠窃取的奥术能量维持形态。他在凄凉之地的盐沼地带游荡，破碎的意识驱使着他，让他对法力产生了一种永不满足的渴求，以此防止自己的实体崩解。",
+    Story =
+    "康卡维斯曾是一个在虚空风暴混沌气流中漂泊的次级元素灵体，后来被鲁莽的火刃氏族邪教徒从以太位面强行扯出，并束缚在凄凉之地荒芜的土地上。如今，他已化身为一个巨大的水晶虚空行者，依靠窃取的奥术能量维持形态。他在凄凉之地的盐沼地带游荡，破碎的意识驱使着他，让他对法力产生了一种永不满足的渴求，以此防止自己的实体崩解。",
     Caption = "康卡维斯",
     Alliance = {},
     Horde = {}
 }
-kQuestInstanceData.Concavius.Alliance[1] = { --TODO translate
+kQuestInstanceData.Concavius.Alliance[1] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "能量迸发的法力碎片",
     Id = 41929,
     Level = 60,
@@ -5407,12 +5763,15 @@ kQuestInstanceData.Concavius.Horde[1] = kQuestInstanceData.Concavius.Alliance[1]
 
 --------------- Nerubian Overseer ---------------
 kQuestInstanceData.Nerubian = {
-    Story = "地穴监督者是一个陨落帝国的冷酷哨兵，这位蛛型王国的顶级建筑师其古老的智慧已被亡灵的冰冷拥抱所扭曲。在他那甲壳覆盖的身躯内潜藏着阴险的恶意，受命在世界各地织就恐怖之网，以黑暗主宰之名诱捕生者。他既精通武技又擅长通灵诡计，守护着大地的阴影深处，静静地等待着，准备击杀任何敢于踏入他那神圣且丝网遍布领地的冒失者。",
+    Story =
+    "地穴监督者是一个陨落帝国的冷酷哨兵，这位蛛型王国的顶级建筑师其古老的智慧已被亡灵的冰冷拥抱所扭曲。在他那甲壳覆盖的身躯内潜藏着阴险的恶意，受命在世界各地织就恐怖之网，以黑暗主宰之名诱捕生者。他既精通武技又擅长通灵诡计，守护着大地的阴影深处，静静地等待着，准备击杀任何敢于踏入他那神圣且丝网遍布领地的冒失者。",
     Caption = "地穴监督者",
     Alliance = {},
     Horde = {}
 }
-kQuestInstanceData.Nerubian.Alliance[1] = { --TODO translate
+kQuestInstanceData.Nerubian.Alliance[1] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "地穴领主的召唤",
     Id = 41928,
     Level = 60,
@@ -5425,7 +5784,8 @@ kQuestInstanceData.Nerubian.Horde[1] = kQuestInstanceData.Nerubian.Alliance[1]
 
 --------------- Azuregos ---------------
 kQuestInstanceData.Azuregos = {
-    Story = "在大灾变之前，暗夜精灵城市艾达拉斯在现在被称为艾萨拉的土地上繁荣发展。据信许多古老而强大的上层精灵神器可能在曾经强大的据点废墟中被发现。无数代以来，蓝龙军团一直守护着强大的神器和魔法知识，确保它们不落入凡人手中。蓝龙艾索雷葛斯的存在似乎暗示，极其重要的物品，也许是传说中的永恒之瓶本身，可能在艾萨拉的荒野中被发现。无论艾索雷葛斯在寻找什么，有一件事是确定的：他将战斗至死以保卫艾萨拉的魔法宝藏。",
+    Story =
+    "在大灾变之前，暗夜精灵城市艾达拉斯在现在被称为艾萨拉的土地上繁荣发展。据信许多古老而强大的上层精灵神器可能在曾经强大的据点废墟中被发现。无数代以来，蓝龙军团一直守护着强大的神器和魔法知识，确保它们不落入凡人手中。蓝龙艾索雷葛斯的存在似乎暗示，极其重要的物品，也许是传说中的永恒之瓶本身，可能在艾萨拉的荒野中被发现。无论艾索雷葛斯在寻找什么，有一件事是确定的：他将战斗至死以保卫艾萨拉的魔法宝藏。",
     Caption = "艾索雷葛斯",
     Alliance = {},
     Horde = {}
@@ -5455,7 +5815,9 @@ kQuestInstanceData.Azuregos.Alliance[2] = {
     Prequest = "巨龙军团的指控",
     Folgequest = "翻译龙语",
 }
-kQuestInstanceData.Azuregos.Alliance[3] = { --TODO translate
+kQuestInstanceData.Azuregos.Alliance[3] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "复生仪式",
     Id = 41935,
     Level = 60,
@@ -5470,12 +5832,15 @@ end
 
 --------------- Lord Kazzak ---------------
 kQuestInstanceData.LordKazzak = {
-    Story = "在第三次战争结束时击败燃烧军团后，剩余的敌军在巨大的恶魔领主卡扎克的带领下撤退到诅咒之地。他们至今仍居住在那里一个叫做污染之痕的地区，等待着黑暗之门的重新开启。有传言称，一旦传送门重新开启，卡扎克将带着他的残余部队前往外域。外域曾经是兽人的故乡德拉诺，被兽人萨满耐奥祖创造的几个传送门同时激活而撕裂，现在作为一个破碎的世界存在，被暗夜精灵叛徒伊利丹指挥下的大批恶魔代理人占据。",
+    Story =
+    "在第三次战争结束时击败燃烧军团后，剩余的敌军在巨大的恶魔领主卡扎克的带领下撤退到诅咒之地。他们至今仍居住在那里一个叫做污染之痕的地区，等待着黑暗之门的重新开启。有传言称，一旦传送门重新开启，卡扎克将带着他的残余部队前往外域。外域曾经是兽人的故乡德拉诺，被兽人萨满耐奥祖创造的几个传送门同时激活而撕裂，现在作为一个破碎的世界存在，被暗夜精灵叛徒伊利丹指挥下的大批恶魔代理人占据。",
     Caption = "卡扎克",
     Alliance = {},
     Horde = {}
 }
-kQuestInstanceData.LordKazzak.Alliance[1] = { --TODO translate
+kQuestInstanceData.LordKazzak.Alliance[1] = {
+    Servers = { AtlasCFM.Server.TURTLE },
+    --TODO translate
     Title = "扭曲裂隙水晶",
     Id = 41936,
     Level = 60,
@@ -5488,7 +5853,8 @@ kQuestInstanceData.LordKazzak.Horde[1] = kQuestInstanceData.LordKazzak.Alliance[
 
 --------------- Alterac Valley ---------------
 kQuestInstanceData.BGAlteracValleyNorth = {
-    Story = "很久以前，在第一次战争之前，术士古尔丹将一个名为霜狼的兽人氏族流放到奥特拉克山脉深处的一个隐秘山谷。霜狼氏族就在这个山谷的南部地区勉强度日，直到萨尔的到来。\n在萨尔成功地统一了各个氏族之后，霜狼氏族，现在由兽人萨满德雷克塔尔领导，选择留在他们长期以来称之为家园的山谷。然而，最近，霜狼氏族相对平静的生活受到了矮人风暴之峰远征队的挑战。\n风暴之峰远征队在山谷中安营扎寨，寻找自然资源和古代遗迹。尽管他们的意图如此，矮人的存在却与南方的霜狼兽人引发了激烈的冲突，霜狼兽人发誓要将这些入侵者赶出他们的土地。",
+    Story =
+    "很久以前，在第一次战争之前，术士古尔丹将一个名为霜狼的兽人氏族流放到奥特拉克山脉深处的一个隐秘山谷。霜狼氏族就在这个山谷的南部地区勉强度日，直到萨尔的到来。\n在萨尔成功地统一了各个氏族之后，霜狼氏族，现在由兽人萨满德雷克塔尔领导，选择留在他们长期以来称之为家园的山谷。然而，最近，霜狼氏族相对平静的生活受到了矮人风暴之峰远征队的挑战。\n风暴之峰远征队在山谷中安营扎寨，寻找自然资源和古代遗迹。尽管他们的意图如此，矮人的存在却与南方的霜狼兽人引发了激烈的冲突，霜狼兽人发誓要将这些入侵者赶出他们的土地。",
     Caption = "奥特兰克山谷",
     Alliance = {},
     Horde = {}
@@ -5510,7 +5876,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Alliance[2] = {
     Attain = 51,
     Aim = "到主基地东南边的蛮爪洞穴中去找到霜狼军旗，然后把它交给战争大师拉格隆德。",
     Location = "哈格丁中尉 (奥特兰克山脉 " .. yellow .. "39,81" .. white .. ")",
-    Note = "雷矛军旗 在 奥特兰克山谷 - 北 地图的 冰翼洞穴 " .. yellow .. "[11]" .. white .. " 处。每当你获得新的声望等级时，与同一个NPC交谈以获得升级的徽章。\n\n前置任务不是获得此任务所必需的，但它确实提供约 9550 点经验值。",
+    Note = "雷矛军旗 在 奥特兰克山谷 - 北 地图的 冰翼洞穴 " ..
+        yellow .. "[11]" .. white .. " 处。每当你获得新的声望等级时，与同一个NPC交谈以获得升级的徽章。\n\n前置任务不是获得此任务所必需的，但它确实提供约 9550 点经验值。",
     Prequest = "国王的命令",
     Folgequest = "崭露头角 -> 命令之眼",
     Rewards = {
@@ -5525,8 +5892,10 @@ kQuestInstanceData.BGAlteracValleyNorth.Alliance[3] = {
     Level = 60,
     Attain = 51,
     Aim = "进入奥特兰克山谷，击败部落将军德雷克塔尔。然后回到勘查员塔雷·石镐那里。",
-    Location = "勘察员塔雷·石镐 (奥特兰克山脉 " .. yellow .. "41,80" .. white .. ") 和\n(奥特兰克山谷 - 北 " .. yellow .. "[B]" .. white .. ")",
-    Note = "德雷克塔尔 在 (奥特兰克山谷 - 南 " .. yellow .. "[B]" .. white .. ")。实际上不需要杀死他来完成任务。只需要你的一方以任何方式赢得战场。\n交还此任务后，再次与NPC交谈以获得奖励。",
+    Location = "勘察员塔雷·石镐 (奥特兰克山脉 " ..
+        yellow .. "41,80" .. white .. ") 和\n(奥特兰克山谷 - 北 " .. yellow .. "[B]" .. white .. ")",
+    Note = "德雷克塔尔 在 (奥特兰克山谷 - 南 " ..
+        yellow .. "[B]" .. white .. ")。实际上不需要杀死他来完成任务。只需要你的一方以任何方式赢得战场。\n交还此任务后，再次与NPC交谈以获得奖励。",
     Folgequest = "雷矛英雄",
     Rewards = {
         Text = "奖励：任选其一",
@@ -5580,7 +5949,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Alliance[8] = {
     Attain = 51,
     Aim = "占领一座还没有被雷矛部族控制的矿洞，然后向丹巴达尔的雷矛军需官复命。",
     Location = "杜尔根·雷矛 (奥特兰克山脉 " .. yellow .. "37,77" .. white .. ")",
-    Note = "要完成任务，你必须在部落控制矿洞时杀死 (奥特兰克山谷 - 北 " .. yellow .. "[1]" .. white .. ") 深铁矿洞 中的 莫洛克 或 (奥特兰克山谷 - 南 " .. yellow .. "[6]" .. white .. ") 冷齿矿洞 中的 工头斯尼维尔。",
+    Note = "要完成任务，你必须在部落控制矿洞时杀死 (奥特兰克山谷 - 北 " ..
+        yellow .. "[1]" .. white .. ") 深铁矿洞 中的 莫洛克 或 (奥特兰克山谷 - 南 " .. yellow .. "[6]" .. white .. ") 冷齿矿洞 中的 工头斯尼维尔。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Alliance[9] = {
     Title = "哨塔和碉堡",
@@ -5625,7 +5995,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Alliance[13] = {
     Attain = 51,
     Aim = "有时你可能会陷入长达数天或数周的战斗。在这些长时间的活动中，你可能会收集到大量的霜狼风暴水晶。\n\n议会接受此类供奉",
     Location = "大德鲁伊雷弗拉尔 (奥特兰克山谷 - 北 " .. yellow .. "[2]" .. white .. ")",
-    Note = "交还大约 200 个水晶后，大德鲁伊雷弗拉尔 将开始走向 (奥特兰克山谷 - 北 " .. yellow .. "[19]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，森林之王伊弗斯 将被召唤来协助战斗。",
+    Note = "交还大约 200 个水晶后，大德鲁伊雷弗拉尔 将开始走向 (奥特兰克山谷 - 北 " ..
+        yellow .. "[19]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，森林之王伊弗斯 将被召唤来协助战斗。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Alliance[14] = {
     Title = "森林之王伊弗斯",
@@ -5634,14 +6005,16 @@ kQuestInstanceData.BGAlteracValleyNorth.Alliance[14] = {
     Attain = 51,
     Aim = "霜狼氏族受到元素能量的腐蚀保护。他们的萨满祭司干预的力量，如果不加以制止，必将毁灭我们所有人。\n\n霜狼士兵携带着一种名为风暴水晶的元素护符。我们可以利用这些护符召唤伊弗斯。出发去夺取这些水晶吧。",
     Location = "大德鲁伊雷弗拉尔 (奥特兰克山谷 - 北 " .. yellow .. "[2]" .. white .. ")",
-    Note = "交还大约 200 个水晶后，大德鲁伊雷弗拉尔 将开始走向 (奥特兰克山谷 - 北 " .. yellow .. "[19]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，森林之王伊弗斯 将被召唤来协助战斗。",
+    Note = "交还大约 200 个水晶后，大德鲁伊雷弗拉尔 将开始走向 (奥特兰克山谷 - 北 " ..
+        yellow .. "[19]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，森林之王伊弗斯 将被召唤来协助战斗。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Alliance[15] = {
     Title = "天空的召唤—斯里多尔的空军",
     Id = 6942,
     Level = 60,
     Attain = 51,
-    Aim = "我的狮鹫已经准备好攻击前线，但在前线兵力减少之前无法发动攻击。\n\n负责守卫前线的霜狼战士胸前自豪地佩戴着服役勋章。从他们腐烂的尸体上扯下那些勋章带回来给我。\n\n一旦前线兵力足够稀薄，我就会呼叫空中支援！死神从天而降！",
+    Aim =
+    "我的狮鹫已经准备好攻击前线，但在前线兵力减少之前无法发动攻击。\n\n负责守卫前线的霜狼战士胸前自豪地佩戴着服役勋章。从他们腐烂的尸体上扯下那些勋章带回来给我。\n\n一旦前线兵力足够稀薄，我就会呼叫空中支援！死神从天而降！",
     Location = "空军指挥官斯里多尔 (奥特兰克山谷 - 北 " .. yellow .. "[8]" .. white .. ")",
     Note = "杀死部落NPC以获得 部落士兵的勋章。",
 }
@@ -5680,7 +6053,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Horde[2] = {
     Attain = 51,
     Aim = "到主基地东南边的蛮爪洞穴中去找到霜狼军旗，然后把它交给战争大师拉格隆德。",
     Location = "战争大师拉格隆德 (奥特兰克山脉 " .. yellow .. "62,59" .. white .. ")",
-    Note = "霜狼军旗 在 (奥特兰克山谷 - 南 " .. yellow .. "[9]" .. white .. ") 的 蛮爪洞穴 中。每当你获得新的声望等级时，与同一个NPC交谈以获得升级的徽章。\n\n前置任务不是获得此任务所必需的，但它确实提供约 9550 点经验值。",
+    Note = "霜狼军旗 在 (奥特兰克山谷 - 南 " ..
+        yellow .. "[9]" .. white .. ") 的 蛮爪洞穴 中。每当你获得新的声望等级时，与同一个NPC交谈以获得升级的徽章。\n\n前置任务不是获得此任务所必需的，但它确实提供约 9550 点经验值。",
     Prequest = "保卫霜狼氏族",
     Folgequest = "崭露头角 -> 命令之眼",
     Rewards = {
@@ -5696,7 +6070,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Horde[3] = {
     Attain = 51,
     Aim = "进入奥特兰克山谷，击败矮人将军范达尔·雷矛。然后回到沃加·死爪那里。",
     Location = "沃加·死爪 (奥特兰克山脉 " .. yellow .. "64,60" .. white .. ")",
-    Note = "范达尔·雷矛 在 (奥特兰克山谷 - 北 " .. yellow .. "[B]" .. white .. ")。实际上不需要杀死他来完成任务。只需要你的一方以任何方式赢得战场。\n交还此任务后，再次与NPC交谈以获得奖励。",
+    Note = "范达尔·雷矛 在 (奥特兰克山谷 - 北 " ..
+        yellow .. "[B]" .. white .. ")。实际上不需要杀死他来完成任务。只需要你的一方以任何方式赢得战场。\n交还此任务后，再次与NPC交谈以获得奖励。",
     Folgequest = "霜狼英雄",
     Rewards = kQuestInstanceData.BGAlteracValleyNorth.Alliance[3].Rewards
 }
@@ -5744,7 +6119,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Horde[8] = {
     Attain = 51,
     Aim = "占领一座还没有被雷矛部族控制的矿洞，然后向丹巴达尔的雷矛军需官复命。",
     Location = "提卡·血牙 (奥特兰克山脉 " .. yellow .. "66,55" .. white .. ")",
-    Note = "要完成任务，你必须在联盟控制矿洞时杀死 (奥特兰克山谷 - 北 " .. yellow .. "[1]" .. white .. ") 深铁矿洞 中的 莫洛克 或 (奥特兰克山谷 - 南 " .. yellow .. "[6]" .. white .. ") 冷齿矿洞 中的 工头斯尼维尔。",
+    Note = "要完成任务，你必须在联盟控制矿洞时杀死 (奥特兰克山谷 - 北 " ..
+        yellow .. "[1]" .. white .. ") 深铁矿洞 中的 莫洛克 或 (奥特兰克山谷 - 南 " .. yellow .. "[6]" .. white .. ") 冷齿矿洞 中的 工头斯尼维尔。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Horde[9] = {
     Title = "哨塔和碉堡",
@@ -5789,7 +6165,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Horde[13] = {
     Attain = 51,
     Aim = "你可以选择提供更多从我们敌人身上获取的血液。我很乐意接受加仑大小的供品。",
     Location = "指挥官瑟鲁加 (奥特兰克山谷 - 南 " .. yellow .. "[8]" .. white .. ")",
-    Note = "交还大约 150 份血液后，指挥官瑟鲁加 将开始走向 (奥特兰克山谷 - 南 " .. yellow .. "[14]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，冰雪之王洛克霍拉 将被召唤来杀死联盟玩家。",
+    Note = "交还大约 150 份血液后，指挥官瑟鲁加 将开始走向 (奥特兰克山谷 - 南 " ..
+        yellow .. "[14]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，冰雪之王洛克霍拉 将被召唤来杀死联盟玩家。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Horde[14] = {
     Title = "冰雪之王洛克霍拉",
@@ -5798,7 +6175,8 @@ kQuestInstanceData.BGAlteracValleyNorth.Horde[14] = {
     Attain = 51,
     Aim = "你必须击倒我们的敌人并把他们的血带给我。一旦收集了足够的血，召唤仪式就可以开始了。\n\n当元素领主被释放到雷矛军队身上时，胜利将得到保证。",
     Location = "指挥官瑟鲁加 (奥特兰克山谷 - 南 " .. yellow .. "[8]" .. white .. ")",
-    Note = "交还大约 150 份血液后，指挥官瑟鲁加 将开始走向 (奥特兰克山谷 - 南 " .. yellow .. "[14]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，冰雪之王洛克霍拉 将被召唤来杀死联盟玩家。",
+    Note = "交还大约 150 份血液后，指挥官瑟鲁加 将开始走向 (奥特兰克山谷 - 南 " ..
+        yellow .. "[14]" .. white .. ")。到达那里后，她将开始一个召唤仪式，需要 10 人协助。如果成功，冰雪之王洛克霍拉 将被召唤来杀死联盟玩家。",
 }
 kQuestInstanceData.BGAlteracValleyNorth.Horde[15] = {
     Title = "天空的召唤—古斯的部队",
@@ -5900,7 +6278,8 @@ kQuestInstanceData.BGArathiBasin.Horde[3] = {
 
 --------------- Warsong Gulch ---------------
 kQuestInstanceData.BGWarsongGulch = {
-    Story = "战歌峡谷位于灰谷森林的南部地区，靠近格罗姆·地狱咆哮和他的兽人在第三次战争期间砍伐大片森林的地区。一些兽人留在了附近，继续砍伐森林以支持部落的扩张。他们自称为战歌氏族。\n暗夜精灵已经开始大规模反攻以夺回灰谷的森林，现在正集中精力将战歌氏族彻底赶出他们的土地。因此，银翼哨兵响应了号召，发誓在每一个兽人被击败并被赶出战歌峡谷之前绝不休息。 ",
+    Story =
+    "战歌峡谷位于灰谷森林的南部地区，靠近格罗姆·地狱咆哮和他的兽人在第三次战争期间砍伐大片森林的地区。一些兽人留在了附近，继续砍伐森林以支持部落的扩张。他们自称为战歌氏族。\n暗夜精灵已经开始大规模反攻以夺回灰谷的森林，现在正集中精力将战歌氏族彻底赶出他们的土地。因此，银翼哨兵响应了号召，发誓在每一个兽人被击败并被赶出战歌峡谷之前绝不休息。 ",
     Caption = "战歌峡谷",
     Alliance = {},
     Horde = {}
@@ -5908,7 +6287,8 @@ kQuestInstanceData.BGWarsongGulch = {
 
 --------------- The Crescent Grove ---------------
 kQuestInstanceData.TheCrescentGrove = {
-    Story = "位于灰谷南部俯瞰迷雾之湖的隐秘树林，曾是德鲁伊数年的静修之地，现在一个邪恶的存在已在该地区扎根。最初作为德鲁伊平静静修之地的隐秘树林，近来树林熊怪部落在逃离污林熊怪部落的疯狂时搬了进来，在这个过程中驱逐了几个原来的居民。然而，尽管他们试图逃离疯狂，他们最终还是屈服了。卡兰纳·明辉曾住在这里，后来他被树林熊怪从树林驱逐，家园被烧毁。由末日守卫大师拉克希斯领导的燃烧军团恶魔力量已在树林中建立据点，开始腐化林地。军团已经以邪刺之痕的形式留下了他们的印记，打破了平衡并扰乱了灵魂。",
+    Story =
+    "位于灰谷南部俯瞰迷雾之湖的隐秘树林，曾是德鲁伊数年的静修之地，现在一个邪恶的存在已在该地区扎根。最初作为德鲁伊平静静修之地的隐秘树林，近来树林熊怪部落在逃离污林熊怪部落的疯狂时搬了进来，在这个过程中驱逐了几个原来的居民。然而，尽管他们试图逃离疯狂，他们最终还是屈服了。卡兰纳·明辉曾住在这里，后来他被树林熊怪从树林驱逐，家园被烧毁。由末日守卫大师拉克希斯领导的燃烧军团恶魔力量已在树林中建立据点，开始腐化林地。军团已经以邪刺之痕的形式留下了他们的印记，打破了平衡并扰乱了灵魂。",
     Caption = "新月林地",
     Alliance = {},
     Horde = {}
@@ -6133,7 +6513,8 @@ kQuestInstanceData.HateforgeQuarry.Alliance[3] = {
     Attain = 45,
     Aim = "杀死巴古尔·黑锤，并为燃烧平原黑石小径的奥瓦克·严岩取回元老院命令。",
     Location = "奥瓦克·严岩 (燃烧平原 - 黑石小径 " .. yellow .. "75.9,68.2" .. white .. ").",
-    Note = "任务线开始于 拉德根·深焰，任务 '获得奥瓦克的信任' (燃烧平原 - 黑石小径 " .. yellow .. "76.1,67.6" .. white .. ")。\n杀死 巴古尔·黑锤 并从首领旁边的桌子上拿取 元老院命令。",
+    Note = "任务线开始于 拉德根·深焰，任务 '获得奥瓦克的信任' (燃烧平原 - 黑石小径 " ..
+        yellow .. "76.1,67.6" .. white .. ")。\n杀死 巴古尔·黑锤 并从首领旁边的桌子上拿取 元老院命令。",
     Prequest = "获得奥瓦克的信任 -> 聆听奥瓦克的故事 -> 斯特恩洛克藏品",
     Rewards = {
         Text = "奖励：任选其一",
@@ -6167,7 +6548,7 @@ kQuestInstanceData.HateforgeQuarry.Alliance[5] = {
     Note = "仇恨熔炉化学家 怪物掉落 黑铁药瓶 用于任务，仇恨熔炉化学文件 在 箱子" .. yellow .. "[a]" .. white .. "中。",
     Rewards = {
         Text = "奖励：",
-        { id = 2686 }, --Thunder Ale Drinkable
+        { id = 2686 },  --Thunder Ale Drinkable
         { id = 60699 }, --Varlag's Clutches Hands, Leather
     }
 }
@@ -6188,6 +6569,7 @@ kQuestInstanceData.HateforgeQuarry.Alliance[6] = {
     }
 }
 kQuestInstanceData.HateforgeQuarry.Alliance[7] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "为什么不两者兼得？",
     Id = 41142,
     Level = 50,
@@ -6228,7 +6610,9 @@ kQuestInstanceData.HateforgeQuarry.Horde[6] = {
     Attain = 45,
     Aim = "冒险进入仇恨熔炉采石场，为卡方要塞的卡方清除暮光之锤存在。",
     Location = "卡方 (燃烧平原 - 卡方要塞 " .. yellow .. "90.1,22.5" .. white .. " 燃烧平原东北角)。",
-    Note = "杀死 最后的首领 哈格什末日召唤者 " .. yellow .. "[5]" .. white .. "。\n任务线开始于 瓦尔盖克议员 (燃烧平原 - 卡方要塞 " .. yellow .. "90.0,22.7" .. white .. " 燃烧平原东北角)，任务 '新与旧之一'。",
+    Note = "杀死 最后的首领 哈格什末日召唤者 " ..
+        yellow ..
+        "[5]" .. white .. "。\n任务线开始于 瓦尔盖克议员 (燃烧平原 - 卡方要塞 " .. yellow .. "90.0,22.7" .. white .. " 燃烧平原东北角)，任务 '新与旧之一'。",
     Prequest = "新与旧之一 -> 新与旧之二 -> 新与旧之三",
     Rewards = {
         Text = "奖励：任选其一",
@@ -6305,7 +6689,8 @@ end
 
 --------------- Ostarius ---------------
 kQuestInstanceData.Ostarius = {
-    Story = "奥斯塔里乌斯是一位巨大的泰坦守护者，一个由星辰之石锻造并灌注了恒星原力的静默哨兵。他肩负着守护奥丹姆最神圣地库的重任，在这里屹立了万古岁月，他的宇宙意识与万神殿的造物引擎紧密相连。不同于那些被古神腐蚀的守卫，奥斯塔里乌斯始终坚定地执行着泰坦逻辑，随时准备焚净任何威胁到神圣远古使命的“有机异常体”。",
+    Story =
+    "奥斯塔里乌斯是一位巨大的泰坦守护者，一个由星辰之石锻造并灌注了恒星原力的静默哨兵。他肩负着守护奥丹姆最神圣地库的重任，在这里屹立了万古岁月，他的宇宙意识与万神殿的造物引擎紧密相连。不同于那些被古神腐蚀的守卫，奥斯塔里乌斯始终坚定地执行着泰坦逻辑，随时准备焚净任何威胁到神圣远古使命的“有机异常体”。",
     Caption = "奥兹塔里亚斯",
     Alliance = {},
     Horde = {}
@@ -6333,7 +6718,8 @@ kQuestInstanceData.Ostarius.Horde[1] = {
 
 --------------- Gilneas City ---------------
 kQuestInstanceData.GilneasCity = {
-    Story = "吉尔尼斯城是位于吉尔尼斯的副本地下城。位于这片曾经孤立的土地的中心，吉尔尼斯城曾是其人民的希望堡垒。在摆脱阿拉索领主的统治后建立，它作为韧性和繁荣的象征矗立着。然而，它现在只是昔日美丽的空壳，一个黑暗的存在在吉尔尼斯投下令人窒息的阴影，提醒着它曾经辉煌的过去。远处的嚎叫回荡在城市中，令人不安地提醒着它的新占领者。然而，有可能并非所有人都已离去，他们被诅咒的国王可能仍然活着。",
+    Story =
+    "吉尔尼斯城是位于吉尔尼斯的副本地下城。位于这片曾经孤立的土地的中心，吉尔尼斯城曾是其人民的希望堡垒。在摆脱阿拉索领主的统治后建立，它作为韧性和繁荣的象征矗立着。然而，它现在只是昔日美丽的空壳，一个黑暗的存在在吉尔尼斯投下令人窒息的阴影，提醒着它曾经辉煌的过去。远处的嚎叫回荡在城市中，令人不安地提醒着它的新占领者。然而，有可能并非所有人都已离去，他们被诅咒的国王可能仍然活着。",
     Caption = "吉尔尼斯城",
     Alliance = {},
     Horde = {}
@@ -6414,7 +6800,9 @@ kQuestInstanceData.GilneasCity.Alliance[6] = {
     Attain = 35,
     Aim = "「救出」吉恩，并且为拉文郡的达瑞斯·拉文伍德勋爵找到格雷迈恩王冠。",
     Location = "达瑞斯·拉文伍德勋爵 (吉尔尼斯 - 拉文郡 (主建筑) " .. yellow .. "58.4,67.6" .. white .. ")",
-    Note = "任务线开始于卡利班·席瓦莱恩男爵 (吉尔尼斯 - 拉文郡 (主建筑) " .. yellow .. "58.4,67.8" .. white .. ") 处的任务 '披着羊皮的狼'。\n格雷迈恩王冠掉落自吉恩·格雷迈恩 " .. yellow .. "[8]" .. white .. "，位于塔顶的最后首领。",
+    Note = "任务线开始于卡利班·席瓦莱恩男爵 (吉尔尼斯 - 拉文郡 (主建筑) " ..
+        yellow ..
+        "58.4,67.8" .. white .. ") 处的任务 '披着羊皮的狼'。\n格雷迈恩王冠掉落自吉恩·格雷迈恩 " .. yellow .. "[8]" .. white .. "，位于塔顶的最后首领。",
     Prequest = "披着羊皮的狼 -> 一步一脚印 -> 传奇之路 -> 回到拉文郡 -> 黑暗中的微光 -> 卑劣的行径 -> 十字路口的交易 -> 突袭弗雷希尔要塞",
     Rewards = {
         Text = "奖励：1 或 2 或 3 和 4",
@@ -6445,7 +6833,11 @@ kQuestInstanceData.GilneasCity.Alliance[8] = {
     Attain = 40,
     Aim = "把冒险者的项链交给铁炉堡的塔瓦斯德·基瑟尔。",
     Location = "塔瓦斯德·基瑟尔 (铁炉堡 - 秘法区 " .. yellow .. "36,3" .. white .. ").",
-    Note = red .. "(珠宝加工：仅限金匠)" .. white .. " 前置任务来自 梅瓦·托格维尤 (铁炉堡 - 探险者大厅 " .. yellow .. "60,24" .. white .. "). \n达斯蒂万·黑风 " .. yellow .. "[4]" .. white .. " 掉落失去光泽的黄水晶项链",
+    Note = red ..
+        "(珠宝加工：仅限金匠)" ..
+        white ..
+        " 前置任务来自 梅瓦·托格维尤 (铁炉堡 - 探险者大厅 " ..
+        yellow .. "60,24" .. white .. "). \n达斯蒂万·黑风 " .. yellow .. "[4]" .. white .. " 掉落失去光泽的黄水晶项链",
     Prequest = "掌握金匠之术",
     Rewards = {
         Text = "奖励：",
@@ -6453,6 +6845,7 @@ kQuestInstanceData.GilneasCity.Alliance[8] = {
     }
 }
 kQuestInstanceData.GilneasCity.Alliance[9] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "沃根多尔之血",
     Id = 41378,
     Level = 60,
@@ -6480,7 +6873,8 @@ kQuestInstanceData.GilneasCity.Horde[2] = {
     Level = 45,
     Attain = 35,
     Aim = "为吉尔尼斯的埃博米尔农场的约书亚·埃博米尔杀死吉尔尼斯城内的达斯蒂万·布莱克考尔，并夺回埃博米尔的地契。",
-    Location = "乔舒·埃博米尔 (吉尔尼斯 - 埃博米尔农场 " .. yellow .. "[49.5,31.1]" .. white .. ")。进入吉尔尼斯大门后，沿着左侧（东侧）的山脉走，在有风车的田野里你会找到乔舒·埃博米尔。",
+    Location = "乔舒·埃博米尔 (吉尔尼斯 - 埃博米尔农场 " ..
+        yellow .. "[49.5,31.1]" .. white .. ")。进入吉尔尼斯大门后，沿着左侧（东侧）的山脉走，在有风车的田野里你会找到乔舒·埃博米尔。",
     Note = "前置任务 '埃博米尔农场的蝙蝠' 和 '埃博米尔农场的狼人'。\n达斯蒂万·黑风 " .. yellow .. "[4]" .. white .. " 掉落埃博米尔的地契",
     Prequest = "埃博米尔农场的蝙蝠 -> 埃博米尔农场的狼人",
     Rewards = {
@@ -6507,7 +6901,13 @@ kQuestInstanceData.GilneasCity.Horde[4] = {
     Attain = 35,
     Aim = "在吉尔尼斯城找到“论血液的力量”，然后返回吉尔尼斯格雷郡遗址的奥万·黑眼身边。",
     Location = "奥万·黑眼 (吉尔尼斯 - 格雷希尔废墟 " .. yellow .. "[31.3,47.0]" .. white .. ")",
-    Note = red .. "任务线开始于亡灵哨兵阿琳娜 (吉尔尼斯 - 寂静守卫教堂 " .. yellow .. "[57.3,39.6]" .. white .. "，内部)，任务为 '死到天黑'。\n《论血液的力量》一书位于摄政夫人西莉亚·哈鲁恩和摄政王莫蒂默·哈鲁恩身后的桌子上，就在哈洛家族的箱子" .. yellow .. "[7]" .. white .. "旁边。\n完成下一个任务后，你将获得奖励。",
+    Note = red ..
+        "任务线开始于亡灵哨兵阿琳娜 (吉尔尼斯 - 寂静守卫教堂 " ..
+        yellow ..
+        "[57.3,39.6]" ..
+        white ..
+        "，内部)，任务为 '死到天黑'。\n《论血液的力量》一书位于摄政夫人西莉亚·哈鲁恩和摄政王莫蒂默·哈鲁恩身后的桌子上，就在哈洛家族的箱子" ..
+        yellow .. "[7]" .. white .. "旁边。\n完成下一个任务后，你将获得奖励。",
     Prequest = "死到天黑 -> 我们所需要的只是血 -> 最后的活死人 -> 我们从活物中获取它",
     Folgequest = "以血还血",
     Rewards = {
@@ -6555,7 +6955,8 @@ kQuestInstanceData.GilneasCity.Horde[7] = {
     Attain = 34,
     Aim = "在吉尔尼斯城找到这本书籍，并将其带给荒芜之地卡加斯的加卡尔·融苔。",
     Location = "加卡尔·融苔 (荒芜之地 - 卡加斯 " .. yellow .. "2,46" .. white .. ").",
-    Note = red .. "(珠宝加工：仅限金匠)" .. white .. " 前置任务来自 古尔迈尔·法塔尔 (幽暗城 - 盗贼区 " .. yellow .. "77,76" .. white .. ")。\n'吉尔尼斯珠宝：概要' 包含物品。", --TODO: where?
+    Note = red ..
+        "(珠宝加工：仅限金匠)" .. white .. " 前置任务来自 古尔迈尔·法塔尔 (幽暗城 - 盗贼区 " .. yellow .. "77,76" .. white .. ")。\n'吉尔尼斯珠宝：概要' 包含物品。", --TODO: where?
     Prequest = "掌握金匠之术",
     Rewards = {
         Text = "奖励：",
@@ -6563,6 +6964,7 @@ kQuestInstanceData.GilneasCity.Horde[7] = {
     }
 }
 kQuestInstanceData.GilneasCity.Horde[8] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "狼、巫婆与镰刀",
     Id = 41381,
     Level = 60,
@@ -6580,14 +6982,16 @@ kQuestInstanceData.GilneasCity.Horde[9] = {
     Attain = 60,
     Aim = "冒险前往吉尔尼斯城，寻找第二个普利克巫妖的下落。",
     Location = "大德鲁伊梦风 (海加尔山 - 诺达纳尔 " .. yellow .. "85, 30" .. white .. ")", --61512
-    Note = "西莉亚日记放置在附近" .. yellow .. "[7]" .. white .. "\n[女神的镰刀] 前置任务开始于艾露恩的镰刀 掉落自 布莱克伍德公爵 II " .. yellow .. "(下层卡拉赞大厅 [5])。",
+    Note = "西莉亚日记放置在附近" ..
+        yellow .. "[7]" .. white .. "\n[女神的镰刀] 前置任务开始于艾露恩的镰刀 掉落自 布莱克伍德公爵 II " .. yellow .. "(下层卡拉赞大厅 [5])。",
     Prequest = "普利克巫妖纳尔穆恩",
     Folgequest = "普利克巫妖人狼",
 }
 
 --------------- Lower Karazhan Halls ---------------
 kQuestInstanceData.LowerKarazhan = {
-    Story = "卡拉赞下层大厅是位于逆风小径的团队副本。卡拉赞，曾经是提瑞斯法前守护者的高耸据点，现在栖息在强大的地脉上，嗡嗡作响着魔法能量。它被遗忘已久、布满灰尘的走廊已成为各种生物的避风港，尽管看起来并非所有居民都是自愿离开的。在下层大厅的深处，麦迪文忠诚的管家莫罗斯仍然是一位警惕的守护者。如果你设法给他留下深刻印象，他可能会授予你进入上层的权限。",
+    Story =
+    "卡拉赞下层大厅是位于逆风小径的团队副本。卡拉赞，曾经是提瑞斯法前守护者的高耸据点，现在栖息在强大的地脉上，嗡嗡作响着魔法能量。它被遗忘已久、布满灰尘的走廊已成为各种生物的避风港，尽管看起来并非所有居民都是自愿离开的。在下层大厅的深处，麦迪文忠诚的管家莫罗斯仍然是一位警惕的守护者。如果你设法给他留下深刻印象，他可能会授予你进入上层的权限。",
     Caption = "下层卡拉赞大厅",
     Alliance = {},
     Horde = {}
@@ -6685,6 +7089,7 @@ kQuestInstanceData.LowerKarazhan.Alliance[9] = {
     Folgequest = "罗斯伦家族胸针",
 }
 kQuestInstanceData.LowerKarazhan.Alliance[10] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "罗斯伦家族胸针",
     Id = 41000,
     Level = 60,
@@ -6748,7 +7153,9 @@ kQuestInstanceData.LowerKarazhan.Alliance[15] = {
     Attain = 60,
     Aim = "杀死爪王嚎牙并向埃伯洛克领主报告。",
     Location = "艾露恩的镰刀 " .. yellow .. "[5]" .. white .. ".",
-    Note = red .. "法师，牧师，术士，仅德鲁伊" .. white .. ":\n任务线开始于传说物品 '艾露恩的镰刀'，掉落自布莱克沃尔德勋爵二世 " .. yellow .. "[5]" .. white .. " (低几率)。\n传说饰品任务线。",
+    Note = red ..
+        "法师，牧师，术士，仅德鲁伊" ..
+        white .. ":\n任务线开始于传说物品 '艾露恩的镰刀'，掉落自布莱克沃尔德勋爵二世 " .. yellow .. "[5]" .. white .. " (低几率)。\n传说饰品任务线。",
     Folgequest = "女神的镰刀",
 }
 kQuestInstanceData.LowerKarazhan.Alliance[16] = {
@@ -6758,7 +7165,8 @@ kQuestInstanceData.LowerKarazhan.Alliance[16] = {
     Attain = 55,
     Aim = "在卡拉赞外的小教堂为圣职者涅修斯收集15个奥术精华、20个幻影之尘和10个强效不灭精华。",
     Location = "圣职者奈瑟斯 (逆风小径，卡拉赞旁边的教堂前 " .. yellow .. "[40.3,77.2]" .. white .. ").",
-    Note = "15x 奥术精华 - 随机小怪掉落；\n20x 幻影之尘 - 附魔师或拍卖行；\n10x 强效不灭精华 - 附魔师或拍卖行；\n完成此任务后，你将能够获得头/腿附魔任务。每个附魔你需要：\n 1x 过载魔法能量 - 卡拉赞小怪/首领随机掉落的稀有物品；\n6x 奥术精华 - 随机小怪掉落。",
+    Note =
+    "15x 奥术精华 - 随机小怪掉落；\n20x 幻影之尘 - 附魔师或拍卖行；\n10x 强效不灭精华 - 附魔师或拍卖行；\n完成此任务后，你将能够获得头/腿附魔任务。每个附魔你需要：\n 1x 过载魔法能量 - 卡拉赞小怪/首领随机掉落的稀有物品；\n6x 奥术精华 - 随机小怪掉落。",
     Folgequest = "破碎祈祷，强效保护祈祷，广阔思维祈祷，强效奥术坚韧祈祷",
     Rewards = {
         Text = "奖励：任选其一",
@@ -6775,7 +7183,10 @@ kQuestInstanceData.LowerKarazhan.Alliance[17] = {
     Attain = 60,
     Aim = "从格里齐基尔那拿到滑稽的大蜡烛并交给卡拉赞上层的大吱吱。",
     Location = "看门人蒙蒂格" .. blue .. " " .. white .. "位于副本入口处的楼梯前。",
-    Note = red .. "法师专用" .. white .. ": 格里齐基尔 " .. yellow .. "[3]" .. white .. " 掉落 '滑稽的大蜡烛'。\n任务线开始于 " .. yellow .. "[卡拉赞之塔]" .. white .. " 的大吱吱。",
+    Note = red ..
+        "法师专用" ..
+        white ..
+        ": 格里齐基尔 " .. yellow .. "[3]" .. white .. " 掉落 '滑稽的大蜡烛'。\n任务线开始于 " .. yellow .. "[卡拉赞之塔]" .. white .. " 的大吱吱。",
     Prequest = "吾非鼠辈",
     Rewards = {
         Text = "奖励：",
@@ -6783,6 +7194,7 @@ kQuestInstanceData.LowerKarazhan.Alliance[17] = {
     }
 }
 kQuestInstanceData.LowerKarazhan.Alliance[18] = {
+    Servers = { AtlasCFM.Server.TURTLE1 },
     Title = "沃根多尔之血",
     Id = 41381,
     Level = 60,
@@ -6829,7 +7241,10 @@ kQuestInstanceData.EmeraldSanctum.Alliance[1] = {
     Attain = 55,
     Aim = "将阴燃梦境精华带给海加尔山诺达纳尔的大德鲁伊梦风。",
     Location = "阴燃梦境精华 [2]",
-    Note = red .. "仅德鲁伊" .. white .. ": 大德鲁伊梦风位于 (海加尔山 - 诺达纳尔 " .. yellow .. "85,30" .. white .. ")。团队中只有一人可以拾取此物品，且该任务只能完成一次。\n\n列出的奖励为后续任务的奖励。",
+    Note = red ..
+        "仅德鲁伊" ..
+        white ..
+        ": 大德鲁伊梦风位于 (海加尔山 - 诺达纳尔 " .. yellow .. "85,30" .. white .. ")。团队中只有一人可以拾取此物品，且该任务只能完成一次。\n\n列出的奖励为后续任务的奖励。",
     Folgequest = "净化梦境精华",
     Rewards = {
         Text = "奖励：",
@@ -6873,7 +7288,10 @@ kQuestInstanceData.EmeraldSanctum.Alliance[4] = {
     Attain = 60,
     Aim = "击杀索尔尼乌斯，并在翡翠圣所内的阿尔恩之藤处，将提尔法罗与其持有的碎片重新结合。",
     Location = "深渊祭坛（艾萨拉 " .. yellow .. "[89, 56]" .. white .. "）。",
-    Note = red .. "仅限术士！" .. white .. " 前置任务始于“蠕动的触须之团”，掉落于（木喉要塞 " .. yellow .. "[10]" .. white .. "）。‘索尔尼乌斯’位于 " .. yellow .. "[2]" .. white .. "。",
+    Note = red ..
+        "仅限术士！" ..
+        white ..
+        " 前置任务始于“蠕动的触须之团”，掉落于（木喉要塞 " .. yellow .. "[10]" .. white .. "）。‘索尔尼乌斯’位于 " .. yellow .. "[2]" .. white .. "。",
     Prequest = "蠕动之眼 -> 银色之刃 -> 力量浸染",
     Rewards = {
         Text = "奖励：",
@@ -6898,7 +7316,11 @@ kQuestInstanceData.TowerofKarazhan.Alliance[1] = {
     Attain = 60,
     Aim = "为了修复麦迪文的权杖，逆风小径摩根墓场的千里眼亚妮拉丝需要大量的奥术能量。",
     Location = "千里眼亚妮拉丝 (逆风小径 - 摩根墓场 " .. yellow .. "41.2,79.2" .. white .. ")",
-    Note = "黑曜石棒 " .. yellow .. "下层卡拉赞大厅 [e]." .. white .. " 宇宙残骸 掉落自 " .. yellow .. "[3]." .. white .. "\n赞萨的束缚 前置任务开始于正义的汉瓦 (逆风小径 - 摩根墓场 " .. yellow .. "40.9, 79.3" ..
+    Note = "黑曜石棒 " ..
+        yellow ..
+        "下层卡拉赞大厅 [e]." ..
+        white ..
+        " 宇宙残骸 掉落自 " .. yellow .. "[3]." .. white .. "\n赞萨的束缚 前置任务开始于正义的汉瓦 (逆风小径 - 摩根墓场 " .. yellow .. "40.9, 79.3" ..
         white .. ")，凯尔森的酒 前置任务开始于厨师 " .. yellow .. "(下层卡拉赞大厅 [e])",
     Prequest = "凯尔森的酒, 赞萨的束缚",
     Folgequest = "提瑞斯法的遗迹",
@@ -6914,7 +7336,10 @@ kQuestInstanceData.TowerofKarazhan.Alliance[2] = {
     Attain = 60,
     Aim = "一个麦迪文的幻象是重新激活麦迪文的权杖所必需的。把可以充当替代品的东西带到卡拉赞郊外摩根墓场的千里眼亚妮拉丝那里。",
     Location = "千里眼亚妮拉丝 (逆风小径 - 摩根墓场 " .. yellow .. "41.2,79.2" .. white .. ")",
-    Note = "掉落自 " .. yellow .. "麦迪文的回响 [4]." .. white .. "\n卡德加的日记 [?] 开启此任务链。\n任务链最后任务的奖励。\n萨恩克拉 (悲伤沼泽 " .. yellow .. "25, 30" .. white .. ") 开启 桑夫的护身符 任务链。",
+    Note = "掉落自 " ..
+        yellow ..
+        "麦迪文的回响 [4]." ..
+        white .. "\n卡德加的日记 [?] 开启此任务链。\n任务链最后任务的奖励。\n萨恩克拉 (悲伤沼泽 " .. yellow .. "25, 30" .. white .. ") 开启 桑夫的护身符 任务链。",
     Prequest = "桑拉嵌座 -> 修复遗物",
     Folgequest = "桑夫的护身符 -> 一个请求 -> 麦迪文的权杖的另一面 -> 开辟道路",
     Rewards = {
@@ -6959,7 +7384,8 @@ kQuestInstanceData.TowerofKarazhan.Alliance[6] = {
     Attain = 60,
     Aim = "前往厄运之槌找到博学者莱德罗斯。",
     Location = "古人与树人们 (卡拉赞之塔 " .. yellow .. "附近 [] " .. white .. ")",
-    Note = red .. "仅德鲁伊" .. white .. ": 博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")\n任务线在厄运之槌东，任务为 [奥术古树雕文]。",
+    Note = red ..
+        "仅德鲁伊" .. white .. ": 博学者莱德罗斯 (厄运之槌 - 西 或 北 " .. yellow .. "[1] 图书馆" .. white .. ")\n任务线在厄运之槌东，任务为 [奥术古树雕文]。",
     Folgequest = "缠绕扭木",
 }
 kQuestInstanceData.TowerofKarazhan.Alliance[7] = {
@@ -6969,7 +7395,8 @@ kQuestInstanceData.TowerofKarazhan.Alliance[7] = {
     Attain = 60,
     Aim = "杀死爪王嚎牙并向埃伯洛克领主报告。",
     Location = "大德鲁伊梦风 (海加尔山 - 诺达纳尔 " .. yellow .. "85, 30" .. white .. ")",
-    Note = "《沃根多尔：鲜血维度的神话》 (入口附近) 包含任务物品。\n" .. white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5]).",
+    Note = "《沃根多尔：鲜血维度的神话》 (入口附近) 包含任务物品。\n" ..
+        white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5]).",
     Prequest = "女神的镰刀",
     Folgequest = "女神的镰刀",
 }
@@ -6980,7 +7407,8 @@ kQuestInstanceData.TowerofKarazhan.Alliance[8] = {
     Attain = 60,
     Aim = "杀死守护者纳尔穆恩。他在卡拉赞的上层。",
     Location = "大德鲁伊梦风 (海加尔山 - 诺达纳尔 " .. yellow .. "85, 30" .. white .. ")",
-    Note = "需要击杀 " .. yellow .. "守护者纳尔穆恩 [1]。\n" .. white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5]).",
+    Note = "需要击杀 " ..
+        yellow .. "守护者纳尔穆恩 [1]。\n" .. white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5]).",
     Prequest = "女神的镰刀 -> 乌尔的智慧",
     Folgequest = "吉尔尼斯的普利克巫妖",
 }
@@ -6991,7 +7419,10 @@ kQuestInstanceData.TowerofKarazhan.Alliance[9] = {
     Attain = 60,
     Aim = "杀死爪王嚎牙并向埃伯洛克领主报告。",
     Location = "大德鲁伊梦风 (海加尔山 - 诺达纳尔 " .. yellow .. "85, 30" .. white .. ")",
-    Note = "[恐惧魔王之魂] 掉落自 " .. yellow .. "孟菲斯托斯 [8]。\n" .. white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5])。\n" .. white .. "月布来自裁缝，永恒梦境碎片来自附魔。",
+    Note = "[恐惧魔王之魂] 掉落自 " ..
+        yellow ..
+        "孟菲斯托斯 [8]。\n" ..
+        white .. "[女神的镰刀] 前置任务开始于艾露恩的镰刀，掉落自布莱克伍德公爵二世 " .. yellow .. "(下层卡拉赞大厅 [5])。\n" .. white .. "月布来自裁缝，永恒梦境碎片来自附魔。",
     Prequest = "女神的镰刀 -> 普利克巫妖人狼",
     Folgequest = "女神之力",
     Rewards = {
@@ -7005,7 +7436,8 @@ end
 
 --------------- Dragonmaw Retreat ---------------
 kQuestInstanceData.DragonmawRetreat = {
-    Story = "龙喉据点是位于湿地的副本地下城。作为更古老但未知的矮人文明的碎片，这些洞穴曾被用作格瑞姆巴托采矿网络的一部分。自从第二次被遗弃以来，龙喉氏族已将这个被遗忘的网络雕刻成了一个行动基地。现在拥有恶魔之魂碎片，他们将不择手段地在他们被迷惑的红龙军队的帮助下夺回湿地和格瑞姆郊区。",
+    Story =
+    "龙喉据点是位于湿地的副本地下城。作为更古老但未知的矮人文明的碎片，这些洞穴曾被用作格瑞姆巴托采矿网络的一部分。自从第二次被遗弃以来，龙喉氏族已将这个被遗忘的网络雕刻成了一个行动基地。现在拥有恶魔之魂碎片，他们将不择手段地在他们被迷惑的红龙军队的帮助下夺回湿地和格瑞姆郊区。",
     Caption = "龙喉居所",
     Alliance = {},
     Horde = {}
@@ -7017,7 +7449,10 @@ kQuestInstanceData.DragonmawRetreat.Alliance[1] = {
     Attain = 25,
     Aim = "基座完好无损，且未遭受严重破坏。",
     Location = "联合基座 (龙喉居所 " .. yellow .. "35,93" .. white .. ")",
-    Note = "基座位于 " .. yellow .. "[5]" .. white .. " 附近\n'阿尔戈隆碎片' 掉落自 " .. yellow .. "[3]" .. white .. "\n'达斯罗纳格碎片' 包含在 '达斯罗纳格的箱子' 中 " .. yellow .. "[a]",
+    Note = "基座位于 " ..
+        yellow ..
+        "[5]" ..
+        white .. " 附近\n'阿尔戈隆碎片' 掉落自 " .. yellow .. "[3]" .. white .. "\n'达斯罗纳格碎片' 包含在 '达斯罗纳格的箱子' 中 " .. yellow .. "[a]",
     Rewards = {
         Text = "奖励：",
         { id = 41876, desc = "钥匙" }, --Lower Reserve Key
@@ -7088,7 +7523,8 @@ kQuestInstanceData.DragonmawRetreat.Alliance[6] = {
     Attain = 30,
     Aim = "把这封信带给冷酷海岸的某位掌权者。",
     Location = "科尔拉格·末日之歌的信件 (龙喉居所 - 酋长塔尔加斯·龙颅 " .. yellow .. "[10]" .. white .. ")",
-    Note = "在 '冷酷海岸' 交给 '镇长荷丹姆·硬手' " .. yellow .. "51, 58" .. white .. "\n完成下一个任务后，你将获得奖励。 需要击杀 '科尔拉格·末日之歌' 格林海岸 - 扎姆·格斯要塞 " .. yellow .. "56, 11",
+    Note = "在 '冷酷海岸' 交给 '镇长荷丹姆·硬手' " ..
+        yellow .. "51, 58" .. white .. "\n完成下一个任务后，你将获得奖励。 需要击杀 '科尔拉格·末日之歌' 格林海岸 - 扎姆·格斯要塞 " .. yellow .. "56, 11",
     Folgequest = "龙喉的毁灭",
     Rewards = {
         Text = "奖励：任选其一",
@@ -7144,7 +7580,10 @@ end
 kQuestInstanceData.DragonmawRetreat.Horde[6] = createInheritedQuest(
     kQuestInstanceData.DragonmawRetreat.Alliance[6],
     {
-        Note = "交给 '指挥官阿格纳什' (冷酷海岸 - 破刃岗哨 - " .. yellow .. "60, 30" .. white .. ")\n完成下一个任务后，你将获得奖励。\n需要击杀 '科尔拉格·末日之歌' (格林海岸 - 扎姆·格斯要塞 " .. yellow .. "56, 11" .. white .. ")"
+        Note = "交给 '指挥官阿格纳什' (冷酷海岸 - 破刃岗哨 - " ..
+            yellow ..
+            "60, 30" ..
+            white .. ")\n完成下一个任务后，你将获得奖励。\n需要击杀 '科尔拉格·末日之歌' (格林海岸 - 扎姆·格斯要塞 " .. yellow .. "56, 11" .. white .. ")"
     }
 )
 kQuestInstanceData.DragonmawRetreat.Horde[7] = {
@@ -7172,7 +7611,8 @@ kQuestInstanceData.DragonmawRetreat.Horde[8] = {
 
 --------------- Stormwrought Ruins ---------------
 kQuestInstanceData.StormwroughtRuins = {
-    Story = "风铸废墟是位于巴罗尔的副本地下城，在风铸城堡的废墟内。作为坚不可摧的堡垒，曾经是巴罗尔公爵的家园和权力之座，风铸城堡荒废地耸立在巴罗尔被海浪冲刷的悬崖之上。在第一次战争期间被占领，所有居民都被残忍屠杀，那些不太幸运的人被俘虏用于令人发指的仪式。多年后，这座废弃的废墟现在再次被兽人风暴掠夺者氏族及其暗影议会的邪恶霸主占领。城堡不再纯净的大厅藏着恐怖和堕落的展示，徘徊的幽灵、庞大的恶魔和喃喃自语的邪教徒在这个可怕地方漆黑的大厅中潜行。",
+    Story =
+    "风铸废墟是位于巴罗尔的副本地下城，在风铸城堡的废墟内。作为坚不可摧的堡垒，曾经是巴罗尔公爵的家园和权力之座，风铸城堡荒废地耸立在巴罗尔被海浪冲刷的悬崖之上。在第一次战争期间被占领，所有居民都被残忍屠杀，那些不太幸运的人被俘虏用于令人发指的仪式。多年后，这座废弃的废墟现在再次被兽人风暴掠夺者氏族及其暗影议会的邪恶霸主占领。城堡不再纯净的大厅藏着恐怖和堕落的展示，徘徊的幽灵、庞大的恶魔和喃喃自语的邪教徒在这个可怕地方漆黑的大厅中潜行。",
     Caption = "风暴废墟",
     Alliance = {},
     Horde = {}
@@ -7184,7 +7624,8 @@ kQuestInstanceData.StormwroughtRuins.Alliance[1] = {
     Attain = 28,
     Aim = "将巴洛之冠带给奥尔米尔·半角。",
     Location = "奥尔米尔·半角 (巴洛 " .. yellow .. "30, 51" .. white .. ")",
-    Note = "'风暴城堡钥匙'是从达克苏尔（巴洛 " .. yellow .. "55, 19" .. white .. "）开始的任务链奖励，并解锁第6个及之后首领的访问权限。\n'巴洛之冠' 掉落自 '巴洛公爵四世' " .. yellow .. "[4]",
+    Note = "'风暴城堡钥匙'是从达克苏尔（巴洛 " ..
+        yellow .. "55, 19" .. white .. "）开始的任务链奖励，并解锁第6个及之后首领的访问权限。\n'巴洛之冠' 掉落自 '巴洛公爵四世' " .. yellow .. "[4]",
     Rewards = {
         Text = "奖励：任选其一",
         { id = 58261 }, --Drinking Halfhorn
@@ -7247,7 +7688,8 @@ kQuestInstanceData.StormwroughtRuins.Alliance[6] = {
     Attain = 29,
     Aim = "削弱风暴废墟中的指挥链，然后回到巴洛岛军情七处哨站的尼普西·斯皮斯潘那里。",
     Location = "尼普西·斯皮斯潘 (巴洛 - 军情七处哨站 " .. yellow .. "70, 78" .. white .. ")",
-    Note = "'欧鲁诺克·裂心' " .. yellow .. "[1]" .. white .. "\n'雷歌酋长' " .. yellow .. "[5]" .. white .. "\n'风暴掠夺者统领' 附近 " .. yellow .. "[5]",
+    Note = "'欧鲁诺克·裂心' " ..
+        yellow .. "[1]" .. white .. "\n'雷歌酋长' " .. yellow .. "[5]" .. white .. "\n'风暴掠夺者统领' 附近 " .. yellow .. "[5]",
     Prequest = "状况评估 -> 诺普西·斯皮斯潘 -> 令人痛心的消息 -> 去捅马蜂窝",
 }
 kQuestInstanceData.StormwroughtRuins.Alliance[7] = {
@@ -7340,7 +7782,8 @@ kQuestInstanceData.StormwroughtRuins.Horde[8] = {
     Attain = 32,
     Aim = "消灭暴食的达加尔、欧鲁诺克·裂心和伊加尔弗，然后回到碎风哨站，向基尔罗格·死眼报告。",
     Location = "基尔罗格·死眼 (巴洛 - 碎风哨站 " .. yellow .. "71, 47" .. white .. ")",
-    Note = "完成下一个任务后，你将获得奖励。\n'欧鲁诺克·裂心' " .. yellow .. "[1]" .. white .. "\n'暴食的达加尔' " .. yellow .. "[2]" .. white .. "\n'伊加尔弗' " .. yellow .. "[11]",
+    Note = "完成下一个任务后，你将获得奖励。\n'欧鲁诺克·裂心' " ..
+        yellow .. "[1]" .. white .. "\n'暴食的达加尔' " .. yellow .. "[2]" .. white .. "\n'伊加尔弗' " .. yellow .. "[11]",
     Prequest = "矿井深处 -> 纯粹的思绪 -> 蚁群",
     Folgequest = "风暴尽头",
     Rewards = {
@@ -7367,7 +7810,8 @@ kQuestInstanceData.StormwroughtRuins.Horde[9] = {
 }
 --------------- Windhorn Canyon ---------------
 kQuestInstanceData.WindhornCanyon = {
-    Story = "这座古老的峡谷一直是许多牛头人部落的家园，他们在过去的岁月里为争夺其流动的水源和庇护所而战，以抵御卡利姆多的危险。许多部落的文化和传统在风角峡谷中延续，这可以从雕刻在山腰的古老庇护所到牛头人觊觎的遗物中看出。最近，风角牛头人被征服它的恐怖图腾驱逐和赶走，并将其据为己有。",
+    Story =
+    "这座古老的峡谷一直是许多牛头人部落的家园，他们在过去的岁月里为争夺其流动的水源和庇护所而战，以抵御卡利姆多的危险。许多部落的文化和传统在风角峡谷中延续，这可以从雕刻在山腰的古老庇护所到牛头人觊觎的遗物中看出。最近，风角牛头人被征服它的恐怖图腾驱逐和赶走，并将其据为己有。",
     Caption = "风角峡谷",
     Alliance = {},
     Horde = {}
@@ -7417,7 +7861,11 @@ kQuestInstanceData.WindhornCanyon.Horde[3] = { --TODO translate
     Attain = 20,
     Aim = "放逐风角峡谷内的元素首领，并向石爪山脉大地之环的修夫回报。",
     Location = "修夫 (石爪山脉 - 大地之环 " .. yellow .. "47, 72" .. white .. ")",
-    Note = red .. "仅限萨满！" .. white .. "前置任务开始于“风裂顶峰之石”，掉落自石爪山脉的雷佐古斯 (" .. yellow .. "30, 19" .. white .. ")。“大使沃塔卢斯”位于 " .. yellow .. "[3]" .. white .. "。",
+    Note = red ..
+        "仅限萨满！" ..
+        white ..
+        "前置任务开始于“风裂顶峰之石”，掉落自石爪山脉的雷佐古斯 (" ..
+        yellow .. "30, 19" .. white .. ")。“大使沃塔卢斯”位于 " .. yellow .. "[3]" .. white .. "。",
     Prequest = "风裂顶峰之石",
     Rewards = {
         Text = "奖励：任选其一",
@@ -7513,7 +7961,8 @@ kQuestInstanceData.FrostmaneHollow.Horde[1] = kQuestInstanceData.FrostmaneHollow
 
 --------------- Timbermaw Hold ---------------
 kQuestInstanceData.TimbermawHold = {
-    Story = "与卡利姆多本身一样古老，这个位于海加尔山下的神秘迷宫般的隧道和洞穴网络自大灾变之前就一直是熊怪的家园。它的大厅在部落中是神圣的，是崇拜他们的祖先——双神乌索克和乌索尔的地方。然而现在，只有一阵阵腐臭的蒸汽从腐烂的洞穴中逸出，崇拜邪恶之神的低语在木喉要塞中回荡……",
+    Story =
+    "与卡利姆多本身一样古老，这个位于海加尔山下的神秘迷宫般的隧道和洞穴网络自大灾变之前就一直是熊怪的家园。它的大厅在部落中是神圣的，是崇拜他们的祖先——双神乌索克和乌索尔的地方。然而现在，只有一阵阵腐臭的蒸汽从腐烂的洞穴中逸出，崇拜邪恶之神的低语在木喉要塞中回荡……",
     Caption = "木喉要塞",
     Alliance = {},
     Horde = {}
@@ -7563,7 +8012,8 @@ kQuestInstanceData.TimbermawHold.Alliance[4] = { --TODO translate
     Attain = 60,
     Aim = "艾萨拉乌索克之口的黑暗纳考格需要特定材料来制作净化药膏。把它们带给他。",
     Location = "黑暗纳考格 (艾萨拉 - 乌索克之口 " .. yellow .. "39, 21" .. white .. ")",
-    Note = "“尼玛斯拉之心”掉落自安戈洛环形山的“尼玛斯拉” (" .. yellow .. "35, 25" .. white .. ")，“格拉蒙之舌”来自菲拉斯的“永恒的格拉蒙” (" .. yellow .. "28, 95" .. white ..
+    Note = "“尼玛斯拉之心”掉落自安戈洛环形山的“尼玛斯拉” (" ..
+        yellow .. "35, 25" .. white .. ")，“格拉蒙之舌”来自菲拉斯的“永恒的格拉蒙” (" .. yellow .. "28, 95" .. white ..
         ")，“净化药瓶”来自“潮汐领主鲁格兹” (尘泥沼泽 - " .. yellow .. "76, 20" .. white .. ")",
     Prequest = "木喉要塞的腐蚀",
     Folgequest = "无边的黑暗",
@@ -7637,11 +8087,11 @@ kQuestInstanceData.TimbermawHold.Alliance[9] = { --TODO translate
     Prequest = "清洗火焰 (熔火之心)", -- 41965
     Rewards = {
         Text = "奖励：",
-        { id = 42242 }, -- Sacred Timbermaw Satchel
-        { id = 13468, quantity = 3 }, -- Black Lotus
+        { id = 42242 },                -- Sacred Timbermaw Satchel
+        { id = 13468, quantity = 3 },  -- Black Lotus
         { id = 42016, quantity = 20 }, -- Timbermaw Sap
-        { id = 42243 }, -- Timbermaw Satchel
-        { id = 61197, quantity = 3 }, -- Fading Dream Fragment
+        { id = 42243 },                -- Timbermaw Satchel
+        { id = 61197, quantity = 3 },  -- Fading Dream Fragment
     }
 }
 kQuestInstanceData.TimbermawHold.Alliance[10] = { --TODO translate
@@ -7673,4 +8123,4 @@ kQuestInstanceData.TimbermawHold.Horde[11] = { --TODO translate
     Note = "“邪恶洛克塔纳格”位于 " .. yellow .. "[4]" .. white .. "。",
 }
 
-AtlasTW.Quest.DataBase = kQuestInstanceData
+AtlasCFM.Quest.DataBase = kQuestInstanceData

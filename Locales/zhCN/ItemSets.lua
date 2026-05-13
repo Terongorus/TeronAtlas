@@ -5,10 +5,9 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("ItemSets", "zhCN", {
+AtlasCFM.Localization:RegisterNamespace("ItemSets", "zhCN", {
     --1.18.1
     ["Sacred Windhorn Attire"] = "神圣风角服饰",
-    ["Surrender to Madness"] = "屈服疯狂",
 
     ["Stormcloud Jewelry"] = "雷云珠宝",
     ["Mastercrafted Diamond Jewelry"] = "精制钻石珠宝",

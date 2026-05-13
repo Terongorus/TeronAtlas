@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Bosses", "esES", {
+AtlasCFM.Localization:RegisterNamespace("Bosses", "esES", {
     ["Broodcommander Axelus"] = "Comandante de la Prole Axelus",
     ["Ezzel Darkbrewer"] = "Ezzel el Cervecero Oscuro",
     ["High Speaker Jam'wahli"] = "Alto Portavoz Jam'wahli", -- TODO
@@ -154,6 +154,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "esES", {
     ["Sapphiron"] = "Safirón",
     ["Kel'Thuzad"] = "Kel'Thuzad",
     ["Nefarian"] = "Nefarian",
+    ["Elementium Decapitator MK III"] = "Decapitador de Elementium mk III", -- VP
     ["Vaelastrasz the Corrupt"] = "Vaelastrasz el Corrupto",
     ["Razorgore the Untamed"] = "Sangrevaja el Indomable",
     ["Broodlord Lashlayer"] = "Señor de Prole Capazote",
@@ -183,6 +184,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "esES", {
     ["Ostarius"] = "Ostarius",
     ["Cla'ckora"] = "Cla'ckora",
     ["Lord Kazzak"] = "Lord Kazzak",
+    ["King Mosh"] = "Rey Mosh",                        --VP
+    ["Teremus the Devourer"] = "Teremus el Devorador", --VP
     ["Ysondre"] = "Ysondre",
     ["Emeriss"] = "Emeriss",
     ["Taerar"] = "Taerar",
@@ -200,6 +203,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "esES", {
     ["Renataki"] = "Renataki",
     ["Wushoolay"] = "Wushoolay",
     ["Hakkar"] = "Hakkar",
+    ["Azus the Bloodseeker"] = "Azus el Buscador de Sangre", --VP
+    ["Nameless Hermit"] = "Ermitaño sin nombre",             --VP
     ["Ayamiss the Hunter"] = "Ayamiss el Cazador",
     ["Buru the Gorger"] = "Buru el Manducador",
     ["General Rajaxx"] = "General Rajaxx",
@@ -328,6 +333,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "esES", {
     ["Razorclaw the Butcher"] = "Zarpador el Carnicero",
     ["Wolf Master Nandos"] = "Maestro de Lobos Nandos",
     ["Kurinnaxx"] = "Kurinnaxx",
+    ["Lady Hederine"] = "Señora Hederine",
     ["Oggleflint"] = "Ogglesílex",
     ["Taragaman the Hungerer"] = "Taragaman el Hambriento",
     ["Jergosh the Invoker"] = "Jergosh el Convocador",

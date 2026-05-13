@@ -1,56 +1,54 @@
-# Atlas‑TW — Documentation (WoW 1.12)
+# Atlas‑CFM — Documentation (WoW 1.12)
 
-Overview: Atlas‑TW is a dungeon map browser with an integrated loot panel and quests module. It is compatible with World of Warcraft 1.12 and includes localization support.
+Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and quests module. It is compatible with World of Warcraft 1.12 and includes localization support.
 
 ![main](https://github.com/user-attachments/assets/fb4b69fc-158c-4f55-a0dd-bfd0a7967170)
 
 
 1) Compatibility and Requirements
 - Client: WoW 1.12 (Interface: 11200)
-- Addon folder: Interface\AddOns\Atlas-TW
+- Addon folder: Interface\AddOns\Atlas-CFM
 - Saved variables:
-  - Account-wide: AtlasTWOptions
-  - Per-character: AtlasTWCharDB
+  - Account-wide: AtlasCFMOptions
+  - Per-character: AtlasCFMCharDB
 - Optional dependencies (detected if installed): EquipCompare, EQCompare, pfQuest, pfUI
 
 2) Installation
-- Copy the Atlas‑TW folder to Interface\AddOns
+- Copy the Atlas‑CFM folder to Interface\AddOns
 - Enable the addon on the character selection screen
 
 3) Quick Start and Controls
-- Open/Close Atlas‑TW: /atlas
+- Open/Close Atlas‑CFM: /atlas
 - Open options: /atlas options (or /atlas opt)
 - Minimap button (if enabled):
-  - Left-click — open Atlas‑TW
-  - Middle-click — open Atlas‑TW options
+  - Left-click — open Atlas‑CFM
+  - Middle-click — open Atlas‑CFM options
   - Right-click + drag — move the button
-- The AtlasTW window can be dragged when unlocked (lock button on the frame)
-- Right-click on the AtlasTW window (if enabled) — close AtlasTW and open the World Map
+- The AtlasCFM window can be dragged when unlocked (lock button on the frame)
+- Right-click on the AtlasCFM window (if enabled) — close AtlasCFM and open the World Map
 
-4) Key Features
-- Instance maps with drop-downs:
-  - Top-left: category (map type) selection
-  - Next to it: instance list
-- Auto-select map based on the current zone (Auto‑Select option)
-- Adjustable Scale and Transparency for the AtlasTW window
-- Clamp window to the screen
-- Loot panel (bottom panel):
-  - Sections: Dungeons & Raids, Collections, Factions, PvP Rewards, Crafting, World Events, Rare Mobs
-  - Search, presets, quick navigation
-  - **pfQuest Integration**:
-    - Right-click on a item to search for it in the pfQuest database
-- Quests module:
-  - Side panel with instance quests
-  - In‑Atlas details panel with story/rewards
-  - Faction toggle (Alliance/Horde), basic availability filtering
-  - **pfQuest Integration**:
-    - Right-click on a quest in the list to show its starter location on the map
-    - Right-click on a quest reward item to search for it in the pfQuest database
-- Enhanced item tooltips: adds loot source at the end of the tooltip and integrates with compare addons if enabled
-- Optional: cursor coordinates overlay on the default World Map (toggle in options)
+- **World Map Markers**:
+  - Icons for Dungeons, Raids, World Bosses, and Transport routes (Zeppelins, Boats, Tram) directly on the World Map.
+  - Interactive tooltips showing level ranges and destinations.
+  - Clicking a marker automatically opens the corresponding map in Atlas‑CFM.
+- **Profession & Crafting Integration**:
+  - Comprehensive catalogs for all professions and world events.
+  - Automatic detection of player professions and recipe knowledge (Known/Unknown).
+  - Filtering of loot and recipes based on your character's professions.
+  - Reagent requirements and crafting information displayed in item tooltips.
+- **Enhanced Item Tooltips**:
+  - Displays loot sources, drop rates, and boss names.
+  - Integrated recipe information (reagents, skill required).
+  - Support for comparison addons (EquipCompare, EQCompare).
+- **Server Specialization**: Switch the target server (e.g., TurtleWoW, Vanilla+) to adapt loot tables, quest data, and display server-specific markers.
+- **Wishlist System**: Save desired items to a personal wishlist for quick tracking.
+- **pfQuest Integration**:
+  - Right-click on an item to search for it in the pfQuest database.
+  - Search quest starters and rewards directly from the Atlas interface.
+- Optional: cursor coordinates overlay on the default World Map.
 
 5) Window and UI Elements
-- Main frame: AtlasTWFrame
+- Main frame: AtlasCFMFrame
 - Drop-downs:
   - Map Type (category)
   - Instance selection
@@ -68,26 +66,25 @@ Overview: Atlas‑TW is a dungeon map browser with an integrated loot panel and 
 - Right‑Click for World Map — right-click closes Atlas and opens the World Map
 - Show Acronyms — show instance acronyms
 - Clamp window to screen — keep the window within the screen
-- Transparency — Atlas window transparency
-- Scale — Atlas window scale
-- Show Loot Panel with AtlasTW — show the bottom loot panel
-- Quests — embed the quests panel into the Atlas window
-- Show cursor coordinates on World Map — toggle AtlasTWOptions.AtlasCursorCoords
+- **Server Selection** — Change the target server specialization for data and markers.
+- **Show Map Markers** — Toggle icons for dungeons and transport on the World Map.
+- **Profession Filters** — Filter tooltip info based on chosen professions.
+- Show cursor coordinates on World Map — toggle AtlasCFMOptions.AtlasCursorCoords
 
 7) Commands
-- /atlastw — toggle Atlas‑TW window
-- /atlastw options (or /atlastw opt) — open options
-- /atlastw ver — print your local Atlas‑TW version to chat
-- /atlastw ver check — immediately publish your version to LFT and print confirmation
+- /atlascfm — toggle Atlas‑CFM window
+- /atlascfm options (or /atlascfm opt) — open options
+- /atlascfm ver — print your local Atlas‑CFM version to chat
+- /atlascfm ver check — immediately publish your version to LFT and print confirmation
 
 8) First Run
 - On the first run, a setup prompt may be shown once
-- AtlasTWCharDB.FirstTime controls the one‑time greeting behavior
+- AtlasCFMCharDB.FirstTime controls the one‑time greeting behavior
 
 9) FAQ
 - The window is invisible
   - Check Scale/Transparency in options
-  - Type /atlastw
+  - Type /atlascfm
 - Minimap button is missing
   - Enable "Show Button on Minimap" in options
 - Right‑click opens the World Map
@@ -102,7 +99,7 @@ Overview: Atlas‑TW is a dungeon map browser with an integrated loot panel and 
 - Hide the loot panel temporarily to save space inside the Atlas window
 
 11) Localization
-- Atlas-TW uses a modular localization system based on namespaces
+- Atlas-CFM uses a modular localization system based on namespaces
 - Structure:
   - `Locales/LocalizationFramework.lua` — Core localization system
   - `Locales/[locale]/` — Language-specific files (enUS, deDE, esES, ptBR, zhCN)

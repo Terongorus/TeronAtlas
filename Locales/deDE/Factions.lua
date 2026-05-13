@@ -6,9 +6,11 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Factions", "deDE", {
+AtlasCFM.Localization:RegisterNamespace("Factions", "deDE", {
     ["Alliance"] = "Allianz",
     ["Horde"] = "Horde",
+    ["Firebird Corps"] = "Rabenfeder-Korps",
+    ["Operation Rattlesnake"] = "Operation Klapperschlange",
     ["Argent Dawn"] = "Argentumdämmerung",
     ["Bloodsail Buccaneers"] = "Blutsegelbukaniere",
     ["Brood of Nozdormu"] = "Brut von Nozdormu",
@@ -35,7 +37,7 @@ AtlasTW.Localization:RegisterNamespace("Factions", "deDE", {
     ["Revantusk Trolls"] = "Trolls der Bruchhauer",
     ["Durotar Labor Union"] = "Arbeitsunion von Durotar",
     ["Wardens of Time"] = "Wächter der Zeit",
-    ["Earthen Ring"] = "Der Irdene Ring", --1.18.1 TODO
+    ["Earthen Ring"] = "Der Irdene Ring",     --1.18.1 TODO
     ["Draenei Exiles"] = "Exilierte Draenei", --1.18.1 TODO
     ["Neutral"] = "Neutral",
     ["Friendly"] = "Freundlich",

@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Bosses", "deDE", {
+AtlasCFM.Localization:RegisterNamespace("Bosses", "deDE", {
     ["Broodcommander Axelus"] = "Brutkommandant Axelus",
     ["Ezzel Darkbrewer"] = "Ezzel Dunkelbräu",
     ["High Speaker Jam'wahli"] = "Hoher Sprecher Jam'wahli", -- TODO
@@ -154,6 +154,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "deDE", {
     ["Sapphiron"] = "Saphiron",
     ["Kel'Thuzad"] = "Kel'Thuzad",
     ["Nefarian"] = "Nefarian",
+    ["Elementium Decapitator MK III"] = "Elementium-Enthaupter der Marke III", -- VP
     ["Vaelastrasz the Corrupt"] = "Vaelastrasz der Verdorbene",
     ["Razorgore the Untamed"] = "Feuerkralle der Ungezähmte",
     ["Broodlord Lashlayer"] = "Brutwächter Dreschbringer",
@@ -183,6 +184,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "deDE", {
     ["Ostarius"] = "Ostarius",
     ["Cla'ckora"] = "Cla'ckora",
     ["Lord Kazzak"] = "Lord Kazzak",
+    ["King Mosh"] = "König Mosh",                          --VP
+    ["Teremus the Devourer"] = "Teremus der Verschlinger", --VP
     ["Ysondre"] = "Ysondre",
     ["Emeriss"] = "Smariss",
     ["Taerar"] = "Taerar",
@@ -200,6 +203,8 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "deDE", {
     ["Renataki"] = "Renataki",
     ["Wushoolay"] = "Wushoolay",
     ["Hakkar"] = "Hakkar",
+    ["Azus the Bloodseeker"] = "Azu's der Blutverfolgers", --VP
+    ["Nameless Hermit"] = "Stiller Einsiedler",            --VP
     ["Ayamiss the Hunter"] = "Ayamiss die Jägerin",
     ["Buru the Gorger"] = "Buru der Verschlinger",
     ["General Rajaxx"] = "General Rajaxx",
@@ -328,6 +333,7 @@ AtlasTW.Localization:RegisterNamespace("Bosses", "deDE", {
     ["Razorclaw the Butcher"] = "Klingenklaue der Metzger",
     ["Wolf Master Nandos"] = "Wolfmeister Nandos",
     ["Kurinnaxx"] = "Kurinnaxx",
+    ["Lady Hederine"] = "Lady Hederine",
     ["Oggleflint"] = "Flintauge",
     ["Taragaman the Hungerer"] = "Taragaman der Hungerleider",
     ["Jergosh the Invoker"] = "Jergosh der Herbeirufer",

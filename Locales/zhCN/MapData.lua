@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("MapData", "zhCN", {
+AtlasCFM.Localization:RegisterNamespace("MapData", "zhCN", {
     -- Instance Specific Data - Razorfen Kraul
     ["Razorfen Spearhide"] = "剃刀沼泽刺鬃守卫",
     ["Willix the Importer"] = "进口商威利克斯",
@@ -351,6 +351,7 @@ AtlasTW.Localization:RegisterNamespace("MapData", "zhCN", {
     ["Nalpak"] = "纳尔帕克",
     ["Kalldan Felmoon"] = "卡尔丹·暗月",
     ["Waldor"] = "瓦多尔",
+    ["Mysterious Wailing Cavern Chest"] = "纳斯留出的神秘洞穴宝箱",
 
     -- Dire Maul (Entrance)
     ["Dire Pool"] = "厄运之池",

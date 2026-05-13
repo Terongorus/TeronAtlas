@@ -5,10 +5,9 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("ItemSets", "esES", {
+AtlasCFM.Localization:RegisterNamespace("ItemSets", "esES", {
     --1.18.1
     ["Sacred Windhorn Attire"] = "Vestiduras Cornaviento Sagradas",
-    ["Surrender to Madness"] = "Rendirse a la Locura",
 
     ["Stormcloud Jewelry"] = "Joyería de Nube de Tormenta",
     ["Mastercrafted Diamond Jewelry"] = "Joyería de Diamante Magistral",

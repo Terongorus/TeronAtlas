@@ -6,9 +6,11 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Factions", "esES", {
+AtlasCFM.Localization:RegisterNamespace("Factions", "esES", {
     ["Alliance"] = "Alianza",
     ["Horde"] = "Horda",
+    ["Firebird Corps"] = "Cuerpo de Colibrí",
+    ["Operation Rattlesnake"] = "Operación Serpiente de Cascabel",
     ["Argent Dawn"] = "El Alba Argenta",
     ["Bloodsail Buccaneers"] = "Bucaneros Velasangre",
     ["Brood of Nozdormu"] = "Linaje de Nozdormu",

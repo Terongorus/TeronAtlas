@@ -6,7 +6,7 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Spells", "ptBR", {
+AtlasCFM.Localization:RegisterNamespace("Spells", "ptBR", {
     ["Alchemy"] = "Alquimia",
     ["Armorsmith"] = "Armeiro",
     ["Basic Campfire"] = "Fogueira Básica",
@@ -35,7 +35,7 @@ AtlasTW.Localization:RegisterNamespace("Spells", "ptBR", {
     ["Enchant 2H Weapon - Minor Intellect"] = "Encantar Arma de 2M - Intelecto Menor",
     ["Enchant 2H Weapon - Superior Impact"] = "Encantar Arma de 2M - Impacto Superior",
     ["Enchant 2H Weapon - Nature Damage"] = "Encantar Arma de 2M - Dano de Natureza", --1.18.1 TODO
-    ["Enchant 2H Weapon - Shadow Damage"] = "Encantar Arma de 2M - Dano de Sombra", --1.18.1 TODO
+    ["Enchant 2H Weapon - Shadow Damage"] = "Encantar Arma de 2M - Dano de Sombra",   --1.18.1 TODO
     ["Enchant Boots - Agility"] = "Encantar Botas - Agilidade",
     ["Enchant Boots - Greater Agility"] = "Encantar Botas - Agilidade Maior",
     ["Enchant Boots - Greater Spirit"] = "Encantar Botas - Espírito Maior",
@@ -120,7 +120,7 @@ AtlasTW.Localization:RegisterNamespace("Spells", "ptBR", {
     ["Enchant Cloak - Stealth"] = "Encantar Capa - Furtividade",
     ["Enchant Cloak - Subtlety"] = "Encantar Capa - Sutileza",
     ["Enchant Cloak - Superior Defense"] = "Encantar Capa - Defesa Superior",
-    ["Enchant Cloak - Agility"] = "Encantar Capa - Agilidade", --1.18.1 TODO
+    ["Enchant Cloak - Agility"] = "Encantar Capa - Agilidade",                                    --1.18.1 TODO
     ["Enchant Cloak - Greater Shadow Resistance"] = "Encantar Capa - Resistência à Sombra Maior", --1.18.1 TODO
     ["Enchant Gloves - Advanced Herbalism"] = "Encantar Luvas - Herborismo Avançado",
     ["Enchant Gloves - Advanced Mining"] = "Encantar Luvas - Mineração Avançada",

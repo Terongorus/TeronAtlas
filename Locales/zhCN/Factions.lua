@@ -6,9 +6,11 @@
 --- @compatible World of Warcraft 1.12
 ---
 
-AtlasTW.Localization:RegisterNamespace("Factions", "zhCN", {
+AtlasCFM.Localization:RegisterNamespace("Factions", "zhCN", {
     ["Alliance"] = "联盟",
     ["Horde"] = "部落",
+    ["Firebird Corps"] = "火鸟军团",
+    ["Operation Rattlesnake"] = "响尾蛇行动",
     ["Argent Dawn"] = "银色黎明",
     ["Bloodsail Buccaneers"] = "血帆海盗",
     ["Brood of Nozdormu"] = "诺兹多姆的子嗣",
