@@ -221,6 +221,7 @@ AtlasCFM.InstanceData.BlackwingLair = {
                 { id = 26227 },                -- Auto-Aim Goggles SMark 2
                 { id = 26228 },                -- Combat Parser Interface V150r
                 { id = 26229 },                -- Orb of Chaotic Elements
+                { id = 26230 },                -- Ebony Flame Boots
                 { id = 26238 },                -- Idol of Health
                 { id = 26240 },                -- Idol of Wilderness
                 { id = 26241 },                -- Ring of Master

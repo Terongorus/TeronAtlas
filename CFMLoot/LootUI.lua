@@ -176,7 +176,7 @@ local function AtlasCFMLoot_ApplyParentTemplate(frame)
     local border = frame:CreateTexture(frame:GetName() .. "Border", "BACKGROUND")
     border:SetWidth(33)
     border:SetHeight(33)
-    border:SetTexture(AtlasCFM.PATH .. "Images\\AtlasCFMContainer-Border")
+    border:SetTexture(AtlasCFM.PATH .. "Images\\Container-Border")
     border:SetPoint("TOPLEFT", frame, -2, 2)
     border:Hide()
 end
@@ -816,7 +816,7 @@ local function AtlasCFMLoot_CreateItemsFrame()
     scrollHint:Hide()
     local scrollHintTexture = scrollHint:CreateTexture("AtlasCFMLootScrollHintTexture", "ARTWORK")
     scrollHintTexture:SetAllPoints(scrollHint)
-    scrollHintTexture:SetTexture(AtlasCFM.PATH .. "Images\\AtlasCFMScrolldown")
+    scrollHintTexture:SetTexture(AtlasCFM.PATH .. "Images\\Scrolldown")
 
     -- Background texture
     local backTexture = frame:CreateTexture(frame:GetName() .. "_Back", "BACKGROUND")
