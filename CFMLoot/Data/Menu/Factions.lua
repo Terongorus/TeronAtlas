@@ -73,9 +73,9 @@ AtlasCFM.MenuData.Factions = {
 	{},
 	{},
 	{},
-	{ name = LF["Durotar Labor Union"],                                  icon = "Interface\\Icons\\INV_Misc_Coin_01",                     lootpage = "DurotarLaborUnion",   Extra = Colors.RED .. LF["Horde"] },
-	{ name = LZ["Undercity"],                                            icon = "Interface\\Icons\\Spell_Shadow_RaiseDead",               lootpage = "Undercity",           Extra = Colors.RED .. LF["Horde"] },
-	{ name = LZ["Orgrimmar"],                                            icon = "Interface\\Icons\\INV_BannerPVP_01",                     lootpage = "Orgrimmar",           Extra = Colors.RED .. LF["Horde"] },
+	{ name = LF["Durotar Labor Union"],                                  icon = "Interface\\Icons\\INV_Misc_Coin_01",                     lootpage = "DurotarLaborUnion",   Extra = Colors.RED .. LF["Horde"],                                  servers = { AtlasCFM.Server.TURTLE1 } },
+	{ name = LZ["Undercity"],                                            icon = "Interface\\Icons\\Spell_Shadow_RaiseDead",               lootpage = "Undercity",           Extra = Colors.RED .. LF["Horde"],                                  servers = { AtlasCFM.Server.TURTLE1 } },
+	{ name = LZ["Orgrimmar"],                                            icon = "Interface\\Icons\\INV_BannerPVP_01",                     lootpage = "Orgrimmar",           Extra = Colors.RED .. LF["Horde"],                                  servers = { AtlasCFM.Server.TURTLE1 } },
 }
 
 ---

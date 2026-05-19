@@ -359,7 +359,6 @@ AtlasCFM.InstanceData.DireMaulWest = {
                 { id = 41985, dropRate = 100,                 container = { 41986 },                     servers = { AtlasCFM.Server.TURTLE } }, -- Crest of Valor
                 { id = 51217, disc = L["Transmogrification"], dropRate = 5,                              servers = { AtlasCFM.Server.TURTLE1 } }, -- Fashion Coin
                 {},
-                { id = 22249, dropRate = 1,                   servers = { AtlasCFM.Server.VANILLA_PLUS } },                                      -- Big Bag of Enchantment
                 unpack(ShareLoot),
             }
         },

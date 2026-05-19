@@ -159,6 +159,62 @@ local function AtlasCFMLoot_BlinkScrollHint()
 	f:SetScript("OnUpdate", AtlasCFMLoot_Blink_OnUpdate)
 end
 
+-- Helper function to apply server-specific border or container border
+local function UpdateElementBorder(borderFrame, element, link)
+	if not borderFrame then return end
+	
+	local hasTurtle = false
+	local hasVPlus = false
+	
+	local function checkServers(src)
+		if not src or type(src) ~= "table" then return end
+		local servers = src.servers or src.Servers
+		if not servers and src[8] and type(src[8]) == "table" then
+			servers = src[8]
+		end
+		if servers and type(servers) == "table" then
+			for k, s in pairs(servers) do
+				local target = nil
+				if type(k) == "number" and type(s) == "string" and string.sub(s, 1, 1) ~= "!" then
+					target = s
+				elseif type(k) == "string" and s ~= false then
+					target = k
+				end
+				if target then
+					if string.sub(target, 1, 1) == "=" then target = string.sub(target, 2) end
+					if target == AtlasCFM.Server.TURTLE or target == AtlasCFM.Server.TURTLE1 then
+						hasTurtle = true
+					elseif target == AtlasCFM.Server.VANILLA_PLUS then
+						hasVPlus = true
+					end
+				end
+			end
+		end
+	end
+
+	checkServers(element)
+	if link then checkServers(link) end
+
+	if hasTurtle then
+		borderFrame:SetTexture(AtlasCFM.PATH .. "Images\\Turtle-Border")
+		borderFrame:SetDrawLayer("BACKGROUND")
+		borderFrame:SetAlpha(1)
+		borderFrame:Show()
+	elseif hasVPlus then
+		borderFrame:SetTexture(AtlasCFM.PATH .. "Images\\V+Border")
+		borderFrame:SetDrawLayer("BACKGROUND")
+		borderFrame:SetAlpha(1)
+		borderFrame:Show()
+	elseif element and element.container then
+		borderFrame:SetTexture(AtlasCFM.PATH .. "Images\\Container-Border")
+		borderFrame:SetDrawLayer("BACKGROUND")
+		borderFrame:SetAlpha(1)
+		borderFrame:Show()
+	else
+		borderFrame:Hide()
+	end
+end
+
 ---
 --- Updates the scrollbar and content for the loot items frame
 --- Loads and displays loot data for the currently selected element
@@ -327,11 +383,7 @@ function AtlasCFM.LootBrowserUI.ScrollBarLootUpdate()
 						menuButton.lootpage = element.lootpage
 						menuButton.container = element.container
 						menuButton.firstBoss = element.firstBoss
-						if element.container then
-							borderFrame:Show()
-						else
-							borderFrame:Hide()
-						end
+						UpdateElementBorder(borderFrame, element, nil)
 						menuButton:Show()
 					else
 						-- Clear fields to prevent stale data usage
@@ -558,10 +610,7 @@ function AtlasCFM.LootBrowserUI.ScrollBarLootUpdate()
 
 						-- Save the item button data
 						itemButton.container = element.container
-						borderFrame:Hide()
-						if itemButton.container then
-							borderFrame:Show()
-						end
+						UpdateElementBorder(borderFrame, element, link)
 
 						-- Set the item drop rate
 						itemButton.droprate = element.dropRate and element.dropRate .. "%"
