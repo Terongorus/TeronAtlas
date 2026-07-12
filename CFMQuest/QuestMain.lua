@@ -1,7 +1,7 @@
 ---
 --- QuestMain.lua - Atlas quest system main functionality
 ---
---- This file contains the main quest system functionality for Atlas-CFM.
+--- This file contains the main quest system functionality for Teron's Atlas.
 --- It handles quest display, quest data processing, quest UI management,
 --- and provides the core infrastructure for the Atlas quest browser.
 ---

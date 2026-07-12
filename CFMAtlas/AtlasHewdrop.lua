@@ -1,5 +1,5 @@
 ---
---- AtlasCFMHewdrop.lua - Hewdrop-based dropdown menu system for Atlas-CFM
+--- AtlasCFMHewdrop.lua - Hewdrop-based dropdown menu system for Teron's Atlas
 ---
 --- This file provides wrapper functions AND the minimized Hewdrop library itself
 --- to replace the standard UIDropDownMenu which has a ~32 element limit.
@@ -659,7 +659,7 @@ _G.ATWHewdrop = Hewdrop
 _G.AtlasCFMLoot_Hewdrop = Hewdrop -- Export for TWLoot compatibility
 
 -----------------------------------------------------------------------------
--- Atlas-CFM Wrapper
+-- Teron's Atlas Wrapper
 -----------------------------------------------------------------------------
 
 -- Module namespace

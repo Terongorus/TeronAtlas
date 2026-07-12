@@ -14,12 +14,12 @@ AtlasCFMZoneSubstitutions = {
 }
 
 ---
---- Key binding definitions for Atlas-CFM addon
+--- Key binding definitions for Teron's Atlas addon
 ---
-BINDING_HEADER_AtlasCFM_TITLE = "Atlas-CFM Bindings"
-BINDING_NAME_AtlasCFM_TOGGLE = "Toggle Atlas-CFM"
+BINDING_HEADER_AtlasCFM_TITLE = "Teron's Atlas Bindings"
+BINDING_NAME_AtlasCFM_TOGGLE = "Toggle Teron's Atlas"
 BINDING_NAME_AtlasCFM_OPTIONS = "Toggle Options"
-BINDING_HEADER_AtlasCFMLOOT_TITLE = "Atlas-CFM Loot Bindings"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Teron's Atlas Loot Bindings"
 BINDING_NAME_AtlasCFMLOOT_QL1 = "QuickLook 1"
 BINDING_NAME_AtlasCFMLOOT_QL2 = "QuickLook 2"
 BINDING_NAME_AtlasCFMLOOT_QL3 = "QuickLook 3"
@@ -267,7 +267,7 @@ AtlasCFM.Localization:RegisterNamespace("UI", "enUS", {
     ["pfUI styling enabled. Type /reload to apply changes."] = true,
     ["pfUI styling disabled. Type /reload to apply changes."] = true,
     ["Scale"] = true,
-    ["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."] = true,
+    ["Welcome to Teron's Atlas. Please take a moment to set your preferences."] = true,
 
     --************************************************
     -- Quest Related
@@ -364,9 +364,7 @@ AtlasCFM.Localization:RegisterNamespace("UI", "enUS", {
     ["Version check sent to %s"] = true,
     ["NewVersionAvailableFmt"] = "|cffff0000New version available!|r |cff00ff00Download here:|r %s",
     [" |cffA52A2Aloaded."] = true,
-    ["NoticeText"] = "If you find anything missing, please report it at:|r",
-    ["NoticeLink"] = "https://github.com/byCFM2/Atlas-CFM/issues/|r",
-    ["Link"] = "https://github.com/byCFM2/Atlas-CFM/|r",
+    ["Link"] = "https://github.com/Terongorus/TeronAtlas/|r",
 
     --************************************************
     -- Categories & Menus
@@ -384,7 +382,7 @@ AtlasCFM.Localization:RegisterNamespace("UI", "enUS", {
     --************************************************
     -- Minimap Tooltip
     --************************************************
-    ["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."] = true,
+    ["Left-click to open Teron's Atlas.\nMiddle-click for Teron's Atlas options.\nRight-click and drag to move this button."] = true,
 
     --************************************************
     -- Instance Locations

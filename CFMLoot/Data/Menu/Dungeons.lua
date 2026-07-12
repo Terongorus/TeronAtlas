@@ -1,7 +1,7 @@
 ---
 --- Dungeons.lua - Dungeon and raid loot system
 ---
---- This module handles dungeon and raid loot tables and menu systems for Atlas-CFM.
+--- This module handles dungeon and raid loot tables and menu systems for Teron's Atlas.
 --- It dynamically generates menu data from AtlasCFM.InstanceData, organizing instances
 --- by level ranges and player limits with automatic sorting and categorization.
 ---

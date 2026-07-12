@@ -1,7 +1,7 @@
 ---
 --- Factions.lua - Faction reputation rewards system
 ---
---- This module handles faction-related loot tables and reputation rewards for Atlas-CFM.
+--- This module handles faction-related loot tables and reputation rewards for Teron's Atlas.
 --- It provides access to items available from various factions including neutral factions,
 --- Alliance-specific factions, and Horde-specific factions with their reputation requirements.
 ---

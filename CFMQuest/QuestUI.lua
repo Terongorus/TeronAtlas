@@ -1,7 +1,7 @@
 ---
 --- QuestUI.lua - Atlas quest UI frame and component creation
 ---
---- This file contains the quest UI frame creation and management for Atlas-CFM.
+--- This file contains the quest UI frame creation and management for Teron's Atlas.
 --- It handles quest window interface, quest display components, frame layout,
 --- and provides the visual foundation for the Atlas quest browser system.
 ---
@@ -174,7 +174,7 @@ frame:RegisterEvent("CHAT_MSG_ADDON")
 frame:SetBackdropBorderColor(0.80, 0.60, 0.25, 1)
 frame:SetScript("OnEvent", function()
     -- Debug print to verify script handler execution
-    -- if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("Atlas-CFM: Frame OnEvent Triggered: " .. (event or "nil")) end
+    -- if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("Teron's Atlas: Frame OnEvent Triggered: " .. (event or "nil")) end
     AtlasCFM.Quest.OnEvent(event, arg1, arg2, arg3)
 end)
 frame:SetScript("OnShow", function() AtlasCFM.Quest.OnQuestFrameShow() end)

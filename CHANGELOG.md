@@ -24,6 +24,22 @@ Teron fork of Atlas-CFM (upstream v1.60), with one critical fix.
 
 ### Changed
 - Rebranded to "Teron's Atlas" / `TeronAtlas` folder per Terongorus's addon conventions.
-  Internal `AtlasCFM.Name` identifier and the one hardcoded `IsAddOnLoaded("Atlas-CFM")`
-  check were updated to match; saved-variable names (`AtlasCFMOptions`, `AtlasCFMCharDB`)
-  and the `/atlascfm` slash command are unchanged so existing settings carry over.
+  Internal `AtlasCFM.Name` identifier and the hardcoded `IsAddOnLoaded("Atlas-CFM")` /
+  `arg1 == "Atlas-CFM"` checks were updated to match, as was `AtlasCFM.PATH`/`MAPPATH`
+  (previously hardcoded to `Interface\AddOns\Atlas-CFM\`, feeding dozens of texture calls
+  across the whole addon - left unfixed this would have silently broken almost all of
+  Atlas's art). Saved-variable names (`AtlasCFMOptions`, `AtlasCFMCharDB`), the internal
+  `AtlasCFM.*` Lua namespace/frame names, and the `/atlascfm` slash command are
+  deliberately left unchanged so existing settings carry over.
+- Removed the "report missing content" notice box/link that used to sit in the main
+  frame's header - it always pointed at upstream's issue tracker regardless of which
+  codebase was actually running.
+- Version-check/broadcast module (`AtlasVersion.lua`): switched to a distinct broadcast
+  abbreviation (`TRA` instead of upstream's `ATW`) so this fork's version announcements on
+  the shared `LFT` channel never get cross-compared against independently-versioned
+  upstream Atlas-CFM/Atlas-TW installs. Also fixed the version-number parser, which only
+  understood two-segment `major.minor` strings, to handle this fork's three-segment
+  `major.minor.hotfix` versions.
+- Swept all remaining user-visible "Atlas-CFM" text (key binding names, minimap tooltip,
+  first-run welcome popup, a chat debug message) and doc-comment headers across all 5
+  locales to read "Teron's Atlas" instead.

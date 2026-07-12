@@ -1,8 +1,8 @@
 --- TODO check for Azshara BG for V+
 
---- MapMarkers.lua - Map markers module for Atlas-CFM
+--- MapMarkers.lua - Map markers module for Teron's Atlas
 ---
---- Integrates ModernMapMarkers functionality into Atlas-CFM.
+--- Integrates ModernMapMarkers functionality into Teron's Atlas.
 --- Shows icons for dungeons, raids, world bosses, and transport on the World Map.
 ---
 --- @compatible World of Warcraft 1.12

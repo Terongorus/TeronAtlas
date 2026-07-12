@@ -1,8 +1,8 @@
 ---
---- Tooltip.lua - Tooltip enhancement system for Atlas-CFM
+--- Tooltip.lua - Tooltip enhancement system for Teron's Atlas
 ---
 --- This module provides enhanced tooltip functionality with item source information
---- for Atlas-CFM. It extends the default WoW tooltips to show additional details about
+--- for Teron's Atlas. It extends the default WoW tooltips to show additional details about
 --- where items can be obtained, their drop rates, and related quest information.
 ---
 --- Features:

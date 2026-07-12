@@ -16,12 +16,12 @@ AtlasCFMZoneSubstitutions = {
 }
 
 ---
---- Key binding definitions for Atlas-CFM addon
+--- Key binding definitions for Teron's Atlas addon
 ---
-BINDING_HEADER_AtlasCFM_TITLE = "Atalhos do Atlas-CFM"
-BINDING_NAME_AtlasCFM_TOGGLE = "Alternar Atlas-CFM"
+BINDING_HEADER_AtlasCFM_TITLE = "Atalhos do Teron's Atlas"
+BINDING_NAME_AtlasCFM_TOGGLE = "Alternar Teron's Atlas"
 BINDING_NAME_AtlasCFM_OPTIONS = "Alternar Opções"
-BINDING_HEADER_AtlasCFMLOOT_TITLE = "Atalhos do AtlasCFM Saques"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Atalhos do Teron's Atlas Saques"
 BINDING_NAME_AtlasCFMLOOT_QL1 = "Visualização Rápida 1"
 BINDING_NAME_AtlasCFMLOOT_QL2 = "Visualização Rápida 2"
 BINDING_NAME_AtlasCFMLOOT_QL3 = "Visualização Rápida 3"
@@ -361,8 +361,8 @@ AtlasCFM.Localization:RegisterNamespace("UI", "ptBR", {
     ["Show IDs in Tooltips"] = "Mostrar IDs nas dicas",
     ["Show Icon in Tooltips"] = "Mostrar ícone nas dicas",
     ["Show Source on Tooltips"] = "Mostrar origem nas dicas",
-    ["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."] =
-    "Bem-vindo ao Atlas-CFM Edition. Por favor, tome um momento para configurar suas preferências.",
+    ["Welcome to Teron's Atlas. Please take a moment to set your preferences."] =
+    "Bem-vindo ao Teron's Atlas. Por favor, tome um momento para configurar suas preferências.",
 
     --************************************************
     -- Version & Updates
@@ -372,7 +372,6 @@ AtlasCFM.Localization:RegisterNamespace("UI", "ptBR", {
     ["Version check sent to %s"] = "Verificação de versão enviada para %s",
     ["NewVersionAvailableFmt"] = "|cffff0000Nova versão disponível!|r |cff00ff00Baixe aqui:|r %s",
     [" |cffA52A2Aloaded."] = " |cffA52A2Acarregado.",
-    ["NoticeText"] = "Encontrou algo faltando? Relate em:|r",
 
     --************************************************
     -- Categories & Menus
@@ -390,8 +389,8 @@ AtlasCFM.Localization:RegisterNamespace("UI", "ptBR", {
     --************************************************
     -- Minimap Tooltip
     --************************************************
-    ["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."] =
-    "Clique esquerdo para abrir Atlas-CFM.\nClique do meio para opções do Atlas-CFM.\nClique direito e arraste para mover este botão.",
+    ["Left-click to open Teron's Atlas.\nMiddle-click for Teron's Atlas options.\nRight-click and drag to move this button."] =
+    "Clique esquerdo para abrir Teron's Atlas.\nClique do meio para opções do Teron's Atlas.\nClique direito e arraste para mover este botão.",
 
     --************************************************
     -- Instance Locations

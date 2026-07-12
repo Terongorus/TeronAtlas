@@ -1,7 +1,7 @@
 ---
 --- AtlasConfig.lua - Atlas configuration constants and data mappings
 ---
---- This file contains the core configuration constants and data mappings for Atlas-CFM.
+--- This file contains the core configuration constants and data mappings for Teron's Atlas.
 --- It defines system constants, entrance-to-instance mappings, quest limits,
 --- and provides the foundational configuration data for Atlas functionality.
 ---

@@ -1,7 +1,7 @@
 ---
 --- World.lua - World boss loot system
 ---
---- This module handles world boss loot tables and menu systems for Atlas-CFM.
+--- This module handles world boss loot tables and menu systems for Teron's Atlas.
 --- It provides access to outdoor raid bosses, world dragons, and other rare
 --- spawns with their unique loot tables and spawn information.
 ---

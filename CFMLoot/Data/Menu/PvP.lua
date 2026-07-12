@@ -1,7 +1,7 @@
 ---
 --- PvP.lua - PvP rewards and battleground loot system
 ---
---- This module handles PvP-related loot tables and menu systems for Atlas-CFM.
+--- This module handles PvP-related loot tables and menu systems for Teron's Atlas.
 --- It provides access to battleground rewards, PvP armor sets, weapons, and accessories
 --- organized by rank requirements and battleground locations.
 ---

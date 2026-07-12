@@ -1,5 +1,5 @@
 ---
---- DataIndex.lua - Centralized indexing and caching for Atlas-CFM
+--- DataIndex.lua - Centralized indexing and caching for Teron's Atlas
 ---
 --- This module unifies the caching logic from Tooltip.lua and ProfessionHooks.lua
 --- into a single efficient indexing system. It iterates over loot data once

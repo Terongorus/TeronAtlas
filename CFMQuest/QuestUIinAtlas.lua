@@ -1,7 +1,7 @@
 ---
 --- QuestUIinAtlas.lua - Atlas quest UI integration within main Atlas frame
 ---
---- This file contains the quest UI integration within the main Atlas frame for Atlas-CFM.
+--- This file contains the quest UI integration within the main Atlas frame for Teron's Atlas.
 --- It handles quest display inside the Atlas window, quest item positioning,
 --- and provides the embedded quest interface functionality.
 ---

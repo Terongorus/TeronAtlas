@@ -2,7 +2,7 @@
 --- Search.lua - Advanced item search functionality
 ---
 --- This module provides comprehensive search functionality across items, spells, and enchantments
---- for Atlas-CFM. It enables users to quickly find specific items using various search criteria
+--- for Teron's Atlas. It enables users to quickly find specific items using various search criteria
 --- including name patterns, item types, and source locations.
 ---
 --- Features:

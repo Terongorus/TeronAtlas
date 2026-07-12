@@ -1,7 +1,7 @@
 ---
---- AtlasCFM.lua - Main Atlas-CFM addon core functionality
+--- AtlasCFM.lua - Main Teron's Atlas addon core functionality
 ---
---- This is the primary module of Atlas-CFM that handles the main Atlas frame,
+--- This is the primary module of Teron's Atlas that handles the main Atlas frame,
 --- map display, dropdown management, search functionality, and core UI logic.
 --- It coordinates between different subsystems and manages the overall addon state.
 ---

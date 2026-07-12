@@ -1,7 +1,7 @@
 ---
 --- AtlasUILogic.lua - Atlas UI logic and minimap button functionality
 ---
---- This file contains UI logic functions for Atlas-CFM including minimap button
+--- This file contains UI logic functions for Teron's Atlas including minimap button
 --- management, position handling, and UI interaction logic. It provides the
 --- core functionality for Atlas UI components and user interface behavior.
 ---
@@ -113,7 +113,7 @@ function AtlasCFM.MinimapButtonOnEnter()
 	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
 	GameTooltip:SetText(AtlasCFM.Name)
 	GameTooltip:AddLine(
-		L["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."],
+		L["Left-click to open Teron's Atlas.\nMiddle-click for Teron's Atlas options.\nRight-click and drag to move this button."],
 		1,
 		1, 1, true)
 	GameTooltip:Show()

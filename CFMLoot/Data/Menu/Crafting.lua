@@ -1,7 +1,7 @@
 ---
 --- Crafting.lua - Crafting professions menu and data management
 ---
---- This module provides comprehensive crafting profession support for Atlas-CFM,
+--- This module provides comprehensive crafting profession support for Teron's Atlas,
 --- organizing all tradeskill-related loot tables and profession menus.
 --- It handles the display and navigation of crafting recipes, materials,
 --- and profession-specific items across all available tradeskills.

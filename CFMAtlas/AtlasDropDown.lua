@@ -1,7 +1,7 @@
 ---
 --- AtlasCFMDropDown.lua - Atlas dropdown menu system and navigation
 ---
---- This file contains the dropdown menu system for Atlas-CFM navigation.
+--- This file contains the dropdown menu system for Teron's Atlas navigation.
 --- It handles category selection, zone filtering, sorting options,
 --- and provides the interface for browsing Atlas content by various criteria.
 ---

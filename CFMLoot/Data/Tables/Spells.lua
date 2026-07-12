@@ -1,7 +1,7 @@
 ---
 --- Spells.lua - Spell and enchantment data tables
 ---
---- This module contains comprehensive spell data for Atlas-CFM including
+--- This module contains comprehensive spell data for Teron's Atlas including
 --- enchantments, buffs, abilities, and magical effects. It provides
 --- spell information for item tooltips and effect descriptions.
 ---

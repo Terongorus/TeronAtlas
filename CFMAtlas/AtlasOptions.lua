@@ -1,7 +1,7 @@
 ---
 --- AtlasOptions.lua - Atlas configuration and options management
 ---
---- This file contains the options and configuration system for Atlas-CFM.
+--- This file contains the options and configuration system for Teron's Atlas.
 --- It handles user preferences, settings persistence, UI customization,
 --- and provides the interface for configuring Atlas behavior and appearance.
 ---
@@ -210,7 +210,7 @@ function AtlasCFM.OptionMapMarkersOnClick()
 end
 
 ---
---- Initializes all Atlas-CFM option settings and UI elements
+--- Initializes all Teron's Atlas option settings and UI elements
 --- Sets checkbox states, slider values, and frame visibility based on saved options
 --- @return nil
 --- @usage AtlasCFM.OptionsInit() -- Called after option changes
@@ -369,7 +369,7 @@ function AtlasOptions_UpdateSlider(text, frame)
     end
 end
 
---- Sets default configuration options for Atlas-CFM
+--- Sets default configuration options for Teron's Atlas
 --- Initializes all addon settings to their default values
 --- @return nil
 --- @usage AtlasCFM.OptionDefaultSettings() -- Reset to defaults
@@ -609,7 +609,7 @@ end
 
 -- Popup Box for first time users
 StaticPopupDialogs["AtlasCFMLoot_SETUP"] = {
-    text = L["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."],
+    text = L["Welcome to Teron's Atlas. Please take a moment to set your preferences."],
     button1 = L["Setup"],
     OnAccept = function()
         AtlasCFM.OptionsOnClick()

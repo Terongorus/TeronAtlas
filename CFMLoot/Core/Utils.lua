@@ -1,5 +1,5 @@
 ---
--- Utils.lua - Common string and link utilities for Atlas-CFM Loot
+-- Utils.lua - Common string and link utilities for Teron's Atlas Loot
 -- Provides helper functions for text formatting and WoW item link parsing
 -- Features:
 -- 1) Strip WoW formatting codes from text
@@ -82,7 +82,7 @@ end
 
 ---
 -- @module AtlasCFM.LootUtils
--- @description Common string and link utilities for Atlas-CFM Loot
+-- @description Common string and link utilities for Teron's Atlas Loot
 ---
 function AtlasCFM.LootUtils.GetChatLink(id)
     local itemName, itemLink, itemQuality = GetItemInfo(tonumber(id))

@@ -2,7 +2,7 @@
 --- Sets.lua - Item sets and collections management
 ---
 --- This module provides comprehensive set browsing functionality for all WoW item sets
---- in Atlas-CFM. It organizes and displays various equipment sets including dungeon sets,
+--- in Teron's Atlas. It organizes and displays various equipment sets including dungeon sets,
 --- raid sets, PvP sets, and crafted sets with detailed information and requirements.
 ---
 --- Features:

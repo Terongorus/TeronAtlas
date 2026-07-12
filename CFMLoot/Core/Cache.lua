@@ -1,5 +1,5 @@
 ---
---- Cache.lua - Item caching system for Atlas-CFM Loot
+--- Cache.lua - Item caching system for Teron's Atlas Loot
 --- Provides efficient item caching utilities and memoization
 --- Features:
 --- • Asynchronous item caching with batched tooltip requests

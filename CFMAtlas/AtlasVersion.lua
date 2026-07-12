@@ -1,9 +1,9 @@
 ---
---- AtlasCFMVersion.lua - Version check and update notification module
+--- AtlasVersion.lua - Version check and update notification module
 ---
 --- Implements lightweight version broadcast/listen over the 'LFT' channel,
 --- similar to PizzaWorldBuffs. Notifies the user if a newer version is seen
---- from another Atlas-CFM client.
+--- from another Teron's Atlas client.
 ---
 --- @compatible World of Warcraft 1.12
 
@@ -18,7 +18,9 @@ AtlasCFM.VersionCheck = AtlasCFM.VersionCheck or {}
 local VC = AtlasCFM.VersionCheck
 
 -- Settings
-VC.abbrev = 'ATW'
+-- Distinct abbreviation from upstream Atlas-CFM/Atlas-TW ('ATW') so this fork's version
+-- broadcasts never get cross-compared against an unrelated, independently-versioned addon.
+VC.abbrev = 'TRA'
 VC.channelName = 'LFT'
 VC.nextPublishAt = nil
 VC.joinAt = nil
@@ -35,16 +37,17 @@ end
 
 ---
 --- Converts local version string to comparable number.
---- Interprets "major.minor" as major*1000 + minor.
---- @return number Version as major*1000+minor; 0 if missing
+--- Interprets "major.minor.hotfix" as major*1000000 + minor*1000 + hotfix.
+--- @return number Version as major*1000000+minor*1000+hotfix; 0 if missing
 --- @usage local n = AtlasCFM.VersionCheck.getVersionNumber()
 function VC.getVersionNumber()
   local v = VC.getLocalVersionString()
   if not v or v == '' then return 0 end
-  local _, _, major, minor = string.find(v, '^(%d*)%.?(%d*)$')
+  local _, _, major, minor, hotfix = string.find(v, '^(%d*)%.?(%d*)%.?(%d*)$')
   major = tonumber(major) or 0
   minor = tonumber(minor) or 0
-  return major * 1000 + minor
+  hotfix = tonumber(hotfix) or 0
+  return major * 1000000 + minor * 1000 + hotfix
 end
 
 ---

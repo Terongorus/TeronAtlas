@@ -1,7 +1,7 @@
 ---
 --- WishList.lua - Wish list management system
 ---
---- This module provides comprehensive wish list functionality for Atlas-CFM.
+--- This module provides comprehensive wish list functionality for Teron's Atlas.
 --- It allows players to create, manage, and organize their desired items with
 --- categorization, search capabilities, and persistent storage across sessions.
 ---

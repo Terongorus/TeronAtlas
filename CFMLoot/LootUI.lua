@@ -1,7 +1,7 @@
 ---
 --- LootUI.lua - Atlas loot UI frame and component management
 ---
---- This file contains the loot UI frame creation and management for Atlas-CFM.
+--- This file contains the loot UI frame creation and management for Teron's Atlas.
 --- It handles loot window interface, item display components, frame templates,
 --- and provides the visual foundation for the Atlas loot browser system.
 ---

@@ -1,7 +1,7 @@
 ---
 --- AtlasUI.lua - Atlas main UI frame and interface components
 ---
---- This file contains the main UI frame creation and management for Atlas-CFM.
+--- This file contains the main UI frame creation and management for Teron's Atlas.
 --- It handles the primary Atlas window, frame positioning, event registration,
 --- and provides the foundation for all Atlas UI components and interactions.
 ---
@@ -455,25 +455,6 @@ do
     updateMarker:SetText(Colors.RED2 .. L["Update available"])
     updateMarker:SetPoint("RIGHT", titleText, "LEFT", -10, 0)
     updateMarker:Hide()
-
-    -- Notice text
-    local noticeText = atlasFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    noticeText:SetText(Colors.RED .. L["NoticeText"])
-    noticeText:SetPoint("TOP", -20, -17)
-
-    -- Notice link
-    local noticeBox = CreateFrame("EditBox", "AtlasCFMNoticeBox", atlasFrame, "InputBoxTemplate")
-    noticeBox:SetWidth(230)
-    noticeBox:SetHeight(16)
-    noticeBox:SetPoint("TOP", 240, -15)
-    noticeBox:SetMaxLetters(48)
-    noticeBox:SetAutoFocus(false)
-    noticeBox:SetText(Colors.RED .. L["NoticeLink"])
-    noticeBox:SetScript("OnTextChanged", function()
-        if noticeBox:GetText() ~= Colors.RED .. L["NoticeLink"] then
-            noticeBox:SetText(Colors.RED .. L["NoticeLink"])
-        end
-    end)
 
     -- Map texture
     atlasFrame:CreateTexture("AtlasCFMMap", "BACKGROUND")

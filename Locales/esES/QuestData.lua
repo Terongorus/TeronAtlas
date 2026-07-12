@@ -1,9 +1,9 @@
 ---
 --- QuestData_esES.lua - Definiciones de datos de misiones de Atlas para la localización española
 ---
---- Este archivo contiene todas las definiciones de datos de misiones para Atlas-CFM en español.
+--- Este archivo contiene todas las definiciones de datos de misiones para Teron's Atlas en español.
 --- Incluye información de misiones, recompensas, ubicaciones y requisitos
---- para todas las instancias y zonas compatibles con Atlas-CFM.
+--- para todas las instancias y zonas compatibles con Teron's Atlas.
 ---
 --- Características:
 --- - Base de datos de misiones completa para todas las instancias

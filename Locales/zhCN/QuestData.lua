@@ -1,9 +1,9 @@
 ---
 --- QuestData_enUS.lua - Atlas quest data definitions for English localization
 ---
---- This file contains all quest data definitions for Atlas-CFM in English.
+--- This file contains all quest data definitions for Teron's Atlas in English.
 --- It includes quest 信息, rewards, locations, and requirements
---- for all instances and zones supported by Atlas-CFM.
+--- for all instances and zones supported by Teron's Atlas.
 ---
 --- Features:
 --- - Complete quest database for all instances

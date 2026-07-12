@@ -17,12 +17,12 @@ AtlasCFMZoneSubstitutions = {
 }
 
 ---
---- Key binding definitions for Atlas-CFM addon
+--- Key binding definitions for Teron's Atlas addon
 ---
-BINDING_HEADER_AtlasCFM_TITLE = "Atlas-CFM 快捷键"
-BINDING_NAME_AtlasCFM_TOGGLE = "打开/关闭 Atlas-CFM"
+BINDING_HEADER_AtlasCFM_TITLE = "Teron's Atlas 快捷键"
+BINDING_NAME_AtlasCFM_TOGGLE = "打开/关闭 Teron's Atlas"
 BINDING_NAME_AtlasCFM_OPTIONS = "打开/关闭选项"
-BINDING_HEADER_AtlasCFMLOOT_TITLE = "AtlasCFM 物品查询快捷键"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Teron's Atlas 物品查询快捷键"
 BINDING_NAME_AtlasCFMLOOT_QL1 = "快速查看 1"
 BINDING_NAME_AtlasCFMLOOT_QL2 = "快速查看 2"
 BINDING_NAME_AtlasCFMLOOT_QL3 = "快速查看 3"
@@ -323,7 +323,7 @@ AtlasCFM.Localization:RegisterNamespace("UI", "zhCN", {
     ["Show IDs in Tooltips"] = "在提示中显示 ID",
     ["Show Icon in Tooltips"] = "在提示中显示图标",
     ["Show Source on Tooltips"] = "在提示中显示来源",
-    ["Welcome to Atlas-CFM Edition. Please take a moment to set your preferences."] = "欢迎使用 Atlas-CFM 版本。请花点时间设置您的偏好。",
+    ["Welcome to Teron's Atlas. Please take a moment to set your preferences."] = "欢迎使用 Teron's Atlas。请花点时间设置您的偏好。",
 
     -- Version & Updates
     ["Update available"] = "有可用更新",
@@ -331,7 +331,6 @@ AtlasCFM.Localization:RegisterNamespace("UI", "zhCN", {
     ["Version check sent to %s"] = "版本检查已发送给 %s",
     ["NewVersionAvailableFmt"] = "|cffff0000有新版本可用！|r |cff00ff00在此下载:|r %s",
     [" |cffA52A2Aloaded."] = " |cffA52A2A已加载。",
-    ["NoticeText"] = "如果您发现任何缺失，请在此报告:|r",
 
     -- Categories & Menus
     ["Collections"] = "收藏",
@@ -345,8 +344,8 @@ AtlasCFM.Localization:RegisterNamespace("UI", "zhCN", {
     ["Trainers"] = "训练师",
 
     -- Minimap Tooltip
-    ["Left-click to open Atlas-CFM.\nMiddle-click for Atlas-CFM options.\nRight-click and drag to move this button."] =
-    "左键打开 Atlas-CFM。\n中键打开 Atlas-CFM 选项。\n右键拖动移动此按钮。",
+    ["Left-click to open Teron's Atlas.\nMiddle-click for Teron's Atlas options.\nRight-click and drag to move this button."] =
+    "左键打开 Teron's Atlas。\n中键打开 Teron's Atlas 选项。\n右键拖动移动此按钮。",
 
     -- Instance Locations
     ["Instances"] = "副本",
@@ -616,10 +615,10 @@ AtlasCFM.Localization:RegisterNamespace("UI", "zhCN", {
     ["Recipe #%d"] = "配方 #%d",
 })
 
-BINDING_HEADER_AtlasCFM_TITLE = "Atlas-CFM 快捷键"
-BINDING_NAME_AtlasCFM_TOGGLE = "切换 Atlas-CFM"
-BINDING_NAME_AtlasCFM_OPTIONS = "切换 Atlas-CFM 选项"
-BINDING_HEADER_AtlasCFMLOOT_TITLE = "AtlasCFM 掉落快捷键"
+BINDING_HEADER_AtlasCFM_TITLE = "Teron's Atlas 快捷键"
+BINDING_NAME_AtlasCFM_TOGGLE = "切换 Teron's Atlas"
+BINDING_NAME_AtlasCFM_OPTIONS = "切换 Teron's Atlas 选项"
+BINDING_HEADER_AtlasCFMLOOT_TITLE = "Teron's Atlas 掉落快捷键"
 BINDING_NAME_AtlasCFMLOOT_QL1 = "快速查看 1"
 BINDING_NAME_AtlasCFMLOOT_QL2 = "快速查看 2"
 BINDING_NAME_AtlasCFMLOOT_QL3 = "快速查看 3"

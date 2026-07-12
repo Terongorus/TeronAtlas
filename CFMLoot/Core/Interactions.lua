@@ -1,5 +1,5 @@
 ---
---- Interactions.lua - User interaction event handlers for Atlas-CFM
+--- Interactions.lua - User interaction event handlers for Teron's Atlas
 ---
 --- This module handles all user interaction events including mouse clicks,
 --- hover events, and keyboard interactions for the loot browser interface.

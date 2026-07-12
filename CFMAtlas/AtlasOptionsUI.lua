@@ -1,7 +1,7 @@
 ---
 --- AtlasOptionsUI.lua - Atlas options UI frame and components
 ---
---- This file contains the options UI frame creation and management for Atlas-CFM.
+--- This file contains the options UI frame creation and management for Teron's Atlas.
 --- It handles the options window interface, UI controls, frame positioning,
 --- and provides the visual components for Atlas configuration settings.
 ---

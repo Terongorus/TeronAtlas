@@ -1,7 +1,7 @@
 ---
 --- QuestLogic.lua - Atlas quest logic and event handling
 ---
---- This file contains the quest logic and event handling for Atlas-CFM.
+--- This file contains the quest logic and event handling for Teron's Atlas.
 --- It handles quest item interactions, tooltip management, quest reward display,
 --- and provides the core logic for quest-related UI interactions.
 ---
@@ -643,7 +643,7 @@ function AtlasCFM.Quest.OnEvent(event, arg1, arg2, arg3)
         if type(AtlasCFMCharDB) == "table" then
             AtlasCFM.Quest.LoadFinishedQuests()
         else
-            PrintA(Colors.GREEN .. "Atlas-CFM Quest:|r|cff00ffffAtlasCFM not loaded!|r")
+            PrintA(Colors.GREEN .. "Teron's Atlas Quest:|r|cff00ffffAtlasCFM not loaded!|r")
         end
     elseif event == "CHAT_MSG_SYSTEM" then
         if (arg1 and strfind(arg1, SearchPattern)) then

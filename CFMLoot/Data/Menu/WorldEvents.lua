@@ -2,7 +2,7 @@
 --- WorldEvents.lua - World events and seasonal content system
 ---
 --- This module handles world events, seasonal activities, and special occasion
---- loot tables for Atlas-CFM. It provides access to holiday-specific items,
+--- loot tables for Teron's Atlas. It provides access to holiday-specific items,
 --- limited-time events, and recurring world activities with their rewards.
 ---
 --- Features:

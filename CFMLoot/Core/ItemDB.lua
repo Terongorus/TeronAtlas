@@ -1,7 +1,7 @@
 ---
 --- ItemDB.lua - Central item database and tooltip parsing system
 ---
---- This module provides comprehensive item database functionality for Atlas-CFM,
+--- This module provides comprehensive item database functionality for Teron's Atlas,
 --- including item information parsing, tooltip analysis, class-based item filtering,
 --- and caching mechanisms for optimal performance.
 ---

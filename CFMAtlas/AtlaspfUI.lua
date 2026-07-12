@@ -1,7 +1,7 @@
 ---
---- AtlasCFMpfUI.lua - pfUI Integration for Atlas-CFM
+--- AtlasCFMpfUI.lua - pfUI Integration for Teron's Atlas
 ---
---- This file contains pfUI styling integration for Atlas-CFM frames and components.
+--- This file contains pfUI styling integration for Teron's Atlas frames and components.
 --- It applies pfUI's CreateBackdrop and CreateBackdropShadow functions to all Atlas
 --- frames when pfUI is detected, creating a unified visual style.
 ---
@@ -451,9 +451,6 @@ local function StyleSearchBox()
     AtlasCFM.pfUI.SkinEditBox(AtlasCFMSearchEditBox)
     AtlasCFMSearchEditBox:SetHeight(20) -- Fix height for pfUI style
 
-    if pfUI.api.SkinButton and AtlasCFMNoticeBox then
-        AtlasCFM.pfUI.SkinEditBox(AtlasCFMNoticeBox)
-    end
     -- Also style the search button in the loot panel (handled in StyleLootPanel, but just in case)
     if pfUI.api.SkinButton and AtlasCFMLootSearchBox then
         AtlasCFM.pfUI.SkinEditBox(AtlasCFMLootSearchBox)
@@ -1082,7 +1079,7 @@ end
 
 ---
 --- Applies pfUI styling to checkboxes
---- Styles all checkboxes in Atlas-CFM using pfUI.api.SkinCheckbox
+--- Styles all checkboxes in Teron's Atlas using pfUI.api.SkinCheckbox
 ---
 local function StyleCheckboxes()
     if not pfUI.api.SkinCheckbox then return end
