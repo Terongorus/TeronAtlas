@@ -1280,7 +1280,7 @@ local init = CreateFrame("Frame")
 init:RegisterEvent("ADDON_LOADED")
 init:RegisterEvent("PLAYER_ENTERING_WORLD")
 init:SetScript("OnEvent", function()
-    if arg1 == "Atlas-CFM" then
+    if arg1 == "TeronAtlas" then
         this.atlasLoaded = true
     elseif arg1 == "pfUI" then
         this.pfuiLoaded = true
@@ -1290,7 +1290,7 @@ init:SetScript("OnEvent", function()
         end
     end
 
-    if (this.atlasLoaded or IsAddOnLoaded("Atlas-CFM")) and (this.pfuiLoaded or IsAddOnLoaded("pfUI")) then
+    if (this.atlasLoaded or IsAddOnLoaded("TeronAtlas")) and (this.pfuiLoaded or IsAddOnLoaded("pfUI")) then
         this:SetScript("OnUpdate", function()
             AtlasCFM.pfUI.Initialize()
             this:SetScript("OnUpdate", nil)

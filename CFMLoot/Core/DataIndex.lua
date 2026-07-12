@@ -76,14 +76,14 @@ function DataIndex.GetNamesFromID(id)
                 end
                 local itemID = AtlasCFM.Server.GetDataField(db[id], "item")
                 if itemID then
-                    -- Use scanner to get item name (reliable even if not cached)
-                    scanner:SetOwner(WorldFrame, "ANCHOR_NONE")
-                    scanner:ClearLines()
-                    if pcall(scanner.SetHyperlink, scanner, "item:" .. itemID) then
-                        local textObj = _G["AtlasCFMDataIndexScannerTextLeft1"]
-                        if textObj then
-                            addName(textObj:GetText())
-                        end
+                    -- Only resolve from the client's own item cache - never force a
+                    -- server query here (SetHyperlink on an item the client hasn't
+                    -- seen yet triggers the post-1.10 anti-exploit disconnect). If the
+                    -- item isn't cached yet, this name is simply skipped for now and
+                    -- will be picked up once the item is naturally cached in-game.
+                    local cachedName = GetItemInfo(itemID)
+                    if cachedName then
+                        addName(cachedName)
                     end
                 end
             end
@@ -743,21 +743,12 @@ function DataIndex.CheckAndBuildIndex()
     end
 end
 
--- Initialize on load
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:SetScript("OnEvent", function()
-    -- Start indexing when player enters world to ensure all data is loaded
-    -- But only if options require it
-    -- FIX: Delay indexing to allow server data to propagate (fixes missing skills on login)
-    if AtlasCFM and AtlasCFM.Timer and AtlasCFM.Timer.Start then
-        AtlasCFM.Timer.Start(5, function()
-            DataIndex.CheckAndBuildIndex()
-        end)
-    else
-        DataIndex.CheckAndBuildIndex()
-    end
-end)
+-- No automatic build on login: every real consumer (Tooltip, WishList, Search,
+-- AtlasOptionsUI) already calls DataIndex.CheckAndBuildIndex() lazily on first
+-- use. Building it unconditionally a few seconds after PLAYER_ENTERING_WORLD
+-- forced tooltip/spell hyperlink queries across the entire loot database - for
+-- items and recipes the character has never seen - which is exactly what
+-- triggers the post-1.10 anti-exploit disconnect on many servers.
 
 -- API: Find items by text (Search)
 function DataIndex.FindItems(text, options)

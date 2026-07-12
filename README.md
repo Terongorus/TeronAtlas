@@ -1,28 +1,28 @@
-# Atlas‑CFM — Documentation (WoW 1.12)
+# Teron's Atlas — Documentation (WoW 1.12)
 
-Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and quests module. It is compatible with World of Warcraft 1.12 and includes localization support.
+Overview: Teron's Atlas is a dungeon map browser with an integrated loot panel and quests module. It is compatible with World of Warcraft 1.12 and includes localization support. This is a Terongorus fork of [Atlas-CFM by CFM](https://github.com/byCFM2/Atlas-CFM), with a fix for a login disconnect bug (see CHANGELOG.md).
 
 ![main](https://github.com/user-attachments/assets/fb4b69fc-158c-4f55-a0dd-bfd0a7967170)
 
 
 1) Compatibility and Requirements
 - Client: WoW 1.12 (Interface: 11200)
-- Addon folder: Interface\AddOns\Atlas-CFM
+- Addon folder: Interface\AddOns\TeronAtlas
 - Saved variables:
   - Account-wide: AtlasCFMOptions
   - Per-character: AtlasCFMCharDB
 - Optional dependencies (detected if installed): EquipCompare, EQCompare, pfQuest, pfUI
 
 2) Installation
-- Copy the Atlas‑CFM folder to Interface\AddOns
+- Copy the TeronAtlas folder to Interface\AddOns
 - Enable the addon on the character selection screen
 
 3) Quick Start and Controls
-- Open/Close Atlas‑CFM: /atlas
+- Open/Close Teron's Atlas: /atlas
 - Open options: /atlas options (or /atlas opt)
 - Minimap button (if enabled):
-  - Left-click — open Atlas‑CFM
-  - Middle-click — open Atlas‑CFM options
+  - Left-click — open Teron's Atlas
+  - Middle-click — open Teron's Atlas options
   - Right-click + drag — move the button
 - The AtlasCFM window can be dragged when unlocked (lock button on the frame)
 - Right-click on the AtlasCFM window (if enabled) — close AtlasCFM and open the World Map
@@ -30,7 +30,7 @@ Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and
 - **World Map Markers**:
   - Icons for Dungeons, Raids, World Bosses, and Transport routes (Zeppelins, Boats, Tram) directly on the World Map.
   - Interactive tooltips showing level ranges and destinations.
-  - Clicking a marker automatically opens the corresponding map in Atlas‑CFM.
+  - Clicking a marker automatically opens the corresponding map in Teron's Atlas.
 - **Profession & Crafting Integration**:
   - Comprehensive catalogs for all professions and world events.
   - Automatic detection of player professions and recipe knowledge (Known/Unknown).
@@ -54,7 +54,7 @@ Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and
   - Instance selection
 - Top buttons:
   - Lock/Unlock — toggle window movement
-  - Options — open Atlas‑TW options
+  - Options — open Atlas options
   - Quests — show/hide quests panel
   - Loot Panel — show/hide bottom loot panel
 - Loot panel: section buttons and items area with scrolling
@@ -72,9 +72,9 @@ Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and
 - Show cursor coordinates on World Map — toggle AtlasCFMOptions.AtlasCursorCoords
 
 7) Commands
-- /atlascfm — toggle Atlas‑CFM window
+- /atlascfm — toggle Teron's Atlas window
 - /atlascfm options (or /atlascfm opt) — open options
-- /atlascfm ver — print your local Atlas‑CFM version to chat
+- /atlascfm ver — print your local Teron's Atlas version to chat
 - /atlascfm ver check — immediately publish your version to LFT and print confirmation
 
 8) First Run
@@ -99,7 +99,7 @@ Overview: Atlas‑CFM is a dungeon map browser with an integrated loot panel and
 - Hide the loot panel temporarily to save space inside the Atlas window
 
 11) Localization
-- Atlas-CFM uses a modular localization system based on namespaces
+- Teron's Atlas uses a modular localization system based on namespaces
 - Structure:
   - `Locales/LocalizationFramework.lua` — Core localization system
   - `Locales/[locale]/` — Language-specific files (enUS, deDE, esES, ptBR, zhCN)
